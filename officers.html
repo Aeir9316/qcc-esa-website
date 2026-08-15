@@ -13,57 +13,51 @@
 <body>
 
   <!-- HEADER -->
-  <header class="navbar">
+<header class="navbar">
+  <div class="container nav-content">
 
-    <div class="container nav-content">
+    <a href="index.html" class="logo">
+      <img src="images/logo.png" alt="QCC-ESA Logo">
+      <span>QCC Eagle Scout Association</span>
+    </a>
 
-      <a href="index.html" class="logo">
-        <img src="images/logo.png" alt="QCC-ESA Logo">
-        <span>QCC-ESA</span>
-      </a>
+    <nav>
+     <a href="index.html">Home</a>
+     <a href="about.html">About</a>
+     <a href="officers.html">Officers</a>
+     <a href="districts.html">Districts</a>
+     <a href="announcements.html">Announcements</a>
+     <a href="news.html">News</a>
+     <a href="events.html">Events</a>
+     <a href="merch.html">Merch</a>
+     <a href="contact.html">Contact</a>
+    </nav>
 
-      <nav>
-
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="officers.html" class="active">Officers</a>
-        <a href="districts.html">Districts</a>
-        <a href="announcements.html">Announcements</a>
-        <a href="news.html">News</a>
-        <a href="events.html">Events</a>
-        <a href="merch.html">Merch</a>
-        <a href="contact.html">Contact</a>
-
-      </nav>
-
-      <button class="menu-toggle" aria-label="Open menu">
-        ☰
-      </button>
-
-    </div>
-
-  </header>
-
+  </div>
+</header>
 
   <!-- PAGE HERO -->
-  <section class="officers-hero">
+<section class="hero hero-officers" style="min-height: 55vh;">
 
-    <div class="container">
+  <div class="hero-overlay"></div>
 
-      <span class="eyebrow">
-        QUEZON CITY COUNCIL EAGLE SCOUT ASSOCIATION
-      </span>
+  <div class="container hero-content">
 
-      <h1>Our Officers</h1>
-
-      <p>
-        Meet the leaders who guide the association in advancing
-        leadership, service, fellowship, and the ideals of Scouting.
-      </p>
-
+    <div class="hero-badge">
+      Our Officers
     </div>
 
-  </section>
+    <h1>
+      Officers of QCC-ESA
+    </h1>
+
+    <p>
+      Meet the officers of the Quezon City Council Eagle Scout Association, dedicated to fostering leadership, service, and fellowship among Eagle Scouts.
+    </p>
+
+  </div>
+
+</section>
 
 
   <!-- OFFICERS -->
@@ -140,6 +134,26 @@
 
           <p>
             Manages official records, documentation,
+            correspondence, and organizational communications.
+          </p>
+        </div>
+
+      </article>
+            <article class="officer-card">
+
+        <div class="officer-image">
+          <img src="images/officers/asst-secretary.jpg" alt="Secretary">
+        </div>
+
+        <div class="officer-info">
+          <span class="officer-position">Assistant Secretary</span>
+
+          <h3>
+            Name of Assistant Secretary
+          </h3>
+
+          <p>
+            Assists the Secretary in managing official records, documentation,
             correspondence, and organizational communications.
           </p>
         </div>
@@ -264,51 +278,45 @@
 
 
   <!-- FOOTER -->
-  <footer class="footer">
+<footer class="footer">
 
-    <div class="container">
+  <div class="container footer-content">
 
-      <div class="footer-brand">
+    <div class="footer-brand">
 
-        <img
-          src="images/logo.png"
-          alt="QCC-ESA Logo">
+      <img src="images/logo.png" alt="QCC-ESA Logo">
 
-        <div>
+      <div>
 
-          <h3>
-            Quezon City Council Eagle Scout Association
-          </h3>
-
-          <p>
-            Leadership, service, and fellowship in partnership
-            with the Boy Scouts of the Philippines.
-          </p>
-
-        </div>
-
-      </div>
-
-
-      <div class="footer-bottom">
+        <h3>Quezon City Council Eagle Scout Association</h3>
 
         <p>
-          © 2026 Quezon City Council Eagle Scout Association.
-          All rights reserved.
+          Leadership, service, and fellowship in partnership with the Boy
+          Scouts of the Philippines.
         </p>
-
-        <div class="footer-links">
-
-          <a href="#">Facebook</a>
-          <a href="contact.html">Contact</a>
-
-        </div>
 
       </div>
 
     </div>
 
-  </footer>
+    <div class="footer-bottom">
+
+      <p>© 2026 Quezon City Council Eagle Scout Association. All rights reserved.</p>
+
+      <div class="footer-links">
+        <a href="https://www.facebook.com/qceaglescout" target="_blank" rel="noreferrer">Facebook</a>
+        <a href="contact.html">Contact</a>
+         <a href="https://www.facebook.com/aeirplx" target="_blank" rel="noopener noreferrer">
+    © Love By Aeir
+  </a>
+</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</footer>
 
 
   <script src="js/script.js"></script>

@@ -58,8 +58,9 @@ img {
   position: fixed;
   inset: 0 0 auto 0;
   z-index: 1000;
+
   background: linear-gradient(
-    90deg, 
+    90deg,
     rgba(14, 22, 25, 0.88) 0%,
     rgba(22, 157, 72, 0.82) 45%,
     rgba(184, 216, 61, 0.78) 80%,
@@ -68,10 +69,9 @@ img {
 
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(255,255,255,0.08);
 
-  box-shadow:
-    0 4px 20px rgba(8, 54, 31, 0.12);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 20px rgba(8, 54, 31, 0.12);
 }
 
 .nav-content {
@@ -101,13 +101,14 @@ nav {
 }
 
 nav a {
-  color: rgba(255,255,255,0.86);
+  color: rgba(255, 255, 255, 0.88);
   text-decoration: none;
   font-weight: 600;
   transition: color 0.25s ease;
 }
 
-nav a:hover {
+nav a:hover,
+nav a.active {
   color: var(--gold-light);
 }
 
@@ -119,6 +120,10 @@ nav a:hover {
   min-height: 100vh;
   display: flex;
   align-items: center;
+}
+
+/* Index page background */
+.hero-index {
   background:
     linear-gradient(
       90deg,
@@ -127,7 +132,33 @@ nav a:hover {
       rgba(5, 45, 27, 0.52) 70%,
       rgba(5, 45, 27, 0.38) 100%
     ),
-    url('../images/hero.png') center/cover no-repeat;
+    url('../images/hero-index.jpg') center/cover no-repeat;
+}
+
+/* About page background */
+.hero-about {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(11, 31, 58, 0.88) 0%,
+      rgba(11, 31, 58, 0.72) 40%,
+      rgba(11, 31, 58, 0.52) 70%,
+      rgba(11, 31, 58, 0.38) 100%
+    ),
+    url('../images/hero-about.jpg') center/cover no-repeat;
+}
+
+/* Officers page background */
+.hero-officers {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(7, 29, 53, 0.88) 0%,
+      rgba(7, 29, 53, 0.72) 40%,
+      rgba(7, 29, 53, 0.52) 70%,
+      rgba(7, 29, 53, 0.38) 100%
+    ),
+    url('../images/hero-officers.jpg') center/cover no-repeat;
 }
 
 .hero-overlay {
@@ -643,10 +674,10 @@ nav a:hover {
   color: var(--white);
   overflow: hidden;
 
-   background: linear-gradient(
+  background: linear-gradient(
     135deg,
-    #0b3d2a 0%,
-    #0d2f42 45%,
+    #071d35 0%,
+    #0b2b4a 55%,
     #13294b 100%
   );
 }
@@ -674,10 +705,18 @@ nav a:hover {
 }
 
 .officers-hero h1 {
+  font-size: clamp(2.8rem, 6vw, 4.8rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  font-weight: 800;
+  max-width: 860px;
+  margin-bottom: 22px;
   color: var(--white);
 }
 
 .officers-hero p {
+  max-width: 680px;
+  font-size: 1.08rem;
   color: rgba(255, 255, 255, 0.82);
 }
 
