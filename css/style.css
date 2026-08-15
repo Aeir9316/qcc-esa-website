@@ -390,3 +390,26 @@ nav a:hover {
     min-width: 72px;
   }
 }
+.grid.two{
+  display:grid;
+  grid-template-columns:repeat(2, minmax(0,1fr));
+  gap:24px;
+}
+
+@media (max-width:980px){
+  .grid.two{
+    grid-template-columns:1fr;
+  }
+}
+.card {
+    height: auto;
+    min-height: 220px;
+    overflow: visible;
+}
+
+.card p {
+    display: block;
+    text-align: justify;
+    line-height: 1.6;
+    margin-top: 15px;
+}
