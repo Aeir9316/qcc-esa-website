@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
+/* ============================================================
+   1. VARIABLES
+   ============================================================ */
 :root {
   --navy: #0b1f3a;
   --navy-light: #13294b;
@@ -16,6 +19,9 @@
   --shadow: 0 18px 45px rgba(11, 31, 58, 0.08);
 }
 
+/* ============================================================
+   2. RESET / BASE
+   ============================================================ */
 * {
   margin: 0;
   padding: 0;
@@ -43,7 +49,11 @@ img {
   margin: 0 auto;
 }
 
-/* Navbar */
+/* ============================================================
+   3. NAVBAR
+   (kept the later/navy version — it was the one actually
+   winning the cascade since it was declared last)
+   ============================================================ */
 .navbar {
   position: fixed;
   inset: 0 0 auto 0;
@@ -101,13 +111,15 @@ nav a:hover {
   color: var(--gold-light);
 }
 
-/* Hero */
+/* ============================================================
+   4. HERO
+   ============================================================ */
 .hero {
   position: relative;
   min-height: 100vh;
   display: flex;
   align-items: center;
-   background:
+  background:
     linear-gradient(
       90deg,
       rgba(5, 45, 27, 0.88) 0%,
@@ -135,9 +147,9 @@ nav a:hover {
   align-items: center;
   padding: 10px 16px;
   border-radius: 999px;
-  background: rgba(200,164,77,0.15);
+  background: rgba(200, 164, 77, 0.15);
   color: var(--gold-light);
-  border: 1px solid rgba(200,164,77,0.28);
+  border: 1px solid rgba(200, 164, 77, 0.28);
   margin-bottom: 22px;
   font-weight: 600;
   backdrop-filter: blur(8px);
@@ -153,7 +165,7 @@ nav a:hover {
 
 .hero p {
   max-width: 680px;
-  color: rgba(255,255,255,0.82);
+  color: rgba(255, 255, 255, 0.82);
   font-size: 1.08rem;
   margin-bottom: 34px;
 }
@@ -164,6 +176,9 @@ nav a:hover {
   flex-wrap: wrap;
 }
 
+/* ============================================================
+   5. BUTTONS
+   ============================================================ */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -187,11 +202,13 @@ nav a:hover {
 
 .btn-secondary {
   color: var(--white);
-  border: 1px solid rgba(255,255,255,0.22);
-  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.06);
 }
 
-/* Sections */
+/* ============================================================
+   6. SECTIONS (generic)
+   ============================================================ */
 .section {
   padding: 88px 0;
 }
@@ -209,36 +226,20 @@ nav a:hover {
 }
 
 .section h2 {
-    color: #1E3A5F;
+  color: #1e3a5f;
 }
 
 .view-all {
-    color: #4B5563;
+  color: #4b5563;
 }
 
 .view-all:hover {
-    color: #C8A44D;
+  color: #c8a44d;
 }
 
-.event-info h3 {
-    color: #243B63;
-}
-
-.event-info p {
-    color: #6B7280;
-}
-
-.district-card h3 {
-    color: #243B63;
-}
-
-.district-card p {
-    color: #6B7280;
-}
-.card-date {
-    color: #8B7355;
-}
-/* Cards */
+/* ============================================================
+   7. CARDS
+   ============================================================ */
 .grid {
   display: grid;
   gap: 24px;
@@ -248,7 +249,16 @@ nav a:hover {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.grid.two {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
 .card {
+  height: auto;
+  min-height: 220px;
+  overflow: visible;
   background: var(--white);
   border: 1px solid var(--border);
   border-radius: 22px;
@@ -259,7 +269,7 @@ nav a:hover {
 
 .card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 24px 55px rgba(11,31,58,0.12);
+  box-shadow: 0 24px 55px rgba(11, 31, 58, 0.12);
 }
 
 .card-date {
@@ -276,10 +286,16 @@ nav a:hover {
 }
 
 .card p {
+  display: block;
   color: var(--muted);
+  text-align: justify;
+  line-height: 1.6;
+  margin-top: 15px;
 }
 
-/* Events */
+/* ============================================================
+   8. EVENTS
+   ============================================================ */
 .events-list {
   display: flex;
   flex-direction: column;
@@ -329,12 +345,24 @@ nav a:hover {
   color: var(--muted);
 }
 
-/* District cards */
+/* ============================================================
+   9. DISTRICT CARDS
+   ============================================================ */
 .district-card {
   border-top: 4px solid var(--gold);
 }
 
-/* Footer */
+.district-card h3 {
+  color: #243b63;
+}
+
+.district-card p {
+  color: #6b7280;
+}
+
+/* ============================================================
+   10. FOOTER
+   ============================================================ */
 .footer {
   background: linear-gradient(
     135deg,
@@ -345,6 +373,7 @@ nav a:hover {
 
   color: rgba(255, 255, 255, 0.82);
   padding: 64px 0 36px;
+  box-shadow: 0 -12px 35px rgba(11, 31, 58, 0.08);
 }
 
 .footer-brand {
@@ -379,7 +408,7 @@ nav a:hover {
 }
 
 .footer-links a {
-  color: rgba(255,255,255,0.82);
+  color: rgba(255, 255, 255, 0.82);
   text-decoration: none;
 }
 
@@ -387,13 +416,375 @@ nav a:hover {
   color: var(--gold-light);
 }
 
-/* Responsive */
+/* ============================================================
+   11. HISTORY SECTION
+   ============================================================ */
+.history-section {
+  position: relative;
+  overflow: hidden;
+  background: var(--ivory);
+}
+
+.history-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 65%;
+
+  background:
+    linear-gradient(
+      to right,
+      var(--ivory) 0%,
+      rgba(248, 246, 241, 0.75) 35%,
+      rgba(248, 246, 241, 0.25) 100%
+    ),
+    url("../images/history.jpg") center / cover no-repeat;
+
+  opacity: 0.75;
+  z-index: 0;
+}
+
+.history-section .container,
+.history-section .section-header {
+  position: relative;
+  z-index: 2;
+}
+
+.history-card {
+  position: relative;
+  z-index: 2;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  padding: 32px;
+  box-shadow:
+    0 20px 50px rgba(11, 31, 58, 0.10),
+    0 4px 15px rgba(11, 31, 58, 0.04);
+}
+
+.history-card p {
+  position: relative;
+  z-index: 3;
+  color: var(--muted);
+  text-align: justify;
+  line-height: 1.6;
+  margin-top: 15px;
+}
+
+/* ============================================================
+   12. PREAMBLE SECTION
+   ============================================================ */
+.pre-humble-section {
+  padding: 90px 20px;
+  background: #f5f5f2;
+}
+
+.pre-humble-container {
+  position: relative;
+  z-index: 2;
+  max-width: 1056px;
+  margin: 0 auto;
+  padding: 55px 65px;
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 24px;
+  text-align: center;
+  box-shadow:
+    0 20px 50px rgba(15, 43, 70, 0.08),
+    0 4px 12px rgba(15, 43, 70, 0.04);
+}
+
+.pre-humble-container h2 {
+  margin: 0 0 30px;
+  color: #12345a;
+  font-size: 42px;
+  font-weight: 700;
+}
+
+.section-label {
+  display: inline-block;
+  padding: 9px 18px;
+  border: 1px solid #c6a45b;
+  border-radius: 30px;
+  color: #b08a3c;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.preamble-text {
+  max-width: 850px;
+  margin: 0 auto;
+  color: #53657a;
+  font-size: 17px;
+  line-height: 1.9;
+  text-align: justify;
+}
+
+/* ============================================================
+   13. TIMELINE
+   ============================================================ */
+.timeline-card {
+  background: #fff;
+  border: 1px solid #e7dcc0;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(11, 31, 58, .06);
+  margin-bottom: 32px;
+}
+
+.timeline-image {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.timeline-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.timeline-content {
+  display: flex;
+  gap: 24px;
+  padding: 28px;
+}
+
+.timeline-badge {
+  width: 90px;
+  min-width: 90px;
+  height: 90px;
+  background: #0b1f3a;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.timeline-badge .year {
+  font-size: 14px;
+  color: #e3c87a;
+  font-weight: 700;
+}
+
+.timeline-badge .label {
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.timeline-text h3 {
+  color: #0b1f3a;
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.timeline-text p {
+  color: #64748b;
+  line-height: 1.8;
+}
+
+/* ============================================================
+   14. NEWS CARD
+   ============================================================ */
+.news-card {
+  overflow: hidden;
+}
+
+.news-image {
+  width: 100%;
+  height: 210px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.news-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
+  transition: transform 0.4s ease;
+}
+
+.news-card:hover .news-image img {
+  transform: scale(1.05);
+}
+
+.news-content {
+  padding: 24px 28px 28px;
+}
+
+.news-content .card-date {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.news-content h3 {
+  margin-bottom: 12px;
+}
+
+.news-content p {
+  margin: 0;
+}
+
+/* ============================================================
+   15. OFFICERS PAGE HERO
+   ============================================================ */
+.officers-hero {
+  position: relative;
+  padding-top: 150px;
+  padding-bottom: 80px;
+  color: var(--white);
+  overflow: hidden;
+
+   background: linear-gradient(
+    135deg,
+    #0b3d2a 0%,
+    #0d2f42 45%,
+    #13294b 100%
+  );
+}
+
+.officers-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+
+  background: radial-gradient(
+    circle at 85% 20%,
+    rgba(200, 164, 77, 0.18),
+    transparent 35%
+  );
+}
+
+.officers-hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+.officers-hero .eyebrow {
+  color: var(--gold-light);
+}
+
+.officers-hero h1 {
+  color: var(--white);
+}
+
+.officers-hero p {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+/* ============================================================
+   16. OFFICERS SECTION / CARDS
+   (this was declared 3x in the original file — kept the final,
+   most complete version only)
+   ============================================================ */
+.officers-section {
+  background: var(--ivory);
+  padding: 90px 0;
+}
+
+.officers-section .section-header {
+  margin-bottom: 32px;
+}
+
+.officers-section .section-header h2 {
+  color: var(--navy);
+}
+
+.officers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.officer-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 18px 45px rgba(11, 31, 58, 0.08);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.officer-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--gold);
+  box-shadow: 0 22px 50px rgba(11, 31, 58, 0.13);
+}
+
+.officer-card.featured {
+  border-color: var(--gold);
+}
+
+.officer-image {
+  width: 100%;
+  height: 320px;
+  overflow: hidden;
+  background: #eeeae1;
+}
+
+.officer-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.officer-card:hover .officer-image img {
+  transform: scale(1.04);
+}
+
+.officer-info {
+  padding: 24px 26px 28px;
+}
+
+.officer-position {
+  display: block;
+  margin-bottom: 8px;
+  color: #9a7a35;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
+
+.officer-info h3 {
+  margin-bottom: 10px;
+  color: var(--navy);
+  font-size: 20px;
+  line-height: 1.35;
+}
+
+.officer-info p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* ============================================================
+   17. RESPONSIVE (consolidated by breakpoint)
+   ============================================================ */
 @media (max-width: 980px) {
   nav {
     display: none;
   }
 
-  .grid.three {
+  .grid.three,
+  .grid.two {
     grid-template-columns: 1fr;
   }
 
@@ -414,6 +805,41 @@ nav a:hover {
   .btn {
     width: 100%;
   }
+
+  .officers-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .pre-humble-container {
+    padding: 40px 25px;
+  }
+
+  .pre-humble-container h2 {
+    font-size: 32px;
+  }
+
+  .preamble-text {
+    font-size: 16px;
+  }
+
+  .timeline-content {
+    flex-direction: column;
+  }
+
+  .timeline-badge {
+    width: 72px;
+    height: 72px;
+  }
+
+  .timeline-image {
+    height: 220px;
+  }
+
+  .timeline-text h3 {
+    font-size: 1.6rem;
+  }
 }
 
 @media (max-width: 640px) {
@@ -430,234 +856,16 @@ nav a:hover {
     width: 72px;
     min-width: 72px;
   }
-}
-.grid.two{
-  display:grid;
-  grid-template-columns:repeat(2, minmax(0,1fr));
-  gap:24px;
-}
 
-@media (max-width:980px){
-  .grid.two{
-    grid-template-columns:1fr;
-  }
-}
-.card {
-    height: auto;
-    min-height: 220px;
-    overflow: visible;
-}
-
-.card p {
-    display: block;
-    text-align: justify;
-    line-height: 1.6;
-    margin-top: 15px;
-}
-.history-section {
-  position: relative;
-  overflow: hidden;
-
-  
-  background: var(--ivory);
-}
-
-.history-section::before {
-  content: "";
-  position: absolute;
-
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 65%;
-
-  background:
-    linear-gradient(
-      to right,
-      var(--ivory) 0%,
-      rgba(248, 246, 241, 0.75) 35%,
-      rgba(248, 246, 241, 0.25) 100%
-    ),
-    url("../images/history.jpg") center / cover no-repeat;
-
-  opacity: 0.75;
-  z-index: 0;
-}
-.history-section .container {
-  position: relative;
-  z-index: 2;
-}
-
-/* Title */
-.history-section .section-header {
-  position: relative;
-  z-index: 2;
-}
-.history-card {
-  position: relative;
-  z-index: 2;
-
-  background: #ffffff;
-
-  border: 1px solid var(--border);
-  border-radius: 22px;
-
-  padding: 32px;
-
-  box-shadow:
-    0 20px 50px rgba(11, 31, 58, 0.10),
-    0 4px 15px rgba(11, 31, 58, 0.04);
-}
-
-.history-card p {
-  position: relative;
-  z-index: 3;
-
-  color: var(--muted);
-  text-align: justify;
-  line-height: 1.6;
-  margin-top: 15px;
-}
-.pre-humble-section {
-  padding: 90px 20px;
-  background: #f5f5f2;
-}
-
-.pre-humble-container {
-  max-width: 1056px;
-  margin: 0 auto;
-  padding: 55px 65px;
-  background: rgba(255, 255, 255, 0.96);
-  border-radius: 24px;
-  text-align: center;
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
-}
-.section-label {
-  display: inline-block;
-  padding: 9px 18px;
-  border: 1px solid #c6a45b;
-  border-radius: 30px;
-  color: #b08a3c;
-  font-weight: 600;
-  font-size: 14px;
-  margin-bottom: 15px;
-}
-.pre-humble-container {
-  position: relative;
-  z-index: 2;
-  box-shadow:
-    0 20px 50px rgba(15, 43, 70, 0.08),
-    0 4px 12px rgba(15, 43, 70, 0.04);
-}
-.pre-humble-container h2 {
-  margin: 0 0 30px;
-  color: #12345a;
-  font-size: 42px;
-  font-weight: 700;
-}
-
-.preamble-text {
-  max-width: 850px;
-  margin: 0 auto;
-  color: #53657a;
-  font-size: 17px;
-  line-height: 1.9;
-  text-align: justify;
-}
-
-@media (max-width: 768px) {
-  .pre-humble-container {
-    padding: 40px 25px;
+  .officers-section {
+    padding: 70px 0;
   }
 
-  .pre-humble-container h2 {
-    font-size: 32px;
+  .officers-grid {
+    grid-template-columns: 1fr;
   }
 
-  .preamble-text {
-    font-size: 16px;
+  .officer-image {
+    height: 300px;
   }
-}
-/* Timeline */
-.timeline-card{
-    background:#fff;
-    border:1px solid #e7dcc0;
-    border-radius:24px;
-    overflow:hidden;
-    box-shadow:0 12px 30px rgba(11,31,58,.06);
-    margin-bottom:32px;
-}
-
-.timeline-image{
-    width:100%;
-    height:400px;
-    overflow:hidden;
-}
-
-.timeline-image img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    display:block;
-}
-
-.timeline-content{
-    display:flex;
-    gap:24px;
-    padding:28px;
-}
-
-.timeline-badge{
-    width:90px;
-    min-width:90px;
-    height:90px;
-    background:#0B1F3A;
-    border-radius:20px;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-    color:#fff;
-}
-
-.timeline-badge .year{
-    font-size:14px;
-    color:#E3C87A;
-    font-weight:700;
-}
-
-.timeline-badge .label{
-    font-size:28px;
-    font-weight:800;
-    line-height:1;
-}
-
-.timeline-text h3{
-    color:#0B1F3A;
-    font-size:2rem;
-    margin-bottom:12px;
-}
-
-.timeline-text p{
-    color:#64748B;
-    line-height:1.8;
-}
-
-@media (max-width:768px){
-    .timeline-content{
-        flex-direction:column;
-    }
-
-    .timeline-badge{
-        width:72px;
-        height:72px;
-    }
-
-    .timeline-image{
-        height:220px;
-    }
-
-    .timeline-text h3{
-        font-size:1.6rem;
-    }
 }
