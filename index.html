@@ -1,16 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>QCC Eagle Scout Association</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <header>
-    <h1>QCC Eagle Scout Association</h1>
+<header class="navbar">
+  <div class="container nav-content">
+
+    <a href="index.html" class="logo">
+      <img src="images/logo.png" alt="QCC-ESA Logo">
+      <span>QCC Eagle Scout Association</span>
+    </a>
 
     <nav>
       <a href="index.html">Home</a>
@@ -21,19 +30,264 @@
       <a href="events.html">Events</a>
       <a href="contact.html">Contact</a>
     </nav>
-  </header>
 
-  <main>
-    <section>
-      <h2>Building Leaders Through Service and Excellence</h2>
+  </div>
+</header>
 
-      <p>
-        Official website of the Quezon City Council Eagle Scout Association.
-      </p>
-    </section>
-  </main>
+<section class="hero">
 
-  <script src="js/script.js"></script>
+  <div class="hero-overlay"></div>
+
+  <div class="container hero-content">
+
+    <div class="hero-badge">
+      Quezon City Council
+    </div>
+
+    <h1>
+      Service and Leadership
+    </h1>
+
+    <p>
+      Official website of the Quezon City Council Eagle Scout Association,
+      connecting Eagle Scouts across districts through leadership,
+      community service, and lifelong fellowship.
+    </p>
+
+    <div class="hero-buttons">
+      <a href="about.html" class="btn btn-primary">
+        Learn More
+      </a>
+
+      <a href="events.html" class="btn btn-secondary">
+        Upcoming Events
+      </a>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="section">
+
+  <div class="container">
+
+    <div class="section-header">
+      <h2>Latest News</h2>
+      <a href="news.html" class="view-all">
+        View All
+      </a>
+    </div>
+
+    <div class="grid three">
+
+      <article class="card">
+
+        <span class="card-date">
+          August 2026
+        </span>
+
+        <h3>
+          District Officers Coordination Meeting
+        </h3>
+
+        <p>
+          Agenda, committee reports, and district planning updates for the
+          upcoming council activities.
+        </p>
+
+      </article>
+
+      <article class="card">
+
+        <span class="card-date">
+          July 2026
+        </span>
+
+        <h3>
+          Community Clean-up Campaign
+        </h3>
+
+        <p>
+          Volunteer deployment across participating districts and partner
+          organizations throughout Quezon City.
+        </p>
+
+      </article>
+
+      <article class="card">
+
+        <span class="card-date">
+          June 2026
+        </span>
+
+        <h3>
+          Council Leadership Summit
+        </h3>
+
+        <p>
+          Leadership workshops and strategic planning sessions for Eagle Scout
+          representatives.
+        </p>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="section section-light">
+
+  <div class="container">
+
+    <div class="section-header">
+      <h2>Upcoming Events</h2>
+      <a href="events.html" class="view-all">
+        Event Calendar
+      </a>
+    </div>
+
+    <div class="events-list">
+
+      <div class="event-item">
+
+        <div class="event-date">
+          <span class="month">SEP</span>
+          <span class="day">18</span>
+        </div>
+
+        <div class="event-info">
+          <h3>Quezon City Eagle Scout Conference</h3>
+          <p>Diliman, Quezon City • 9:00 AM</p>
+        </div>
+
+      </div>
+
+      <div class="event-item">
+
+        <div class="event-date">
+          <span class="month">OCT</span>
+          <span class="day">05</span>
+        </div>
+
+        <div class="event-info">
+          <h3>District Fellowship and Service Day</h3>
+          <p>Quezon City Council Grounds • 8:00 AM</p>
+        </div>
+
+      </div>
+
+      <div class="event-item">
+
+        <div class="event-date">
+          <span class="month">NOV</span>
+          <span class="day">14</span>
+        </div>
+
+        <div class="event-info">
+          <h3>Leadership Training Workshop</h3>
+          <p>Quezon City Council Conference Hall • 1:00 PM</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="section">
+
+  <div class="container">
+
+    <div class="section-header">
+      <h2>District Highlights</h2>
+      <a href="districts.html" class="view-all">
+        All Districts
+      </a>
+    </div>
+
+    <div class="grid three">
+
+      <div class="card district-card">
+
+        <h3>First District</h3>
+
+        <p>
+          Leadership development initiatives and youth mentoring programs
+          across partner institutions.
+        </p>
+
+      </div>
+
+      <div class="card district-card">
+
+        <h3>Second District</h3>
+
+        <p>
+          Community outreach, service projects, and civic engagement activities
+          for local communities.
+        </p>
+
+      </div>
+
+      <div class="card district-card">
+
+        <h3>Third District</h3>
+
+        <p>
+          Environmental stewardship, clean-up drives, and sustainability
+          initiatives led by Eagle Scouts.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<footer class="footer">
+
+  <div class="container footer-content">
+
+    <div class="footer-brand">
+
+      <img src="images/logo.png" alt="QCC-ESA Logo">
+
+      <div>
+
+        <h3>Quezon City Council Eagle Scout Association</h3>
+
+        <p>
+          Leadership, service, and fellowship in partnership with the Boy
+          Scouts of the Philippines.
+        </p>
+
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+      <p>© 2026 Quezon City Council Eagle Scout Association. All rights reserved.</p>
+
+      <div class="footer-links">
+        <a href="https://www.facebook.com/qceaglescout" target="_blank" rel="noreferrer">Facebook</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+    </div>
+
+  </div>
+
+</footer>
+
+<script src="js/script.js"></script>
 
 </body>
 </html>
