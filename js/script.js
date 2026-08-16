@@ -5,15 +5,17 @@
 // Navbar scroll effect
 const navbar = document.querySelector('.navbar');
 
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 40) {
-    navbar.style.background = 'rgba(11, 31, 58, 0.96)';
-    navbar.style.boxShadow = '0 10px 30px rgba(0,0,0,0.15)';
+if (navbar) {
+  window.addEventListener('scroll', () => {
+
+    if (window.scrollY > 40) {
+       navbar.style.boxShadow = '0 10px 30px rgba(0,0,0,0.15)';
   } else {
-    navbar.style.background = 'rgba(11, 31, 58, 0.75)';
-    navbar.style.boxShadow = 'none';
-  }
-});
+    navbar.style.boxShadow = '0 4px 20px rgba(8,54,31,0.12)';
+    }
+
+  });
+}
 
 // Smooth scrolling for internal links
 document.querySelectorAll('a[href^="#"]').forEach(link => {
@@ -72,4 +74,49 @@ document.querySelectorAll('.btn').forEach(btn => {
   btn.addEventListener('mouseleave', () => {
     btn.style.transform = 'translateY(0)';
   });
+});
+// ===============================
+// Past Leadership Terms
+// ===============================
+
+document.addEventListener('DOMContentLoaded', function () {
+
+  const termCards = document.querySelectorAll('.past-term-card');
+
+  termCards.forEach(function (card) {
+
+    const toggle = card.querySelector('.past-term-toggle');
+    const icon = card.querySelector('.collapse-icon');
+
+    if (!toggle) return;
+
+    toggle.addEventListener('click', function () {
+
+      const isOpen = card.classList.contains('open');
+
+      // Isara lahat
+      termCards.forEach(function (otherCard) {
+        otherCard.classList.remove('open');
+
+        const otherIcon =
+          otherCard.querySelector('.collapse-icon');
+
+        if (otherIcon) {
+          otherIcon.textContent = '+';
+        }
+      });
+
+      // Buksan ang pinindot kung dati itong sarado
+      if (!isOpen) {
+        card.classList.add('open');
+
+        if (icon) {
+          icon.textContent = '×';
+        }
+      }
+
+    });
+
+  });
+
 });
