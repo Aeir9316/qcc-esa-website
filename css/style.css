@@ -2153,3 +2153,949 @@ nav a.active {
   }
 
 }
+/* ============================================================
+   PAST PRESIDENTS PAGE
+   ============================================================ */
+
+
+/* ============================================================
+   PAGE HERO
+   ============================================================ */
+
+.past-presidents-hero {
+  position: relative;
+
+  padding: 170px 0 95px;
+
+  color: var(--white);
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      135deg,
+      #071d35 0%,
+      #0b2b4a 52%,
+      #0b3d2a 100%
+    );
+}
+
+
+.past-presidents-hero::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  background:
+    radial-gradient(
+      circle at 85% 25%,
+      rgba(200, 164, 77, 0.18),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 15% 80%,
+      rgba(22, 157, 72, 0.15),
+      transparent 35%
+    );
+}
+
+
+.past-presidents-hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+
+.past-presidents-eyebrow {
+  display: inline-block;
+
+  margin-bottom: 14px;
+
+  color: var(--gold-light);
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+
+.past-presidents-hero h1 {
+  margin: 0 0 20px;
+
+  color: #ffffff;
+
+  font-size: clamp(2.8rem, 6vw, 4.8rem);
+
+  line-height: 1.05;
+
+  letter-spacing: -0.03em;
+}
+
+
+.past-presidents-hero p {
+  max-width: 680px;
+
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.80);
+
+  font-size: 1.08rem;
+
+  line-height: 1.8;
+}
+
+
+
+/* ============================================================
+   CURRENT PRESIDENT
+   ============================================================ */
+
+.current-president-section {
+  padding: 90px 0;
+
+  background: var(--ivory);
+}
+
+
+.current-president-header {
+  margin-bottom: 32px;
+}
+
+
+.current-president-header h2 {
+  margin: 0;
+
+  color: var(--navy);
+
+  font-size: 32px;
+}
+
+
+.current-president {
+  display: grid;
+
+  grid-template-columns: 360px 1fr;
+
+  min-height: 360px;
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid var(--border);
+
+  border-radius: 24px;
+
+  box-shadow:
+    0 20px 50px rgba(11, 31, 58, 0.09);
+}
+
+
+.current-president-image {
+  height: 100%;
+
+  min-height: 360px;
+
+  overflow: hidden;
+
+  background: #eeeae1;
+}
+
+
+.current-president-image img {
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+
+  transition: transform 0.5s ease;
+}
+
+
+.current-president:hover
+.current-president-image img {
+  transform: scale(1.03);
+}
+
+
+.current-president-info {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  padding: 55px;
+}
+
+
+.current-president-term {
+  display: inline-block;
+
+  margin-bottom: 8px;
+
+  color: var(--gold);
+
+  font-size: 14px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+}
+
+
+.current-president-position {
+  display: block;
+
+  margin-bottom: 14px;
+
+  color: var(--green-dark);
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+
+.current-president-info h3 {
+  margin: 0 0 15px;
+
+  color: var(--navy);
+
+  font-size: 32px;
+
+  line-height: 1.25;
+}
+
+
+.current-president-info p {
+  max-width: 600px;
+
+  margin: 0;
+
+  color: var(--muted);
+
+  line-height: 1.8;
+}
+
+
+
+/* ============================================================
+   FORMER PRESIDENTS HEADER
+   ============================================================ */
+
+.presidents-history-section {
+  padding: 100px 0 120px;
+
+  background:
+    radial-gradient(
+      circle at 10% 20%,
+      rgba(22, 157, 72, 0.045),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 80%,
+      rgba(200, 164, 77, 0.055),
+      transparent 30%
+    ),
+    var(--white);
+}
+
+
+.presidents-history-header {
+  max-width: 720px;
+
+  margin: 0 auto 75px;
+
+  text-align: center;
+}
+
+
+.presidents-history-header h2 {
+  margin: 0 0 12px;
+
+  color: var(--navy);
+
+  font-size: 34px;
+}
+
+
+.presidents-history-header p {
+  margin: 0;
+
+  color: var(--muted);
+
+  line-height: 1.8;
+}
+
+
+
+/* ============================================================
+   TIMELINE
+   ============================================================ */
+
+.presidents-timeline {
+  position: relative;
+
+  max-width: 1000px;
+
+  margin: 0 auto;
+
+  padding: 10px 0;
+}
+
+
+.presidents-timeline::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+
+  bottom: 0;
+
+  left: 50%;
+
+  width: 2px;
+
+  transform: translateX(-50%);
+
+  background:
+    linear-gradient(
+      to bottom,
+      transparent,
+      var(--green),
+      var(--gold),
+      var(--green),
+      transparent
+    );
+}
+
+
+
+/* ============================================================
+   TIMELINE ITEM
+   ============================================================ */
+
+.president-timeline-item {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  min-height: 210px;
+
+  margin-bottom: 55px;
+}
+
+
+.president-timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+
+.president-timeline-content {
+  position: relative;
+
+  width: calc(100% - 55px);
+
+  padding: 30px 34px;
+
+  background: #ffffff;
+
+  border-top: 3px solid var(--green);
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 15px 35px rgba(11, 31, 58, 0.07);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.president-timeline-content:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 22px 45px rgba(11, 31, 58, 0.11);
+}
+
+
+.president-timeline-item
+.president-timeline-content {
+  grid-column: 1;
+}
+
+
+.president-timeline-item.reverse
+.president-timeline-content {
+  grid-column: 2;
+
+  justify-self: end;
+
+  border-top-color: var(--gold);
+}
+
+
+
+/* ============================================================
+   CONNECTOR
+   ============================================================ */
+
+.president-timeline-content::after {
+  content: "";
+
+  position: absolute;
+
+  top: 35px;
+
+  right: -55px;
+
+  width: 55px;
+
+  height: 2px;
+
+  background: var(--green);
+}
+
+
+.president-timeline-item.reverse
+.president-timeline-content::after {
+  left: -55px;
+
+  right: auto;
+
+  background: var(--gold);
+}
+
+
+
+/* ============================================================
+   TIMELINE MARKER
+   ============================================================ */
+
+.president-timeline-marker {
+  position: absolute;
+
+  z-index: 5;
+
+  top: 27px;
+
+  left: 50%;
+
+  width: 54px;
+
+  height: 54px;
+
+  transform: translateX(-50%);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border: 4px solid var(--white);
+
+  border-radius: 50%;
+
+  background: var(--navy);
+
+  box-shadow:
+    0 5px 18px rgba(11, 31, 58, 0.18);
+}
+
+
+.president-timeline-marker span {
+  color: var(--gold-light);
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.5px;
+
+  text-align: center;
+}
+
+
+
+/* ============================================================
+   PRESIDENT INFORMATION
+   ============================================================ */
+
+.president-term {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: var(--gold);
+
+  font-size: 13px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.4px;
+}
+
+
+.president-timeline-content h3 {
+  margin: 0 0 8px;
+
+  color: var(--navy);
+
+  font-size: 23px;
+
+  line-height: 1.35;
+}
+
+
+.president-role {
+  display: inline-block;
+
+  margin-bottom: 15px;
+
+  color: var(--green-dark);
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.6px;
+}
+
+
+.president-timeline-content p {
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: 14px;
+
+  line-height: 1.75;
+}
+
+
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 800px) {
+
+  .current-president {
+    grid-template-columns: 280px 1fr;
+  }
+
+
+  .current-president-info {
+    padding: 35px;
+  }
+
+
+  .current-president-info h3 {
+    font-size: 26px;
+  }
+
+
+  .presidents-timeline::before {
+    left: 25px;
+
+    transform: none;
+  }
+
+
+  .president-timeline-item {
+    display: block;
+
+    min-height: 0;
+
+    padding-left: 70px;
+
+    margin-bottom: 35px;
+  }
+
+
+  .president-timeline-marker {
+    left: 25px;
+
+    transform: translateX(-50%);
+  }
+
+
+  .president-timeline-content,
+  .president-timeline-item.reverse
+  .president-timeline-content {
+    width: 100%;
+
+    grid-column: auto;
+
+    justify-self: auto;
+  }
+
+
+  .president-timeline-content::after,
+  .president-timeline-item.reverse
+  .president-timeline-content::after {
+
+    left: -45px;
+
+    right: auto;
+
+    width: 45px;
+
+    background: var(--green);
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .past-presidents-hero {
+    padding: 140px 0 75px;
+  }
+
+
+  .current-president-section {
+    padding: 70px 0;
+  }
+
+
+  .current-president {
+    display: block;
+  }
+
+
+  .current-president-image {
+    height: 320px;
+
+    min-height: 320px;
+  }
+
+
+  .current-president-info {
+    padding: 30px 25px 35px;
+  }
+
+
+  .current-president-info h3 {
+    font-size: 25px;
+  }
+
+
+  .presidents-history-section {
+    padding: 75px 0 90px;
+  }
+
+
+  .presidents-history-header {
+    margin-bottom: 55px;
+  }
+
+
+  .presidents-history-header h2 {
+    font-size: 28px;
+  }
+
+
+  .president-timeline-item {
+    padding-left: 55px;
+  }
+
+
+  .presidents-timeline::before {
+    left: 20px;
+  }
+
+
+  .president-timeline-marker {
+    left: 20px;
+
+    width: 44px;
+
+    height: 44px;
+  }
+
+
+  .president-timeline-content {
+    padding: 25px 22px;
+  }
+
+
+  .president-timeline-content h3 {
+    font-size: 20px;
+  }
+
+}
+.past-presidents-hero {
+  position: relative;
+  min-height: 420px;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(7, 29, 53, 0.90),
+      rgba(11, 61, 42, 0.72)
+    ),
+    url("../images/hero-past-presidents.jpg") center / cover no-repeat;
+
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+/* ============================================================
+   VIEW PAST PRESIDENTS BUTTON
+   ============================================================ */
+
+.past-presidents-button {
+  margin-top: 32px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.past-presidents-button .btn {
+  display: inline-flex;
+  width: auto;
+  margin: 0;
+}
+/* ============================================================
+   LEADERSHIP HISTORY LINKS
+   ============================================================ */
+
+.officer-history-links {
+  position: relative;
+  overflow: hidden;
+
+  padding: 110px 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(7, 29, 53, 0.94) 0%,
+      rgba(7, 61, 42, 0.86) 55%,
+      rgba(11, 31, 58, 0.78) 100%
+    ),
+    url("../images/leadership-history.jpg")
+    center / cover no-repeat;
+}
+
+
+/* subtle visual effect */
+
+.officer-history-links::before {
+  content: "";
+  position: absolute;
+  width: 450px;
+  height: 450px;
+
+  top: -180px;
+  right: -100px;
+
+  border-radius: 50%;
+
+  background: rgba(200, 164, 77, 0.12);
+
+  filter: blur(5px);
+
+  pointer-events: none;
+}
+
+
+/* CONTENT */
+
+.history-links-content {
+  position: relative;
+  z-index: 2;
+
+  max-width: 850px;
+
+  margin: 0 auto;
+
+  text-align: center;
+
+  color: #ffffff;
+}
+
+
+/* LABEL */
+
+.history-links-label {
+  display: inline-block;
+
+  margin-bottom: 14px;
+
+  color: #e3c87a;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+
+/* TITLE */
+
+.history-links-content h2 {
+  margin: 0 0 16px;
+
+  color: #ffffff;
+
+  font-size: clamp(2rem, 4vw, 3rem);
+
+  line-height: 1.15;
+}
+
+
+/* DESCRIPTION */
+
+.history-links-content p {
+  max-width: 680px;
+
+  margin: 0 auto 35px;
+
+  color: rgba(255, 255, 255, 0.78);
+
+  font-size: 16px;
+
+  line-height: 1.8;
+}
+
+
+/* ============================================================
+   BUTTONS
+   ============================================================ */
+
+.history-buttons {
+  display: flex;
+
+  justify-content: center;
+  align-items: stretch;
+
+  gap: 18px;
+
+  flex-wrap: wrap;
+}
+
+
+/* INDIVIDUAL BUTTON */
+
+.history-button {
+  min-width: 250px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 17px 20px 17px 24px;
+
+  border-radius: 14px;
+
+  background: #c8a44d;
+
+  color: #0b1f3a;
+
+  text-decoration: none;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.15);
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+/* HOVER */
+
+.history-button:hover {
+  transform: translateY(-4px);
+
+  background: #e3c87a;
+
+  box-shadow:
+    0 18px 35px rgba(0, 0, 0, 0.22);
+}
+
+
+/* ARROW */
+
+.history-button-arrow {
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(11, 31, 58, 0.10);
+
+  font-size: 18px;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
+}
+
+
+.history-button:hover .history-button-arrow {
+  transform: translateX(4px);
+
+  background: rgba(11, 31, 58, 0.18);
+}
+
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 650px) {
+
+  .officer-history-links {
+    padding: 80px 20px;
+  }
+
+  .history-links-content h2 {
+    font-size: 2rem;
+  }
+
+  .history-links-content p {
+    font-size: 15px;
+  }
+
+  .history-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .history-button {
+    width: 100%;
+    min-width: 0;
+  }
+
+}
