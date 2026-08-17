@@ -91,14 +91,23 @@ img {
     0 4px 20px rgba(8, 54, 31, 0.12);
 }
 
+/* ============================================================
+   NAVBAR ANIMATION ONLY
+   ============================================================ */
+
+.navbar {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 1000;
+  overflow: hidden;
+}
+
 .navbar::before {
   content: "";
-
   position: absolute;
   top: 0;
-  left: -35%;
-
-  width: 25%;
+  left: -30%;
+  width: 22%;
   height: 100%;
 
   background: linear-gradient(
@@ -109,16 +118,19 @@ img {
   );
 
   transform: skewX(-20deg);
-
   animation: navbarShine 8s ease-in-out infinite;
 
   pointer-events: none;
 }
 
-@keyframes navbarShine {
+.navbar .nav-content {
+  position: relative;
+  z-index: 2;
+}
 
+@keyframes navbarShine {
   0% {
-    left: -35%;
+    left: -30%;
   }
 
   55% {
@@ -128,7 +140,6 @@ img {
   100% {
     left: 120%;
   }
-
 }
 
 .navbar .nav-content {
@@ -2882,6 +2893,8 @@ nav a.active {
   position: relative;
   overflow: hidden;
 
+  margin-top: 70px;
+
   padding: 110px 0;
 
   background:
@@ -2893,8 +2906,9 @@ nav a.active {
     ),
     url("../images/leadership-history.jpg")
     center / cover no-repeat;
-}
 
+  color: #ffffff;
+}
 
 /* subtle visual effect */
 
@@ -3098,4 +3112,533 @@ nav a.active {
     min-width: 0;
   }
 
+}
+/* ============================================================
+   PREVIOUS EXECUTIVE OFFICERS PAGE
+   ============================================================ */
+
+.previous-executive-page {
+    background: #f8f6f1;
+    min-height: 100vh;
+    padding-bottom: 100px;
+}
+
+
+/* ============================================================
+   PAGE HERO
+   ============================================================ */
+
+.previous-executive-hero {
+    position: relative;
+    min-height: 420px;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(7, 29, 53, 0.92) 0%,
+            rgba(7, 29, 53, 0.78) 45%,
+            rgba(11, 61, 42, 0.58) 75%,
+            rgba(11, 61, 42, 0.40) 100%
+        ),
+        url("../images/hero-officers.jpg")
+        center / cover no-repeat;
+}
+
+/* ============================================================
+   HERO CONTENT
+   ============================================================ */
+
+.previous-executive-hero-content {
+    position: relative;
+    z-index: 2;
+
+    width: min(1180px, 92%);
+    margin: 0 auto;
+
+    padding-top: 80px;
+
+    color: #ffffff;
+}
+
+
+.previous-executive-eyebrow {
+    display: inline-block;
+
+    margin-bottom: 12px;
+
+    color: #e3c87a;
+
+    font-size: 13px;
+    font-weight: 800;
+
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+}
+
+
+.previous-executive-hero h1 {
+    margin: 0 0 18px;
+
+    color: #ffffff;
+
+    font-size: clamp(
+        2.5rem,
+        6vw,
+        4.5rem
+    );
+
+    line-height: 1.05;
+
+    letter-spacing: -0.03em;
+}
+
+
+.previous-executive-hero p {
+    max-width: 680px;
+
+    margin: 0;
+
+    color: rgba(255,255,255,0.82);
+
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+
+/* ============================================================
+   TERMS SECTION
+   ============================================================ */
+
+.previous-executive-section {
+    padding: 90px 0 110px;
+
+    background:
+        radial-gradient(
+            circle at 10% 20%,
+            rgba(11,31,58,0.045),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            rgba(200,164,77,0.06),
+            transparent 30%
+        ),
+        #f8f6f1;
+}
+
+
+.previous-executive-container {
+    width: min(1100px, 92%);
+    margin: 0 auto;
+}
+
+
+/* ============================================================
+   SECTION HEADER
+   ============================================================ */
+
+.previous-executive-header {
+    margin-bottom: 38px;
+}
+
+
+.previous-executive-header .year {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #a97916;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+
+.previous-executive-header h2 {
+    margin: 0 0 10px;
+
+    color: #0b1f3a;
+
+    font-size: 32px;
+    line-height: 1.2;
+}
+
+
+.previous-executive-header p {
+    margin: 0;
+
+    color: #64748b;
+
+    line-height: 1.7;
+}
+
+
+/* ============================================================
+   TERMS GRID
+   ============================================================ */
+
+.previous-terms-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 28px;
+
+    align-items: start;
+}
+
+
+/* ============================================================
+   TERM CARD
+   ============================================================ */
+
+.previous-term-card {
+    overflow: hidden;
+
+    background: #ffffff;
+
+    border: 1px solid rgba(200,164,77,0.55);
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 15px 35px rgba(11,31,58,0.08);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+
+.previous-term-card:hover {
+    transform: translateY(-5px);
+
+    border-color: #c8a44d;
+
+    box-shadow:
+        0 22px 45px rgba(11,31,58,0.12);
+}
+
+
+/* ============================================================
+   TERM HEADER
+   ============================================================ */
+
+.previous-term-toggle {
+    width: 100%;
+
+    min-height: 140px;
+
+    border: none;
+
+    padding: 26px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0b1f3a 0%,
+            #123b5d 48%,
+            #0e7a3a 100%
+        );
+
+    color: #ffffff;
+
+    font: inherit;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease;
+}
+
+
+.previous-term-toggle:hover {
+    background:
+        linear-gradient(
+            135deg,
+            #0b1f3a 0%,
+            #123b5d 40%,
+            #169d48 100%
+        );
+}
+
+
+.previous-term-label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #e3c87a;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+}
+
+
+.previous-term-toggle h3 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 27px;
+
+    line-height: 1.2;
+}
+
+
+/* ============================================================
+   PLUS ICON
+   ============================================================ */
+
+.previous-collapse-icon {
+    width: 40px;
+    height: 40px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(255,255,255,0.25);
+
+    background: rgba(255,255,255,0.10);
+
+    color: #ffffff;
+
+    font-size: 22px;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease;
+}
+
+
+.previous-term-card.open
+.previous-collapse-icon {
+
+    background: #c8a44d;
+
+    border-color: #c8a44d;
+
+    color: #0b1f3a;
+
+    transform: rotate(45deg);
+}
+
+
+/* ============================================================
+   TERM CONTENT
+   ============================================================ */
+
+.previous-term-content {
+    display: none;
+
+    background: #ffffff;
+
+    padding: 10px 26px 20px;
+}
+
+
+.previous-term-card.open
+.previous-term-content {
+
+    display: block;
+
+    animation:
+        previousTermOpen
+        0.25s ease;
+}
+
+
+@keyframes previousTermOpen {
+
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* ============================================================
+   OFFICER ROW
+   ============================================================ */
+
+.previous-officer-row {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    min-height: 60px;
+
+    padding: 14px 2px;
+
+    border-bottom:
+        1px solid #e7dcc0;
+}
+
+
+.previous-officer-row:last-child {
+    border-bottom: none;
+}
+
+
+.previous-officer-position {
+    color: #31577e;
+
+    font-size: 14px;
+
+    font-weight: 700;
+}
+
+
+.previous-officer-name {
+    color: #0b1f3a;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    text-align: right;
+}
+
+
+.previous-executive-back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+
+  width: 100%;
+  padding: 35px 20px;
+
+  background: #f8f6f1;
+}
+
+.previous-back-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  padding: 13px 22px;
+
+  background: #c8a44d;
+  color: #0b1f3a;
+
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 700;
+
+  transition: 0.2s ease;
+}
+
+.previous-back-button:hover {
+  transform: translateY(-2px);
+}
+.previous-executive-back {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 0px;
+    padding: 35px 20px;
+
+    background: #f8f6f1;
+}
+
+.previous-back-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    padding: 13px 20px;
+
+    background: #c8a44d;
+    color: #0b1f3a;
+
+    border-radius: 12px;
+
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+}
+.past-presidents-back-section {
+    width: 100%;
+    padding: 35px 0;
+    background: #ffffff;
+}
+
+.past-presidents-back {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.past-presidents-back-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    padding: 13px 20px;
+
+    background: #c8a44d;
+    color: #0b1f3a;
+
+    border-radius: 12px;
+
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+.past-presidents-back-button:hover {
+    transform: translateY(-2px);
+    background: #d4b35d;
+
+    box-shadow:
+        0 10px 25px rgba(200,164,77,0.25);
 }
