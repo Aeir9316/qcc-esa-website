@@ -3646,3 +3646,58 @@ nav a.active {
     box-shadow:
         0 10px 25px rgba(200,164,77,0.25);
 }
+/* ============================================================
+   PAGE HEIGHT / FOOTER FIX
+   ============================================================ */
+
+html,
+body {
+    min-height: 100%;
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+.footer {
+    margin-top: auto;
+    width: 100%;
+}
+.section-light {
+    position: relative;
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(7, 29, 53, 0.92) 0%,
+            rgba(11, 61, 42, 0.82) 45%,
+            rgba(93, 145, 35, 0.65) 75%,
+            rgba(200, 190, 45, 0.55) 100%
+        ),
+        url("../images/goal-background.jpg")
+        center / cover no-repeat;
+}
+
+
+/* Keep the content above the background */
+
+.section-light .container {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* Text color */
+
+.section-light .eyebrow,
+.section-light h2,
+.section-light p {
+    color: #ffffff;

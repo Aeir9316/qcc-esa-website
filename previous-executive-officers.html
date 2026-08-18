@@ -6,9 +6,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Past Presidents | QCC-ESA</title>
+  <title>Previous Executive Officers | QCC-ESA</title>
 
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/previous-executive-officers.css">
 
 </head>
 
@@ -37,20 +38,23 @@
 
 
     <nav>
-     <a href="index.html">Home</a>
-     <a href="about.html">About</a>
-     <a href="officers.html">Officers</a>
-     <a href="districts.html">Districts</a>
-     <a href="announcements.html">Announcements</a>
-     <a href="news.html">News</a>
-     <a href="events.html">Events</a>
-     <a href="merch.html">Merch</a>
-     <a href="contact.html">Contact</a>
+
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="officers.html">Officers</a>
+      <a href="districts.html">Districts</a>
+      <a href="announcements.html">Announcements</a>
+      <a href="news.html">News</a>
+      <a href="events.html">Events</a>
+      <a href="merch.html">Merch</a>
+      <a href="contact.html">Contact</a>
+
     </nav>
 
   </div>
 
 </header>
+
 
 
 <!-- ============================================================
@@ -95,7 +99,9 @@
   <div class="container">
 
 
-    <!-- PAGE HEADER -->
+    <!-- ========================================================
+         PAGE HEADER
+         ======================================================== -->
 
     <div class="previous-executive-header">
 
@@ -124,11 +130,10 @@
 
 
       <!-- ======================================================
-           2021–2022
+           TERM 2021–2022
            ====================================================== -->
 
       <div class="previous-term-card">
-
 
         <button
           type="button"
@@ -148,13 +153,11 @@
 
           </div>
 
-
           <span class="previous-collapse-icon">
             +
           </span>
 
         </button>
-
 
 
         <div class="previous-term-content">
@@ -167,7 +170,7 @@
             </span>
 
             <span class="previous-officer-name">
-              ES Paul James Castor-Untulan
+              ES Paul James Castor-Untalan
             </span>
 
           </div>
@@ -271,11 +274,10 @@
 
 
       <!-- ======================================================
-           2022–2026
+           TERM 2022–2026
            ====================================================== -->
 
       <div class="previous-term-card">
-
 
         <button
           type="button"
@@ -295,13 +297,11 @@
 
           </div>
 
-
           <span class="previous-collapse-icon">
             +
           </span>
 
         </button>
-
 
 
         <div class="previous-term-content">
@@ -431,9 +431,7 @@
         class="previous-back-button"
       >
 
-        <span>
-          ←
-        </span>
+        <span>←</span>
 
         Back to Executive Officers
 
@@ -446,6 +444,8 @@
 
 </section>
 
+
+
 <!-- ============================================================
      FOOTER
      ============================================================ -->
@@ -453,6 +453,7 @@
 <footer class="footer">
 
   <div class="container footer-content">
+
 
     <div class="footer-brand">
 
@@ -478,6 +479,7 @@
     </div>
 
 
+
     <div class="footer-bottom">
 
       <p>
@@ -496,9 +498,11 @@
           Facebook
         </a>
 
+
         <a href="contact.html">
           Contact
         </a>
+
 
         <a
           href="https://www.facebook.com/aeirplx"
@@ -522,29 +526,35 @@
 
 <script>
 
-document
-  .querySelectorAll('.previous-term-toggle')
-  .forEach(button => {
+  document
+    .querySelectorAll(".previous-term-toggle")
+    .forEach(button => {
 
-    button.addEventListener('click', () => {
+      button.addEventListener("click", () => {
 
-      const card =
-        button.closest('.previous-term-card');
+        const card =
+          button.closest(".previous-term-card");
 
-      const isOpen =
-        card.classList.toggle('open');
+        const isOpen =
+          card.classList.toggle("open");
 
-      button.setAttribute(
-        'aria-expanded',
-        isOpen
-      );
+        button.setAttribute(
+          "aria-expanded",
+          isOpen
+        );
+
+      });
 
     });
 
-  });
-
 </script>
 
+
+<script src="js/script.js"></script>
+
+</body>
+
+</html>
 
 </body>
 
