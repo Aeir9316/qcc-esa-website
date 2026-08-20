@@ -222,21 +222,6 @@ nav a.active {
 }
 
 
-/* ABOUT */
-
-.hero-about {
-  background:
-    linear-gradient(
-      90deg,
-      rgba(11, 31, 58, 0.88) 0%,
-      rgba(11, 31, 58, 0.72) 40%,
-      rgba(11, 31, 58, 0.52) 70%,
-      rgba(11, 31, 58, 0.38) 100%
-    ),
-    url('../images/hero-about.jpg') center/cover no-repeat;
-}
-
-
 /* OFFICERS */
 
 .hero-officers {
@@ -647,253 +632,6 @@ nav a.active {
 
 .footer-links a:hover {
   color: var(--gold-light);
-}
-
-
-/* ============================================================
-   12. HISTORY
-   ============================================================ */
-
-.history-section {
-  position: relative;
-
-  overflow: hidden;
-
-  background: var(--ivory);
-}
-
-.history-section::before {
-  content: "";
-
-  position: absolute;
-
-  top: 0;
-  right: 0;
-  bottom: 0;
-
-  width: 65%;
-
-  background:
-    linear-gradient(
-      to right,
-      var(--ivory) 0%,
-      rgba(248, 246, 241, 0.75) 35%,
-      rgba(248, 246, 241, 0.25) 100%
-    ),
-    url("../images/history.jpg") center / cover no-repeat;
-
-  opacity: 0.75;
-
-  z-index: 0;
-}
-
-.history-section .container,
-.history-section .section-header {
-  position: relative;
-
-  z-index: 2;
-}
-
-.history-card {
-  position: relative;
-
-  z-index: 2;
-
-  background: #ffffff;
-
-  border: 1px solid var(--border);
-
-  border-radius: 22px;
-
-  padding: 32px;
-
-  box-shadow:
-    0 20px 50px rgba(11, 31, 58, 0.10),
-    0 4px 15px rgba(11, 31, 58, 0.04);
-}
-
-.history-card p {
-  position: relative;
-
-  z-index: 3;
-
-  color: var(--muted);
-
-  text-align: justify;
-
-  line-height: 1.6;
-
-  margin-top: 15px;
-}
-
-
-/* ============================================================
-   13. PREAMBLE
-   ============================================================ */
-
-.pre-humble-section {
-  padding: 90px 20px;
-
-  background: #f5f5f2;
-}
-
-.pre-humble-container {
-  position: relative;
-
-  z-index: 2;
-
-  max-width: 1056px;
-
-  margin: 0 auto;
-
-  padding: 55px 65px;
-
-  background: rgba(255, 255, 255, 0.96);
-
-  border-radius: 24px;
-
-  text-align: center;
-
-  box-shadow:
-    0 20px 50px rgba(15, 43, 70, 0.08),
-    0 4px 12px rgba(15, 43, 70, 0.04);
-}
-
-.pre-humble-container h2 {
-  margin: 0 0 30px;
-
-  color: #12345a;
-
-  font-size: 42px;
-
-  font-weight: 700;
-}
-
-.section-label {
-  display: inline-block;
-
-  padding: 9px 18px;
-
-  border: 1px solid #c6a45b;
-
-  border-radius: 30px;
-
-  color: #b08a3c;
-
-  font-weight: 600;
-
-  font-size: 14px;
-
-  margin-bottom: 15px;
-}
-
-.preamble-text {
-  max-width: 850px;
-
-  margin: 0 auto;
-
-  color: #53657a;
-
-  font-size: 17px;
-
-  line-height: 1.9;
-
-  text-align: justify;
-}
-
-
-/* ============================================================
-   14. TIMELINE
-   ============================================================ */
-
-.timeline-card {
-  background: #fff;
-
-  border: 1px solid #e7dcc0;
-
-  border-radius: 24px;
-
-  overflow: hidden;
-
-  box-shadow:
-    0 12px 30px rgba(11, 31, 58, .06);
-
-  margin-bottom: 32px;
-}
-
-.timeline-image {
-  width: 100%;
-
-  height: 400px;
-
-  overflow: hidden;
-}
-
-.timeline-image img {
-  width: 100%;
-  height: 100%;
-
-  object-fit: cover;
-
-  display: block;
-}
-
-.timeline-content {
-  display: flex;
-
-  gap: 24px;
-
-  padding: 28px;
-}
-
-.timeline-badge {
-  width: 90px;
-  min-width: 90px;
-
-  height: 90px;
-
-  background: #0b1f3a;
-
-  border-radius: 20px;
-
-  display: flex;
-
-  flex-direction: column;
-
-  align-items: center;
-  justify-content: center;
-
-  color: #fff;
-}
-
-.timeline-badge .year {
-  font-size: 14px;
-
-  color: #e3c87a;
-
-  font-weight: 700;
-}
-
-.timeline-badge .label {
-  font-size: 28px;
-
-  font-weight: 800;
-
-  line-height: 1;
-}
-
-.timeline-text h3 {
-  color: #0b1f3a;
-
-  font-size: 2rem;
-
-  margin-bottom: 12px;
-}
-
-.timeline-text p {
-  color: #64748b;
-
-  line-height: 1.8;
 }
 
 
@@ -1972,38 +1710,7 @@ nav a.active {
    ============================================================ */
 
 @media (max-width: 768px) {
-
-  .pre-humble-container {
-    padding: 40px 25px;
-  }
-
-  .pre-humble-container h2 {
-    font-size: 32px;
-  }
-
-  .preamble-text {
-    font-size: 16px;
-  }
-
-  .timeline-content {
-    flex-direction: column;
-  }
-
-  .timeline-badge {
-    width: 72px;
-
-    height: 72px;
-  }
-
-  .timeline-image {
-    height: 220px;
-  }
-
-  .timeline-text h3 {
-    font-size: 1.6rem;
-  }
-
-  .past-terms-grid {
+.past-terms-grid {
     grid-template-columns: 1fr;
   }
 
@@ -2266,7 +1973,6 @@ nav a.active {
 }
 
 
-
 /* ============================================================
    CURRENT PRESIDENT
    ============================================================ */
@@ -2405,7 +2111,6 @@ nav a.active {
 }
 
 
-
 /* ============================================================
    FORMER PRESIDENTS HEADER
    ============================================================ */
@@ -2455,7 +2160,6 @@ nav a.active {
 }
 
 
-
 /* ============================================================
    TIMELINE
    ============================================================ */
@@ -2496,7 +2200,6 @@ nav a.active {
       transparent
     );
 }
-
 
 
 /* ============================================================
@@ -2567,7 +2270,6 @@ nav a.active {
 }
 
 
-
 /* ============================================================
    CONNECTOR
    ============================================================ */
@@ -2597,7 +2299,6 @@ nav a.active {
 
   background: var(--gold);
 }
-
 
 
 /* ============================================================
@@ -2647,7 +2348,6 @@ nav a.active {
 
   text-align: center;
 }
-
 
 
 /* ============================================================
@@ -2704,7 +2404,6 @@ nav a.active {
 
   line-height: 1.75;
 }
-
 
 
 /* ============================================================
@@ -3650,27 +3349,11 @@ nav a.active {
    PAGE HEIGHT / FOOTER FIX
    ============================================================ */
 
-html,
-body {
-    min-height: 100%;
-    margin: 0;
-}
+/* ============================================================
+   GOAL MESSAGE - BACKGROUND
+   ============================================================ */
 
-body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-main {
-    flex: 1;
-}
-
-.footer {
-    margin-top: auto;
-    width: 100%;
-}
-.section-light {
+.goal-message-section {
     position: relative;
     overflow: hidden;
 
@@ -3686,18 +3369,13 @@ main {
         center / cover no-repeat;
 }
 
-
-/* Keep the content above the background */
-
-.section-light .container {
+.goal-message-section .container {
     position: relative;
     z-index: 2;
 }
 
-
-/* Text color */
-
-.section-light .eyebrow,
-.section-light h2,
-.section-light p {
+.goal-message-section .eyebrow,
+.goal-message-section h2,
+.goal-message-section p {
     color: #ffffff;
+}

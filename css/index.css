@@ -1,0 +1,184 @@
+/* ============================================================
+   INDEX / HOMEPAGE
+   ============================================================ */
+
+
+/* ============================================================
+   INDEX HERO BACKGROUND
+   ============================================================ */
+
+.hero-index {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5, 45, 27, 0.88) 0%,
+      rgba(5, 45, 27, 0.72) 40%,
+      rgba(5, 45, 27, 0.52) 70%,
+      rgba(5, 45, 27, 0.38) 100%
+    ),
+    url("../images/hero-index.jpg")
+    center / cover no-repeat;
+}
+
+
+/* ============================================================
+   LATEST NEWS
+   ============================================================ */
+
+.news-card {
+  overflow: hidden;
+}
+
+.news-image {
+  width: 100%;
+  height: 210px;
+
+  overflow: hidden;
+
+  border-radius: 12px;
+}
+
+.news-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  display: block;
+
+  border-radius: 12px;
+
+  transition:
+    transform 0.4s ease;
+}
+
+.news-card:hover .news-image img {
+  transform: scale(1.05);
+}
+
+.news-content {
+  padding: 24px 28px 28px;
+}
+
+.news-content .card-date {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.news-content h3 {
+  margin-bottom: 12px;
+}
+
+.news-content p {
+  margin: 0;
+}
+
+
+/* ============================================================
+   EVENTS
+   ============================================================ */
+
+.events-list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 18px;
+}
+
+.event-item {
+  display: flex;
+
+  align-items: center;
+
+  gap: 22px;
+
+  background: var(--white);
+
+  border: 1px solid var(--border);
+
+  border-radius: 22px;
+
+  padding: 22px 24px;
+
+  box-shadow: var(--shadow);
+}
+
+.event-date {
+  width: 84px;
+  min-width: 84px;
+
+  border-radius: 18px;
+
+  background: var(--navy);
+
+  color: var(--white);
+
+  text-align: center;
+
+  padding: 12px 8px;
+}
+
+.event-date .month {
+  display: block;
+
+  font-size: 0.8rem;
+
+  color: var(--gold-light);
+
+  letter-spacing: 0.08em;
+}
+
+.event-date .day {
+  display: block;
+
+  font-size: 1.8rem;
+
+  font-weight: 800;
+}
+
+.event-info h3 {
+  color: var(--navy);
+
+  margin-bottom: 4px;
+}
+
+.event-info p {
+  color: var(--muted);
+}
+
+
+/* ============================================================
+   DISTRICT HIGHLIGHTS
+   ============================================================ */
+
+.district-card {
+  border-top: 4px solid var(--gold);
+}
+
+.district-card h3 {
+  color: #243b63;
+}
+
+.district-card p {
+  color: #6b7280;
+}
+
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 640px) {
+
+  .event-item {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .event-date {
+    width: 72px;
+    min-width: 72px;
+  }
+
+}
