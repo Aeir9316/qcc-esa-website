@@ -1,0 +1,709 @@
+/* ============================================================
+   QCC-ESA ABOUT PAGE
+   ============================================================ */
+
+
+/* ============================================================
+   BASIC RESET
+   ============================================================ */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+
+    font-family: "Inter", sans-serif;
+
+    background: #f7f4ed;
+
+    color: #0b1f3a;
+}
+
+
+/* ============================================================
+   ABOUT HERO
+   500PX
+   ============================================================ */
+
+.about-hero {
+    position: relative;
+
+    width: 100%;
+    height: 500px;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    isolation: isolate;
+
+    background:
+        url("../images/hero/hero-about.jpg")
+        center center / cover no-repeat;
+}
+
+
+/* ============================================================
+   HERO OVERLAY
+   ============================================================ */
+
+.about-hero-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(5, 45, 27, 0.93) 0%,
+            rgba(8, 73, 45, 0.82) 30%,
+            rgba(11, 31, 58, 0.65) 62%,
+            rgba(11, 31, 58, 0.28) 100%
+        );
+
+    z-index: 1;
+}
+
+
+/* ============================================================
+   HERO GREEN GLOW
+   ============================================================ */
+
+.about-hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 420px;
+    height: 420px;
+
+    top: -160px;
+    left: -110px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(22, 157, 72, 0.18);
+
+    filter: blur(90px);
+
+    pointer-events: none;
+
+    z-index: 2;
+
+    animation:
+        aboutGreenGlow
+        12s
+        ease-in-out
+        infinite
+        alternate;
+}
+
+
+/* ============================================================
+   HERO NAVY GLOW
+   ============================================================ */
+
+.about-hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 400px;
+    height: 400px;
+
+    right: -150px;
+    bottom: -160px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(11, 31, 58, 0.24);
+
+    filter: blur(90px);
+
+    pointer-events: none;
+
+    z-index: 2;
+
+    animation:
+        aboutNavyGlow
+        14s
+        ease-in-out
+        infinite
+        alternate;
+}
+
+
+/* ============================================================
+   HERO ANIMATIONS
+   ============================================================ */
+
+@keyframes aboutGreenGlow {
+
+    0% {
+        transform:
+            translate(0, 0)
+            scale(1);
+
+        opacity: 0.55;
+    }
+
+    100% {
+        transform:
+            translate(55px, 30px)
+            scale(1.12);
+
+        opacity: 0.78;
+    }
+}
+
+
+@keyframes aboutNavyGlow {
+
+    0% {
+        transform:
+            translate(0, 0)
+            scale(1);
+
+        opacity: 0.45;
+    }
+
+    100% {
+        transform:
+            translate(-50px, -25px)
+            scale(1.12);
+
+        opacity: 0.68;
+    }
+}
+
+
+/* ============================================================
+   HERO CONTENT
+   ============================================================ */
+
+.about-hero-content {
+    position: relative;
+
+    z-index: 3;
+
+    width:
+        min(1180px, 92%);
+
+    margin:
+        0 auto;
+
+    padding-top: 45px;
+
+    color: #ffffff;
+}
+
+
+/* ============================================================
+   HERO EYEBROW
+   ============================================================ */
+
+.about-hero-eyebrow {
+    display: inline-block;
+
+    margin-bottom: 14px;
+
+    color: #e3c87a;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+
+/* ============================================================
+   HERO TITLE
+   ============================================================ */
+
+.about-hero h1 {
+    max-width: 800px;
+
+    margin:
+        0 0 18px;
+
+    color: #ffffff;
+
+    font-size:
+        clamp(3rem, 6vw, 5.2rem);
+
+    line-height: 1.02;
+
+    letter-spacing: -0.04em;
+
+    font-weight: 800;
+}
+
+
+/* ============================================================
+   HERO DESCRIPTION
+   ============================================================ */
+
+.about-hero p {
+    max-width: 650px;
+
+    margin: 0;
+
+    color:
+        rgba(255, 255, 255, 0.84);
+
+    font-size: 1.05rem;
+
+    line-height: 1.8;
+}
+
+
+/* ============================================================
+   PREAMBLE SECTION
+   ============================================================ */
+
+.about-preamble-section {
+    position: relative;
+
+    width: 100%;
+
+    padding:
+        115px
+        0
+        130px;
+
+    overflow: hidden;
+
+    isolation: isolate;
+
+    background:
+        radial-gradient(
+            circle at 8% 18%,
+            rgba(22, 157, 72, 0.10),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 92% 82%,
+            rgba(11, 31, 58, 0.08),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #f5f1e8 0%,
+            #fffdf8 50%,
+            #f1f7f2 100%
+        );
+}
+
+
+/* ============================================================
+   PREAMBLE GREEN BLOB
+   ============================================================ */
+
+.about-preamble-section::before {
+    content: "";
+
+    position: absolute;
+
+    width: 360px;
+    height: 360px;
+
+    left: -120px;
+    top: -130px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(22, 157, 72, 0.13);
+
+    filter: blur(90px);
+
+    pointer-events: none;
+
+    z-index: 0;
+
+    animation:
+        preambleGreenBlob
+        13s
+        ease-in-out
+        infinite
+        alternate;
+}
+
+
+/* ============================================================
+   PREAMBLE NAVY BLOB
+   ============================================================ */
+
+.about-preamble-section::after {
+    content: "";
+
+    position: absolute;
+
+    width: 380px;
+    height: 380px;
+
+    right: -130px;
+    bottom: -150px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(11, 31, 58, 0.11);
+
+    filter: blur(95px);
+
+    pointer-events: none;
+
+    z-index: 0;
+
+    animation:
+        preambleNavyBlob
+        15s
+        ease-in-out
+        infinite
+        alternate;
+}
+
+
+/* ============================================================
+   PREAMBLE BLOB ANIMATIONS
+   ============================================================ */
+
+@keyframes preambleGreenBlob {
+
+    0% {
+        transform:
+            translate(0, 0)
+            scale(1);
+
+        opacity: 0.40;
+    }
+
+    100% {
+        transform:
+            translate(55px, 35px)
+            scale(1.14);
+
+        opacity: 0.65;
+    }
+}
+
+
+@keyframes preambleNavyBlob {
+
+    0% {
+        transform:
+            translate(0, 0)
+            scale(1);
+
+        opacity: 0.35;
+    }
+
+    100% {
+        transform:
+            translate(-55px, -25px)
+            scale(1.14);
+
+        opacity: 0.58;
+    }
+}
+
+
+/* ============================================================
+   PREAMBLE CONTAINER
+   ============================================================ */
+
+.about-preamble-container {
+    position: relative;
+
+    z-index: 2;
+
+    width:
+        min(980px, 90%);
+
+    margin:
+        0 auto;
+}
+
+
+/* ============================================================
+   PREAMBLE CARD
+   ============================================================ */
+
+.about-preamble-card {
+    position: relative;
+
+    max-width: 850px;
+
+    margin:
+        0 auto;
+
+    padding:
+        58px
+        65px
+        62px;
+
+    text-align: center;
+
+    border:
+        1px solid
+        rgba(11, 31, 58, 0.08);
+
+    border-radius: 26px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.97),
+            rgba(248, 246, 241, 0.94)
+        );
+
+    box-shadow:
+        0 24px 60px
+        rgba(11, 31, 58, 0.09);
+
+    backdrop-filter: blur(10px);
+
+    -webkit-backdrop-filter: blur(10px);
+}
+
+
+/* ============================================================
+   PREAMBLE TOP ACCENT
+   ============================================================ */
+
+.about-preamble-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 50%;
+
+    width: 90px;
+    height: 4px;
+
+    transform:
+        translateX(-50%);
+
+    border-radius:
+        0 0 999px 999px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #169d48,
+            #0b1f3a
+        );
+}
+
+
+/* ============================================================
+   PREAMBLE EYEBROW
+   ============================================================ */
+
+.about-preamble-eyebrow {
+    display: inline-block;
+
+    margin-bottom: 10px;
+
+    color: #a97916;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.8px;
+
+    text-transform: uppercase;
+}
+
+
+/* ============================================================
+   PREAMBLE TITLE
+   ============================================================ */
+
+.about-preamble-card h2 {
+    margin:
+        0 0 18px;
+
+    color: #0b1f3a;
+
+    font-size:
+        clamp(2.1rem, 4vw, 3rem);
+
+    line-height: 1.15;
+
+    font-weight: 800;
+}
+
+
+/* ============================================================
+   PREAMBLE LINE
+   ============================================================ */
+
+.about-preamble-line {
+    width: 55px;
+    height: 2px;
+
+    margin:
+        0 auto 28px;
+
+    border-radius: 999px;
+
+    background:
+        #169d48;
+}
+
+
+/* ============================================================
+   PREAMBLE TEXT
+   ============================================================ */
+
+.about-preamble-card p {
+    max-width: 700px;
+
+    margin:
+        0 auto;
+
+    color: #64748b;
+
+    font-size: 1rem;
+
+    line-height: 1.9;
+}
+
+
+/* ============================================================
+   TABLET
+   ============================================================ */
+
+@media (max-width: 768px) {
+
+    .about-hero {
+        height: 500px;
+    }
+
+    .about-hero-content {
+        padding-top: 65px;
+    }
+
+    .about-hero h1 {
+        font-size:
+            clamp(
+                2.8rem,
+                9vw,
+                4.5rem
+            );
+    }
+
+    .about-hero p {
+        font-size: 1rem;
+    }
+
+    .about-preamble-section {
+        padding:
+            85px
+            0
+            100px;
+    }
+
+    .about-preamble-card {
+        padding:
+            48px
+            38px
+            52px;
+    }
+
+}
+
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (max-width: 600px) {
+
+    .about-hero {
+        height: 500px;
+
+        background-position:
+            60% center;
+    }
+
+    .about-hero-content {
+        padding-top: 70px;
+    }
+
+    .about-hero-eyebrow {
+        font-size: 10px;
+    }
+
+    .about-hero h1 {
+        font-size: 2.8rem;
+        line-height: 1.05;
+    }
+
+    .about-hero p {
+        font-size: 0.96rem;
+        line-height: 1.75;
+    }
+
+    .about-preamble-section {
+        padding:
+            70px
+            0
+            80px;
+    }
+
+    .about-preamble-container {
+        width: 92%;
+    }
+
+    .about-preamble-card {
+        padding:
+            45px
+            24px
+            48px;
+
+        border-radius: 20px;
+    }
+
+    .about-preamble-card h2 {
+        font-size: 2.1rem;
+    }
+
+    .about-preamble-card p {
+        font-size: 0.94rem;
+        line-height: 1.8;
+    }
+
+}
+
+
+/* ============================================================
+   REDUCED MOTION
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .about-hero::before,
+    .about-hero::after,
+    .about-preamble-section::before,
+    .about-preamble-section::after {
+        animation: none;
+    }
+
+}

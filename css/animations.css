@@ -1,0 +1,122 @@
+/* ============================================================
+   GLOBAL SCROLL REVEAL
+   ============================================================ */
+
+.scroll-reveal {
+    opacity: 0;
+
+    transform:
+        translateY(45px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+
+    transition-delay:
+        var(--reveal-delay, 0ms);
+
+    will-change:
+        opacity,
+        transform;
+}
+
+
+/* ============================================================
+   VISIBLE STATE
+   ============================================================ */
+
+.scroll-reveal.is-visible {
+    opacity: 1;
+
+    transform:
+        translateY(0);
+}
+
+
+/* ============================================================
+   DIFFERENT EFFECT FOR HERO SECTIONS
+   ============================================================ */
+
+main section:first-child {
+    --hero-reveal-distance: 0px;
+}
+
+
+/* ============================================================
+   CARDS
+   ============================================================ */
+
+.index-news-card.scroll-reveal,
+.index-event-card.scroll-reveal {
+    transform:
+        translateY(40px)
+        scale(0.98);
+}
+
+
+.index-news-card.scroll-reveal.is-visible,
+.index-event-card.scroll-reveal.is-visible {
+    transform:
+        translateY(0)
+        scale(1);
+}
+
+
+/* ============================================================
+   PREAMBLE / LARGE FEATURE CARDS
+   ============================================================ */
+
+.about-preamble-card.scroll-reveal {
+    transform:
+        translateY(50px)
+        scale(0.97);
+}
+
+
+.about-preamble-card.scroll-reveal.is-visible {
+    transform:
+        translateY(0)
+        scale(1);
+}
+
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
+.site-footer.scroll-reveal {
+    transform:
+        translateY(30px);
+}
+
+
+/* ============================================================
+   ACCESSIBILITY
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .scroll-reveal,
+    .scroll-reveal.is-visible,
+    .index-news-card.scroll-reveal,
+    .index-news-card.scroll-reveal.is-visible,
+    .index-event-card.scroll-reveal,
+    .index-event-card.scroll-reveal.is-visible,
+    .about-preamble-card.scroll-reveal,
+    .about-preamble-card.scroll-reveal.is-visible {
+        opacity: 1;
+
+        transform: none;
+
+        transition: none;
+    }
+
+}
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
+.site-footer.scroll-reveal {
+    transform:
+        translateY(30px);
+}
