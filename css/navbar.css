@@ -1066,24 +1066,3 @@ main {
   }
 
 }
-.site-logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: #ffffff !important;
-  text-decoration: none !important;
-}
-
-.site-logo img {
-  width: 32px;
-  height: 32px;
-  object-fit: contain;
-  flex-shrink: 0;
-}
-
-.site-logo span {
-  color: #ffffff !important;
-  font-size: 14px;
-  font-weight: 700;
-  white-space: nowrap;
-}

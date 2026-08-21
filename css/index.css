@@ -1,9 +1,34 @@
 /* ============================================================
+   QCC-ESA INDEX PAGE
+   Ivory + Green/Navy Gradient Glow
+   ============================================================ */
+
+
+/* ============================================================
+   BASIC RESET
+   ============================================================ */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+}
+
+
+/* ============================================================
    INDEX HERO
    ============================================================ */
 
 .index-hero {
     position: relative;
+
     width: 100%;
     min-height: 1000px;
 
@@ -21,7 +46,6 @@
 
 /* ============================================================
    HERO OVERLAY
-   Ivory + Green + Navy Gradient
    ============================================================ */
 
 .index-hero-overlay {
@@ -43,13 +67,14 @@
 
 
 /* ============================================================
-   HERO SUBTLE GLOW
+   HERO GREEN GLOW
    ============================================================ */
 
 .index-hero::before {
     content: "";
 
     position: absolute;
+
     width: 520px;
     height: 520px;
 
@@ -58,21 +83,29 @@
 
     border-radius: 50%;
 
-    background: rgba(22, 157, 72, 0.18);
+    background:
+        rgba(22, 157, 72, 0.18);
 
     filter: blur(90px);
 
     pointer-events: none;
-    z-index: 1;
 
-    animation: heroGreenGlow 12s ease-in-out infinite alternate;
+    z-index: 2;
+
+    animation:
+        heroGreenGlow 12s ease-in-out infinite alternate;
 }
 
+
+/* ============================================================
+   HERO NAVY GLOW
+   ============================================================ */
 
 .index-hero::after {
     content: "";
 
     position: absolute;
+
     width: 480px;
     height: 480px;
 
@@ -81,14 +114,17 @@
 
     border-radius: 50%;
 
-    background: rgba(11, 31, 58, 0.30);
+    background:
+        rgba(11, 31, 58, 0.30);
 
     filter: blur(100px);
 
     pointer-events: none;
-    z-index: 1;
 
-    animation: heroNavyGlow 14s ease-in-out infinite alternate;
+    z-index: 2;
+
+    animation:
+        heroNavyGlow 14s ease-in-out infinite alternate;
 }
 
 
@@ -97,37 +133,57 @@
    ============================================================ */
 
 @keyframes heroGreenGlow {
+
     0% {
-        transform: translate(0, 0) scale(1);
-        opacity: 0.65;
+        transform:
+            translate(0, 0)
+            scale(1);
+
+        opacity: 0.60;
     }
 
     50% {
-        transform: translate(40px, 30px) scale(1.08);
-        opacity: 0.85;
+        transform:
+            translate(40px, 30px)
+            scale(1.08);
+
+        opacity: 0.82;
     }
 
     100% {
-        transform: translate(80px, 15px) scale(1.16);
-        opacity: 0.60;
+        transform:
+            translate(80px, 15px)
+            scale(1.16);
+
+        opacity: 0.58;
     }
 }
 
 
 @keyframes heroNavyGlow {
+
     0% {
-        transform: translate(0, 0) scale(1);
-        opacity: 0.55;
+        transform:
+            translate(0, 0)
+            scale(1);
+
+        opacity: 0.50;
     }
 
     50% {
-        transform: translate(-35px, -25px) scale(1.08);
-        opacity: 0.75;
+        transform:
+            translate(-35px, -25px)
+            scale(1.08);
+
+        opacity: 0.72;
     }
 
     100% {
-        transform: translate(-65px, 20px) scale(1.14);
-        opacity: 0.50;
+        transform:
+            translate(-65px, 20px)
+            scale(1.14);
+
+        opacity: 0.48;
     }
 }
 
@@ -138,9 +194,11 @@
 
 .index-hero-content {
     position: relative;
+
     z-index: 3;
 
     width: min(1180px, 92%);
+
     margin: 0 auto;
 
     padding-top: 76px;
@@ -161,9 +219,11 @@
     color: #e3c87a;
 
     font-size: 13px;
+
     font-weight: 800;
 
     letter-spacing: 2px;
+
     text-transform: uppercase;
 }
 
@@ -179,7 +239,9 @@
 
     color: #ffffff;
 
-    font-size: clamp(3.2rem, 7vw, 5.8rem);
+    font-size:
+        clamp(3.2rem, 7vw, 5.8rem);
+
     line-height: 1.02;
 
     letter-spacing: -0.04em;
@@ -197,9 +259,11 @@
 
     margin: 0 0 34px;
 
-    color: rgba(255, 255, 255, 0.84);
+    color:
+        rgba(255, 255, 255, 0.84);
 
     font-size: 1.1rem;
+
     line-height: 1.85;
 }
 
@@ -210,6 +274,7 @@
 
 .index-hero-buttons {
     display: flex;
+
     align-items: center;
 
     gap: 14px;
@@ -219,13 +284,14 @@
 
 
 /* ============================================================
-   PRIMARY BUTTON
+   HERO BUTTON BASE
    ============================================================ */
 
 .index-hero-button {
     display: inline-flex;
 
     align-items: center;
+
     justify-content: center;
 
     min-width: 155px;
@@ -237,6 +303,7 @@
     text-decoration: none;
 
     font-size: 14px;
+
     font-weight: 700;
 
     transition:
@@ -246,13 +313,18 @@
 }
 
 
+/* ============================================================
+   PRIMARY BUTTON
+   ============================================================ */
+
 .index-hero-button.primary {
     background: #c8a44d;
 
     color: #0b1f3a;
 
     box-shadow:
-        0 12px 30px rgba(200, 164, 77, 0.25);
+        0 12px 30px
+        rgba(200, 164, 77, 0.25);
 }
 
 
@@ -262,7 +334,8 @@
     background: #d4b35d;
 
     box-shadow:
-        0 18px 35px rgba(200, 164, 77, 0.32);
+        0 18px 35px
+        rgba(200, 164, 77, 0.32);
 }
 
 
@@ -273,11 +346,15 @@
 .index-hero-button.secondary {
     color: #ffffff;
 
-    border: 1px solid rgba(255, 255, 255, 0.28);
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.28);
 
-    background: rgba(255, 255, 255, 0.08);
+    background:
+        rgba(255, 255, 255, 0.08);
 
     backdrop-filter: blur(8px);
+
     -webkit-backdrop-filter: blur(8px);
 }
 
@@ -285,138 +362,217 @@
 .index-hero-button.secondary:hover {
     transform: translateY(-3px);
 
-    background: rgba(255, 255, 255, 0.15);
+    background:
+        rgba(255, 255, 255, 0.15);
 
     box-shadow:
-        0 12px 30px rgba(0, 0, 0, 0.15);
+        0 12px 30px
+        rgba(0, 0, 0, 0.15);
 }
 
 
 /* ============================================================
-   INDEX — LATEST NEWS
+   LATEST NEWS SECTION
    ============================================================ */
 
 .index-news-section {
     position: relative;
 
-    padding: 110px 0 135px;
+    display: block;
+
+    width: 100%;
+
+    min-height: 600px;
+
+    padding:
+        110px
+        0
+        135px;
 
     overflow: hidden;
+
     isolation: isolate;
 
     background:
         radial-gradient(
-            circle at 8% 15%,
-            rgba(22, 157, 72, 0.055),
-            transparent 28%
+            circle at 5% 10%,
+            rgba(22, 157, 72, 0.10),
+            transparent 30%
         ),
         radial-gradient(
-            circle at 92% 85%,
-            rgba(11, 31, 58, 0.065),
-            transparent 28%
+            circle at 95% 90%,
+            rgba(11, 31, 58, 0.08),
+            transparent 32%
         ),
         linear-gradient(
             135deg,
-            #f8f6f1 0%,
+            #f5f1e8 0%,
             #fffdf8 48%,
-            #f3f8f4 100%
+            #f1f7f2 100%
         );
 }
 
 
 /* ============================================================
-   NEWS SECTION ANIMATED BLOBS
+   NEWS GREEN BLOB
    ============================================================ */
 
-.index-news-section::before,
-.index-news-section::after {
+.index-news-section::before {
     content: "";
 
     position: absolute;
 
-    width: 360px;
-    height: 360px;
+    width: 390px;
+
+    height: 390px;
+
+    top: -140px;
+
+    left: -120px;
 
     border-radius: 50%;
 
-    filter: blur(85px);
+    background:
+        rgba(22, 157, 72, 0.16);
 
-    opacity: 0.17;
+    filter: blur(90px);
 
     pointer-events: none;
 
     z-index: 0;
 
     animation:
-        newsFloat 12s ease-in-out infinite alternate;
-}
-
-
-.index-news-section::before {
-    top: -140px;
-    left: -120px;
-
-    background: #169d48;
-}
-
-
-.index-news-section::after {
-    right: -140px;
-    bottom: -160px;
-
-    background: #0b1f3a;
-
-    animation-delay: -6s;
+        newsGreenBlob
+        12s
+        ease-in-out
+        infinite
+        alternate;
 }
 
 
 /* ============================================================
-   NEWS FLOAT ANIMATION
+   NEWS NAVY BLOB
    ============================================================ */
 
-@keyframes newsFloat {
+.index-news-section::after {
+    content: "";
+
+    position: absolute;
+
+    width: 420px;
+
+    height: 420px;
+
+    right: -150px;
+
+    bottom: -180px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(11, 31, 58, 0.14);
+
+    filter: blur(95px);
+
+    pointer-events: none;
+
+    z-index: 0;
+
+    animation:
+        newsNavyBlob
+        14s
+        ease-in-out
+        infinite
+        alternate;
+}
+
+
+/* ============================================================
+   NEWS BLOB ANIMATIONS
+   ============================================================ */
+
+@keyframes newsGreenBlob {
+
     0% {
         transform:
             translate(0, 0)
             scale(1);
+
+        opacity: 0.45;
     }
 
     50% {
         transform:
-            translate(25px, 20px)
+            translate(35px, 25px)
             scale(1.08);
+
+        opacity: 0.65;
     }
 
     100% {
         transform:
-            translate(55px, 35px)
+            translate(70px, 40px)
+            scale(1.16);
+
+        opacity: 0.50;
+    }
+}
+
+
+@keyframes newsNavyBlob {
+
+    0% {
+        transform:
+            translate(0, 0)
+            scale(1);
+
+        opacity: 0.40;
+    }
+
+    50% {
+        transform:
+            translate(-30px, -25px)
+            scale(1.08);
+
+        opacity: 0.60;
+    }
+
+    100% {
+        transform:
+            translate(-60px, 25px)
             scale(1.15);
+
+        opacity: 0.42;
     }
 }
 
 
 /* ============================================================
-   CONTAINER
+   NEWS CONTAINER
    ============================================================ */
 
 .index-news-container {
     position: relative;
+
     z-index: 2;
 
-    width: min(1180px, 92%);
+    width:
+        min(1180px, 92%);
 
-    margin: 0 auto;
+    margin:
+        0 auto;
 }
 
 
 /* ============================================================
-   HEADER
+   NEWS HEADER
    ============================================================ */
 
 .index-news-header {
     display: flex;
 
     align-items: flex-end;
+
     justify-content: space-between;
 
     gap: 30px;
@@ -424,6 +580,10 @@
     margin-bottom: 38px;
 }
 
+
+/* ============================================================
+   NEWS EYEBROW
+   ============================================================ */
 
 .index-news-eyebrow {
     display: block;
@@ -433,6 +593,7 @@
     color: #a97916;
 
     font-size: 11px;
+
     font-weight: 800;
 
     letter-spacing: 1.8px;
@@ -441,16 +602,26 @@
 }
 
 
+/* ============================================================
+   NEWS TITLE
+   ============================================================ */
+
 .index-news-header h2 {
-    margin: 0 0 10px;
+    margin:
+        0 0 10px;
 
     color: #0b1f3a;
 
-    font-size: clamp(2rem, 4vw, 3rem);
+    font-size:
+        clamp(2rem, 4vw, 3rem);
 
     line-height: 1.15;
 }
 
+
+/* ============================================================
+   NEWS DESCRIPTION
+   ============================================================ */
 
 .index-news-header p {
     max-width: 650px;
@@ -464,30 +635,37 @@
 
 
 /* ============================================================
-   VIEW ALL
+   VIEW ALL BUTTON
    ============================================================ */
 
 .index-news-view-all {
     display: inline-flex;
 
     align-items: center;
+
     justify-content: center;
 
     gap: 8px;
 
-    padding: 12px 18px;
+    padding:
+        12px
+        18px;
 
-    border: 1px solid rgba(200, 164, 77, 0.55);
+    border:
+        1px solid
+        rgba(200, 164, 77, 0.55);
 
     border-radius: 12px;
 
-    background: rgba(255, 255, 255, 0.75);
+    background:
+        rgba(255, 255, 255, 0.78);
 
     color: #0b1f3a;
 
     text-decoration: none;
 
     font-size: 13px;
+
     font-weight: 700;
 
     white-space: nowrap;
@@ -505,7 +683,8 @@
     background: #ffffff;
 
     box-shadow:
-        0 10px 25px rgba(11, 31, 58, 0.08);
+        0 10px 25px
+        rgba(11, 31, 58, 0.08);
 }
 
 
@@ -531,13 +710,16 @@
     position: relative;
 
     display: flex;
+
     flex-direction: column;
 
     overflow: hidden;
 
     min-width: 0;
 
-    border: 1px solid rgba(11, 31, 58, 0.08);
+    border:
+        1px solid
+        rgba(11, 31, 58, 0.08);
 
     border-radius: 20px;
 
@@ -549,9 +731,11 @@
         );
 
     box-shadow:
-        0 12px 35px rgba(11, 31, 58, 0.06);
+        0 12px 35px
+        rgba(11, 31, 58, 0.06);
 
     backdrop-filter: blur(8px);
+
     -webkit-backdrop-filter: blur(8px);
 
     transition:
@@ -561,6 +745,10 @@
 }
 
 
+/* ============================================================
+   NEWS CARD HOVER
+   ============================================================ */
+
 .index-news-card:hover {
     transform: translateY(-7px);
 
@@ -568,18 +756,20 @@
         rgba(200, 164, 77, 0.75);
 
     box-shadow:
-        0 24px 50px rgba(11, 31, 58, 0.12);
+        0 24px 50px
+        rgba(11, 31, 58, 0.12);
 }
 
 
 /* ============================================================
-   IMAGE
+   NEWS IMAGE
    ============================================================ */
 
 .index-news-image {
     position: relative;
 
     width: 100%;
+
     height: 240px;
 
     overflow: hidden;
@@ -588,10 +778,15 @@
 }
 
 
+/* ============================================================
+   IMAGE OVERLAY
+   ============================================================ */
+
 .index-news-image::after {
     content: "";
 
     position: absolute;
+
     inset: 0;
 
     background:
@@ -607,8 +802,13 @@
 }
 
 
+/* ============================================================
+   NEWS IMAGE
+   ============================================================ */
+
 .index-news-image img {
     width: 100%;
+
     height: 100%;
 
     object-fit: cover;
@@ -627,13 +827,14 @@
 
 
 /* ============================================================
-   DATE
+   NEWS DATE
    ============================================================ */
 
 .index-news-date {
     position: absolute;
 
     left: 18px;
+
     bottom: 16px;
 
     z-index: 2;
@@ -642,9 +843,13 @@
 
     align-items: center;
 
-    padding: 8px 12px;
+    padding:
+        8px
+        12px;
 
-    border: 1px solid rgba(255, 255, 255, 0.20);
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.20);
 
     border-radius: 999px;
 
@@ -654,25 +859,38 @@
     color: #ffffff;
 
     font-size: 10px;
+
     font-weight: 800;
 
     letter-spacing: 1.2px;
 
     backdrop-filter: blur(8px);
+
     -webkit-backdrop-filter: blur(8px);
 }
 
 
 /* ============================================================
-   CONTENT
+   NEWS CONTENT
    ============================================================ */
 
 .index-news-content {
-    padding: 24px 24px 26px;
+    display: flex;
+
+    flex-direction: column;
 
     flex: 1;
+
+    padding:
+        24px
+        24px
+        26px;
 }
 
+
+/* ============================================================
+   NEWS CATEGORY
+   ============================================================ */
 
 .index-news-category {
     display: inline-block;
@@ -682,6 +900,7 @@
     color: #a97916;
 
     font-size: 10px;
+
     font-weight: 800;
 
     letter-spacing: 1.4px;
@@ -690,8 +909,13 @@
 }
 
 
+/* ============================================================
+   NEWS CARD TITLE
+   ============================================================ */
+
 .index-news-content h3 {
-    margin: 0 0 18px;
+    margin:
+        0 0 18px;
 
     color: #0b1f3a;
 
@@ -702,13 +926,19 @@
 
 
 /* ============================================================
-   INFO BOX
+   NEWS INFO BOX
    ============================================================ */
 
 .index-news-info-box {
-    padding: 14px 15px;
+    margin-top: auto;
 
-    border-left: 3px solid #169d48;
+    padding:
+        14px
+        15px;
+
+    border-left:
+        3px solid
+        #169d48;
 
     border-radius: 10px;
 
@@ -720,6 +950,19 @@
         );
 }
 
+.index-news-info-box p {
+    margin: 0;
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.7;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+
+/* ============================================================
+   INFO LABEL
+   ============================================================ */
 
 .index-news-info-box span {
     display: block;
@@ -729,11 +972,16 @@
     color: #31577e;
 
     font-size: 9px;
+
     font-weight: 800;
 
     letter-spacing: 1.4px;
 }
 
+
+/* ============================================================
+   INFO TEXT
+   ============================================================ */
 
 .index-news-info-box p {
     margin: 0;
@@ -745,9 +993,708 @@
     line-height: 1.65;
 }
 
+/* ============================================================
+   UPCOMING EVENTS
+   Ivory + Green/Navy Glow
+   ============================================================ */
+
+.index-events-section {
+    position: relative;
+
+    display: block;
+
+    width: 100%;
+    min-height: 600px;
+
+    padding: 110px 0 135px;
+
+    overflow: hidden;
+    isolation: isolate;
+
+    background:
+        radial-gradient(
+            circle at 92% 12%,
+            rgba(22, 157, 72, 0.09),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 8% 88%,
+            rgba(11, 31, 58, 0.08),
+            transparent 32%
+        ),
+        linear-gradient(
+            135deg,
+            #fffdf8 0%,
+            #f5f1e8 50%,
+            #f1f7f2 100%
+        );
+}
+
 
 /* ============================================================
-   TABLET — HERO
+   EVENTS GREEN BLOB
+   ============================================================ */
+
+.index-events-section::before {
+    content: "";
+
+    position: absolute;
+
+    width: 390px;
+    height: 390px;
+
+    top: -150px;
+    right: -130px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(22, 157, 72, 0.15);
+
+    filter: blur(90px);
+
+    pointer-events: none;
+
+    z-index: 0;
+
+    animation:
+        eventsGreenBlob
+        13s
+        ease-in-out
+        infinite
+        alternate;
+}
+
+
+/* ============================================================
+   EVENTS NAVY BLOB
+   ============================================================ */
+
+.index-events-section::after {
+    content: "";
+
+    position: absolute;
+
+    width: 420px;
+    height: 420px;
+
+    left: -160px;
+    bottom: -180px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(11, 31, 58, 0.13);
+
+    filter: blur(95px);
+
+    pointer-events: none;
+
+    z-index: 0;
+
+    animation:
+        eventsNavyBlob
+        15s
+        ease-in-out
+        infinite
+        alternate;
+}
+
+
+/* ============================================================
+   EVENTS BLOB ANIMATIONS
+   ============================================================ */
+
+@keyframes eventsGreenBlob {
+
+    0% {
+        transform:
+            translate(0, 0)
+            scale(1);
+
+        opacity: 0.42;
+    }
+
+    50% {
+        transform:
+            translate(-30px, 25px)
+            scale(1.08);
+
+        opacity: 0.62;
+    }
+
+    100% {
+        transform:
+            translate(-65px, 45px)
+            scale(1.16);
+
+        opacity: 0.46;
+    }
+}
+
+
+@keyframes eventsNavyBlob {
+
+    0% {
+        transform:
+            translate(0, 0)
+            scale(1);
+
+        opacity: 0.38;
+    }
+
+    50% {
+        transform:
+            translate(35px, -20px)
+            scale(1.08);
+
+        opacity: 0.58;
+    }
+
+    100% {
+        transform:
+            translate(65px, -45px)
+            scale(1.15);
+
+        opacity: 0.42;
+    }
+}
+
+
+/* ============================================================
+   EVENTS CONTAINER
+   ============================================================ */
+
+.index-events-container {
+    position: relative;
+
+    z-index: 2;
+
+    width:
+        min(1180px, 92%);
+
+    margin:
+        0 auto;
+}
+
+
+/* ============================================================
+   EVENTS HEADER
+   ============================================================ */
+
+.index-events-header {
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    margin-bottom: 38px;
+}
+
+
+/* ============================================================
+   EVENTS EYEBROW
+   ============================================================ */
+
+.index-events-eyebrow {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #a97916;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.8px;
+
+    text-transform: uppercase;
+}
+
+
+/* ============================================================
+   EVENTS TITLE
+   ============================================================ */
+
+.index-events-header h2 {
+    margin:
+        0 0 10px;
+
+    color: #0b1f3a;
+
+    font-size:
+        clamp(2rem, 4vw, 3rem);
+
+    line-height: 1.15;
+}
+
+
+/* ============================================================
+   EVENTS DESCRIPTION
+   ============================================================ */
+
+.index-events-header p {
+    max-width: 650px;
+
+    margin: 0;
+
+    color: #64748b;
+
+    line-height: 1.75;
+}
+
+
+/* ============================================================
+   VIEW ALL EVENTS
+   ============================================================ */
+
+.index-events-view-all {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    padding:
+        12px
+        18px;
+
+    border:
+        1px solid
+        rgba(200, 164, 77, 0.55);
+
+    border-radius: 12px;
+
+    background:
+        rgba(255, 255, 255, 0.78);
+
+    color: #0b1f3a;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.index-events-view-all:hover {
+    transform: translateY(-2px);
+
+    background: #ffffff;
+
+    box-shadow:
+        0 10px 25px
+        rgba(11, 31, 58, 0.08);
+}
+
+
+/* ============================================================
+   EVENTS GRID
+   ============================================================ */
+
+.index-events-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 24px;
+}
+
+
+/* ============================================================
+   EVENT CARD
+   ============================================================ */
+
+.index-event-card {
+    position: relative;
+
+    display: flex;
+
+    align-items: stretch;
+
+    overflow: hidden;
+
+    min-width: 0;
+
+    border:
+        1px solid
+        rgba(11, 31, 58, 0.08);
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.96),
+            rgba(248, 246, 241, 0.94)
+        );
+
+    box-shadow:
+        0 12px 35px
+        rgba(11, 31, 58, 0.06);
+
+    backdrop-filter: blur(8px);
+
+    -webkit-backdrop-filter: blur(8px);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* ============================================================
+   EVENT CARD HOVER
+   ============================================================ */
+
+.index-event-card:hover {
+    transform: translateY(-7px);
+
+    border-color:
+        rgba(200, 164, 77, 0.75);
+
+    box-shadow:
+        0 24px 50px
+        rgba(11, 31, 58, 0.12);
+}
+
+
+/* ============================================================
+   EVENT DATE BOX
+   ============================================================ */
+
+.index-event-date-box {
+    flex: 0 0 105px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding:
+        22px
+        12px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #0b1f3a 0%,
+            #123a59 55%,
+            #169d48 100%
+        );
+
+    color: #ffffff;
+
+    text-align: center;
+}
+
+
+/* ============================================================
+   EVENT MONTH
+   ============================================================ */
+
+.index-event-month {
+    margin-bottom: 3px;
+
+    color:
+        rgba(255, 255, 255, 0.78);
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.8px;
+
+    text-transform: uppercase;
+}
+
+
+/* ============================================================
+   EVENT DAY
+   ============================================================ */
+
+.index-event-day {
+    display: block;
+
+    color: #ffffff;
+
+    font-size: 38px;
+
+    line-height: 1;
+
+    font-weight: 800;
+
+    letter-spacing: -0.04em;
+}
+
+
+/* ============================================================
+   EVENT YEAR
+   ============================================================ */
+
+.index-event-year {
+    margin-top: 5px;
+
+    color:
+        rgba(255, 255, 255, 0.68);
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+}
+
+
+/* ============================================================
+   EVENT CONTENT
+   ============================================================ */
+
+.index-event-content {
+    display: flex;
+
+    flex-direction: column;
+
+    flex: 1;
+
+    min-width: 0;
+
+    padding:
+        24px
+        22px
+        24px;
+}
+
+
+/* ============================================================
+   EVENT CATEGORY
+   ============================================================ */
+
+.index-event-category {
+    display: inline-block;
+
+    margin-bottom: 8px;
+
+    color: #a97916;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.4px;
+
+    text-transform: uppercase;
+}
+
+
+/* ============================================================
+   EVENT TITLE
+   ============================================================ */
+
+.index-event-content h3 {
+    margin:
+        0 0 14px;
+
+    color: #0b1f3a;
+
+    font-size: 20px;
+
+    line-height: 1.3;
+}
+
+
+/* ============================================================
+   EVENT META
+   ============================================================ */
+
+.index-event-meta {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 6px;
+
+    margin-bottom: 14px;
+
+    color: #31577e;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    line-height: 1.5;
+}
+
+
+/* ============================================================
+   EVENT DESCRIPTION
+   ============================================================ */
+
+.index-event-content > p {
+    margin:
+        0 0 18px;
+
+    color: #64748b;
+
+    font-size: 13px;
+
+    line-height: 1.65;
+}
+
+
+/* ============================================================
+   EVENT LINK
+   ============================================================ */
+
+.index-event-link {
+    display: inline-flex;
+
+    align-items: center;
+
+    margin-top: auto;
+
+    color: #0b1f3a;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.index-event-link:hover {
+    color: #169d48;
+
+    transform:
+        translateX(3px);
+}
+
+
+/* ============================================================
+   TABLET
+   ============================================================ */
+
+@media (max-width: 900px) {
+
+    .index-events-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (max-width: 650px) {
+
+    .index-events-section {
+        padding:
+            75px
+            0
+            85px;
+    }
+
+    .index-events-header {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        margin-bottom: 28px;
+    }
+
+    .index-events-view-all {
+        width: 100%;
+
+        justify-content: center;
+    }
+
+    .index-events-grid {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+    .index-event-card {
+        border-radius: 17px;
+    }
+
+    .index-event-date-box {
+        flex-basis: 88px;
+
+        padding:
+            18px
+            10px;
+    }
+
+    .index-event-day {
+        font-size: 32px;
+    }
+
+}
+
+
+/* ============================================================
+   REDUCED MOTION
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .index-events-section::before,
+    .index-events-section::after {
+        animation: none;
+    }
+
+    .index-event-card,
+    .index-events-view-all,
+    .index-event-link {
+        transition: none;
+    }
+
+}
+
+
+/* ============================================================
+   TABLET
+   ============================================================ */
+
+@media (max-width: 900px) {
+
+    .index-news-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+/* ============================================================
+   TABLET HERO
    ============================================================ */
 
 @media (max-width: 768px) {
@@ -762,30 +1709,22 @@
 
     .index-hero h1 {
         font-size:
-            clamp(2.8rem, 9vw, 4.5rem);
+            clamp(
+                2.8rem,
+                9vw,
+                4.5rem
+            );
     }
 
     .index-hero p {
         font-size: 1rem;
     }
+
 }
 
 
 /* ============================================================
-   TABLET — NEWS
-   ============================================================ */
-
-@media (max-width: 900px) {
-
-    .index-news-grid {
-        grid-template-columns:
-            repeat(2, minmax(0, 1fr));
-    }
-}
-
-
-/* ============================================================
-   MOBILE — HERO
+   MOBILE HERO
    ============================================================ */
 
 @media (max-width: 600px) {
@@ -826,17 +1765,21 @@
     .index-hero-button {
         width: 100%;
     }
+
 }
 
 
 /* ============================================================
-   MOBILE — NEWS
+   MOBILE NEWS
    ============================================================ */
 
 @media (max-width: 650px) {
 
     .index-news-section {
-        padding: 75px 0 85px;
+        padding:
+            75px
+            0
+            85px;
     }
 
     .index-news-header {
@@ -870,6 +1813,8 @@
 }
 
 
+
+
 /* ============================================================
    REDUCED MOTION
    ============================================================ */
@@ -889,4 +1834,5 @@
     .index-news-view-all {
         transition: none;
     }
+
 }
