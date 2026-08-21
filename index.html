@@ -1,50 +1,163 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>QCC Eagle Scout Association</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
 
-  <link rel="stylesheet" href="css/style.css">
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/index.css">
+
 </head>
+
 <body>
 
-<header class="navbar">
-  <div class="container nav-content">
 
-    <a href="index.html" class="logo">
-      <img src="images/logo.png" alt="QCC-ESA Logo">
-      <span>QCC Eagle Scout Association</span>
+<!-- ============================================================
+     NAVBAR
+     ============================================================ -->
+
+<header class="site-navbar">
+
+  <div class="site-navbar-inner">
+
+
+    <!-- LOGO -->
+
+    <a href="index.html" class="site-logo">
+
+      <img
+        src="images/logo.png"
+        alt="QCC-ESA Logo"
+      >
+
+      <span>
+        QCC Eagle Scout Association
+      </span>
+
     </a>
 
-    <nav>
-     <a href="index.html">Home</a>
-     <a href="about.html">About</a>
-     <a href="officers.html">Officers</a>
-     <a href="districts.html">Districts</a>
-     <a href="announcements.html">Announcements</a>
-     <a href="news.html">News</a>
-     <a href="events.html">Events</a>
-     <a href="merch.html">Merch</a>
-     <a href="contact.html">Contact</a>
+
+
+    <!-- MOBILE MENU BUTTON -->
+
+    <button
+      class="menu-toggle"
+      type="button"
+      aria-label="Open navigation menu"
+      aria-expanded="false"
+      aria-controls="site-navigation"
+    >
+
+      <span></span>
+      <span></span>
+      <span></span>
+
+    </button>
+
+
+
+    <!-- NAVIGATION -->
+
+    <nav
+      class="site-navigation"
+      id="site-navigation"
+      aria-label="Main navigation"
+    >
+
+      <a href="index.html" class="active">
+        Home
+      </a>
+
+      <a href="about.html">
+        About
+      </a>
+
+      <a href="officers.html">
+        Officers
+      </a>
+
+      <a href="districts.html">
+        Districts
+      </a>
+
+      <a href="announcements.html">
+        Announcements
+      </a>
+
+      <a href="news.html">
+        News
+      </a>
+
+      <a href="events.html">
+        Events
+      </a>
+
+      <a href="merch.html">
+        Merch
+      </a>
+
+      <a href="contact.html">
+        Contact
+      </a>
+
     </nav>
 
   </div>
+
 </header>
 
-<section class="hero hero-index">
 
-  <div class="hero-overlay"></div>
 
-  <div class="container hero-content">
+<!-- MOBILE BACKDROP -->
 
-    <div class="hero-badge">
-      Quezon City Council
-    </div>
+<div class="nav-backdrop"></div>
+
+
+
+<!-- ============================================================
+     MAIN
+     ============================================================ -->
+
+<main>
+
+  <!-- ==========================================================   
+       HOMEPAGE CONTENT
+       ========================================================== -->
+
+<!-- ============================================================
+     INDEX HERO
+     ============================================================ -->
+
+<section class="index-hero">
+
+  <div class="index-hero-overlay"></div>
+
+  <div class="index-hero-content">
+
+    <span class="index-hero-eyebrow">
+      QUEZON CITY COUNCIL
+    </span>
 
     <h1>
       Service and Leadership
@@ -56,125 +169,15 @@
       community service, and lifelong fellowship.
     </p>
 
-    <div class="hero-buttons">
-      <a href="about.html" class="btn btn-primary">
+    <div class="index-hero-buttons">
+
+      <a href="about.html" class="index-hero-button primary">
         Learn More
       </a>
 
-      <a href="events.html" class="btn btn-secondary">
+      <a href="events.html" class="index-hero-button secondary">
         Upcoming Events
       </a>
-    </div>
-
-</section>
-
-<section class="section">
-
-  <div class="container">
-
-    <div class="section-header">
-      <h2>Latest News</h2>
-      <a href="news.html" class="view-all">
-        View All
-      </a>
-    </div>
-
-    <div class="grid three">
-
-      <article class="card news-card">
-
-        <div class="news-image">
-          <img 
-            src="images/news-merit-badge.jpg" 
-            alt="Merit Badge Workshop"
-          >
-        </div>
-
-        <div class="news-content">
-
-          <span class="card-date">
-            July 25, 2026
-          </span>
-
-          <h3>
-            Merit Badge Workshop
-          </h3>
-
-          <p>
-            The Merit Badge Workshop held last July 25 at the Quezon City
-            Council Session Hall was a success, bringing Scouts together
-            to learn, grow, and take another step toward achieving the
-            Explorer, Pathfinder, and Outdoorsman ranks.
-          </p>
-
-        </div>
-
-      </article>
-
-
-      <article class="card news-card">
-
-        <div class="news-image">
-          <img 
-            src="images/news-hopia-day.jpg" 
-            alt="National Hopia Day 2026"
-          >
-        </div>
-
-        <div class="news-content">
-
-          <span class="card-date">
-            July 25, 2026
-          </span>
-
-          <h3>
-            National Hopia Day 2026
-          </h3>
-
-          <p>
-            National Hopia Day 2026 brought KAB Scouts and Eagle Scouts
-            together at Quezon City High School for a fun and meaningful
-            celebration filled with games, cultural learning, and the
-            spirit of unity, made possible through the generous support
-            of Eng Bee Tin, Mr. Gerry Chua, and their dedicated staff.
-          </p>
-
-        </div>
-
-      </article>
-
-
-      <article class="card news-card">
-
-        <div class="news-image">
-          <img 
-            src="images/news-cleanup.jpg" 
-            alt="Community Clean-up Drive"
-          >
-        </div>
-
-        <div class="news-content">
-
-          <span class="card-date">
-            July 4, 2026
-          </span>
-
-          <h3>
-            Small Actions, Big Impact
-          </h3>
-
-          <p>
-            Last July 4, 2026, QCC Eagle Scouts came together for a
-            meaningful clean-up drive at the Quezon City Council.
-            Huge shoutout to all our Eagle Scouts who volunteered.
-            Thank you for giving your time and energy to keep our
-            council clean and green. Your dedication and spirit of
-            service truly reflect what Scouting is all about.
-          </p>
-
-        </div>
-
-      </article>
 
     </div>
 
@@ -182,157 +185,90 @@
 
 </section>
 
-<section class="section section-light">
+</main>
 
-  <div class="container">
 
-    <div class="section-header">
-      <h2>2026 Events</h2>
-      <a href="events.html" class="view-all">
-        Event Calendar
-      </a>
-    </div>
 
-    <div class="events-list">
+</body>
 
-      <div class="event-item">
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
 
-        <div class="event-date">
-          <span class="month">AUG</span>
-          <span class="day">22</span>
-        </div>
+<footer class="site-footer">
 
-        <div class="event-info">
-          <h3>QCC-ESA General Assembly</h3>
-          <p>Quezon City Council Session Hall • 9:30 AM - 3:00 PM</p>
-        </div>
+  <div class="site-footer-inner">
 
-      </div>
 
-      <div class="event-item">
-
-        <div class="event-date">
-          <span class="month">AUG</span>
-          <span class="day">06</span>
-        </div>
-
-        <div class="event-info">
-          <h3>District Officer Meeting (DOCM)</h3>
-          <p>Quezon City Council Conference Room • 1:00 AM - 4:00 PM</p>
-        </div>
-
-      </div>
-
-      <div class="event-item">
-
-        <div class="event-date">
-          <span class="month">JUL</span>
-          <span class="day">25</span>
-        </div>
-
-        <div class="event-info">
-          <h3>Merit Badge Workshop and National Hopia Day</h3>
-          <p>Quezon City Council Session Hall • 9:00 AM - 5:30 PM</p>
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<section class="section">
-
-  <div class="container">
-
-    <div class="section-header">
-      <h2>District Highlights</h2>
-      <a href="districts.html" class="view-all">
-        All Districts
-      </a>
-    </div>
-
-    <div class="grid three">
-
-      <div class="card district-card">
-
-        <h3>First District</h3>
-
-        <p>
-          Loading... :>
-        </p>
-
-      </div>
-
-      <div class="card district-card">
-
-        <h3>Second District</h3>
-
-        <p>
-          Loading... :>
-        </p>
-
-      </div>
-
-      <div class="card district-card">
-
-        <h3>Third District</h3>
-
-        <p>
-          Loading... :>
-        </p>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<footer class="footer">
-
-  <div class="container footer-content">
+    <!-- BRAND -->
 
     <div class="footer-brand">
 
-      <img src="images/logo.png" alt="QCC-ESA Logo">
+      <img
+        src="images/logo.png"
+        alt="QCC-ESA Logo"
+      >
 
       <div>
 
-        <h3>Quezon City Council Eagle Scout Association</h3>
+        <h3>
+          Quezon City Council Eagle Scout Association
+        </h3>
 
         <p>
-          High School Compound, 9 Sct. Ybardolaza Street, Barangay Sacred Heart, Quezon City (Quezon City High School)
+          High School Compound, 9 Sct. Ybardolaza Street,
+          Barangay Sacred Heart, Quezon City
+          (Quezon City High School).
         </p>
 
       </div>
 
     </div>
 
+
+
+    <!-- FOOTER BOTTOM -->
+
     <div class="footer-bottom">
 
-      <p>© 2026 Quezon City Council Eagle Scout Association. All rights reserved.</p>
+      <p>
+        © 2026 Quezon City Council Eagle Scout Association.
+        All rights reserved.
+      </p>
+
 
       <div class="footer-links">
-        <a href="https://www.facebook.com/qceaglescout" target="_blank" rel="noreferrer">Facebook</a>
-        <a href="contact.html">Contact</a>
-         <a href="https://www.facebook.com/aeirplx" target="_blank" rel="noopener noreferrer">
-    © Love By Aeir
-  </a>
-</p>
+
+        <a
+          href="https://www.facebook.com/qceaglescout"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Facebook
+        </a>
+
+        <a href="contact.html">
+          Contact
+        </a>
+
+        <a
+          href="https://www.facebook.com/aeirplx"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          © Love By Aeir
+        </a>
+
       </div>
 
     </div>
 
-  </div>
 
+  </div>
 </footer>
 
-<script src="js/script.js"></script>
 
+<script src="js/navbar.js"></script>
 
 </body>
 </html>

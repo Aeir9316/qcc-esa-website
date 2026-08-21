@@ -1,184 +1,285 @@
 /* ============================================================
-   INDEX / HOMEPAGE
+   INDEX HERO
    ============================================================ */
+
+.index-hero {
+  position: relative;
+
+  width: 100%;
+  min-height: 1000px;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+
+  background:
+    url("../images/hero/hero-index.jpg")
+    center center / cover no-repeat;
+}
 
 
 /* ============================================================
-   INDEX HERO BACKGROUND
+   HERO OVERLAY
    ============================================================ */
 
-.hero-index {
+.index-hero-overlay {
+  position: absolute;
+
+  inset: 0;
+
   background:
     linear-gradient(
       90deg,
-      rgba(5, 45, 27, 0.88) 0%,
-      rgba(5, 45, 27, 0.72) 40%,
-      rgba(5, 45, 27, 0.52) 70%,
-      rgba(5, 45, 27, 0.38) 100%
-    ),
-    url("../images/hero-index.jpg")
-    center / cover no-repeat;
+      rgba(5, 45, 27, 0.92) 0%,
+      rgba(5, 45, 27, 0.78) 35%,
+      rgba(5, 45, 27, 0.52) 65%,
+      rgba(5, 45, 27, 0.28) 100%
+    );
+
+  z-index: 1;
 }
 
 
 /* ============================================================
-   LATEST NEWS
+   HERO CONTENT
    ============================================================ */
 
-.news-card {
-  overflow: hidden;
+.index-hero-content {
+  position: relative;
+
+  z-index: 2;
+
+  width: min(1180px, 92%);
+
+  margin: 0 auto;
+
+  padding-top: 76px;
+
+  color: #ffffff;
 }
 
-.news-image {
-  width: 100%;
-  height: 210px;
 
-  overflow: hidden;
+.index-hero-eyebrow {
+  display: inline-block;
 
-  border-radius: 12px;
-}
+  margin-bottom: 18px;
 
-.news-image img {
-  width: 100%;
-  height: 100%;
+  color: #e3c87a;
 
-  object-fit: cover;
-  display: block;
+  font-size: 13px;
 
-  border-radius: 12px;
+  font-weight: 800;
 
-  transition:
-    transform 0.4s ease;
-}
+  letter-spacing: 2px;
 
-.news-card:hover .news-image img {
-  transform: scale(1.05);
-}
-
-.news-content {
-  padding: 24px 28px 28px;
-}
-
-.news-content .card-date {
-  display: block;
-  margin-bottom: 10px;
-}
-
-.news-content h3 {
-  margin-bottom: 12px;
-}
-
-.news-content p {
-  margin: 0;
+  text-transform: uppercase;
 }
 
 
 /* ============================================================
-   EVENTS
+   HERO TITLE
    ============================================================ */
 
-.events-list {
-  display: flex;
+.index-hero h1 {
+  max-width: 850px;
 
-  flex-direction: column;
+  margin: 0 0 22px;
 
-  gap: 18px;
-}
+  color: #ffffff;
 
-.event-item {
-  display: flex;
+  font-size:
+    clamp(3.2rem, 7vw, 5.8rem);
 
-  align-items: center;
+  line-height: 1.02;
 
-  gap: 22px;
-
-  background: var(--white);
-
-  border: 1px solid var(--border);
-
-  border-radius: 22px;
-
-  padding: 22px 24px;
-
-  box-shadow: var(--shadow);
-}
-
-.event-date {
-  width: 84px;
-  min-width: 84px;
-
-  border-radius: 18px;
-
-  background: var(--navy);
-
-  color: var(--white);
-
-  text-align: center;
-
-  padding: 12px 8px;
-}
-
-.event-date .month {
-  display: block;
-
-  font-size: 0.8rem;
-
-  color: var(--gold-light);
-
-  letter-spacing: 0.08em;
-}
-
-.event-date .day {
-  display: block;
-
-  font-size: 1.8rem;
+  letter-spacing: -0.04em;
 
   font-weight: 800;
 }
 
-.event-info h3 {
-  color: var(--navy);
 
-  margin-bottom: 4px;
-}
+/* ============================================================
+   HERO DESCRIPTION
+   ============================================================ */
 
-.event-info p {
-  color: var(--muted);
+.index-hero p {
+  max-width: 700px;
+
+  margin: 0 0 34px;
+
+  color:
+    rgba(255, 255, 255, 0.84);
+
+  font-size: 1.1rem;
+
+  line-height: 1.85;
 }
 
 
 /* ============================================================
-   DISTRICT HIGHLIGHTS
+   HERO BUTTONS
    ============================================================ */
 
-.district-card {
-  border-top: 4px solid var(--gold);
-}
+.index-hero-buttons {
+  display: flex;
 
-.district-card h3 {
-  color: #243b63;
-}
+  align-items: center;
 
-.district-card p {
-  color: #6b7280;
+  gap: 14px;
+
+  flex-wrap: wrap;
 }
 
 
 /* ============================================================
-   RESPONSIVE
+   PRIMARY BUTTON
    ============================================================ */
 
-@media (max-width: 640px) {
+.index-hero-button {
+  display: inline-flex;
 
-  .event-item {
-    flex-direction: column;
+  align-items: center;
 
-    align-items: flex-start;
+  justify-content: center;
+
+  min-width: 155px;
+
+  padding: 14px 24px;
+
+  border-radius: 13px;
+
+  text-decoration: none;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+
+.index-hero-button.primary {
+  background: #c8a44d;
+
+  color: #0b1f3a;
+
+  box-shadow:
+    0 12px 30px
+    rgba(200, 164, 77, 0.25);
+}
+
+
+.index-hero-button.primary:hover {
+  transform: translateY(-3px);
+
+  background: #d4b35d;
+
+  box-shadow:
+    0 18px 35px
+    rgba(200, 164, 77, 0.32);
+}
+
+
+/* ============================================================
+   SECONDARY BUTTON
+   ============================================================ */
+
+.index-hero-button.secondary {
+  color: #ffffff;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.28);
+
+  background:
+    rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(8px);
+}
+
+
+.index-hero-button.secondary:hover {
+  transform: translateY(-3px);
+
+  background:
+    rgba(255, 255, 255, 0.15);
+
+  box-shadow:
+    0 12px 30px
+    rgba(0, 0, 0, 0.15);
+}
+
+
+/* ============================================================
+   TABLET
+   ============================================================ */
+
+@media (max-width: 768px) {
+
+  .index-hero {
+    min-height: 850px;
   }
 
-  .event-date {
-    width: 72px;
-    min-width: 72px;
+  .index-hero-content {
+    padding-top: 80px;
+  }
+
+  .index-hero h1 {
+    font-size:
+      clamp(2.8rem, 9vw, 4.5rem);
+  }
+
+  .index-hero p {
+    font-size: 1rem;
+  }
+
+}
+
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (max-width: 600px) {
+
+  .index-hero {
+    min-height: 760px;
+
+    background-position: 60% center;
+  }
+
+  .index-hero-content {
+    padding-top: 85px;
+  }
+
+  .index-hero-eyebrow {
+    font-size: 11px;
+  }
+
+  .index-hero h1 {
+    font-size: 2.8rem;
+
+    line-height: 1.05;
+  }
+
+  .index-hero p {
+    font-size: 0.96rem;
+
+    line-height: 1.75;
+  }
+
+  .index-hero-buttons {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  .index-hero-button {
+    width: 100%;
   }
 
 }
