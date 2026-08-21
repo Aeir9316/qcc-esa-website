@@ -556,10 +556,15 @@ img {
 
     background:
       linear-gradient(
-        180deg,
-        #0b1f3a 0%,
-        #13294b 100%
+        160deg,
+        rgba(14, 122, 58, 0.42) 0%,
+        rgba(22, 157, 72, 0.28) 25%,
+        rgba(19, 41, 75, 0.24) 58%,
+        rgba(11, 31, 58, 0.50) 100%
       ) !important;
+
+    backdrop-filter: blur(22px) saturate(160%);
+    -webkit-backdrop-filter: blur(22px) saturate(160%);
 
     box-shadow:
       -16px 0 40px
@@ -811,25 +816,26 @@ main {
     gap: 8px;
 
 
-    /* GLASS EFFECT */
+    /* GLASS EFFECT — TRANSPARENT GREEN + NAVY */
 
     background:
       linear-gradient(
         145deg,
-        rgba(11, 31, 58, 0.88) 0%,
-        rgba(19, 41, 75, 0.82) 48%,
-        rgba(14, 122, 58, 0.76) 100%
+        rgba(14, 122, 58, 0.42) 0%,
+        rgba(22, 157, 72, 0.28) 24%,
+        rgba(19, 41, 75, 0.22) 58%,
+        rgba(11, 31, 58, 0.48) 100%
       );
 
-    backdrop-filter: blur(18px) saturate(135%);
-    -webkit-backdrop-filter: blur(18px) saturate(135%);
+    backdrop-filter: blur(22px) saturate(160%);
+    -webkit-backdrop-filter: blur(22px) saturate(160%);
 
 
     /* BORDER */
 
     border-left:
       1px solid
-      rgba(255, 255, 255, 0.16);
+      rgba(143, 203, 60, 0.22);
 
     border-top:
       1px solid
@@ -840,10 +846,10 @@ main {
 
     box-shadow:
       -18px 0 45px
-      rgba(5, 20, 35, 0.30),
+      rgba(5, 20, 35, 0.28),
 
       inset 1px 0 0
-      rgba(255, 255, 255, 0.05);
+      rgba(255, 255, 255, 0.06);
 
 
     /* SLIDE */
@@ -922,7 +928,7 @@ main {
       rgba(255, 255, 255, 0.94) !important;
 
     background:
-      rgba(255, 255, 255, 0.035);
+      rgba(255, 255, 255, 0.055);
 
     border:
       1px solid
@@ -972,12 +978,12 @@ main {
     background:
       linear-gradient(
         90deg,
-        rgba(200, 164, 77, 0.18),
-        rgba(255, 255, 255, 0.08)
+        rgba(22, 157, 72, 0.24),
+        rgba(11, 31, 58, 0.16)
       );
 
     border-color:
-      rgba(227, 200, 122, 0.24);
+      rgba(143, 203, 60, 0.26);
 
     color:
       #e3c87a !important;
@@ -1059,4 +1065,25 @@ main {
       rotate(-45deg);
   }
 
+}
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #ffffff !important;
+  text-decoration: none !important;
+}
+
+.site-logo img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.site-logo span {
+  color: #ffffff !important;
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
 }
