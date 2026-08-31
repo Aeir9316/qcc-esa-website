@@ -1,0 +1,1788 @@
+/* ============================================================
+   QCC-ESA OFFICERS PAGE
+   ============================================================ */
+
+
+/* ============================================================
+   VARIABLES
+   ============================================================ */
+
+:root {
+
+  --navy: #0b1f3a;
+  --navy-dark: #071d35;
+  --navy-light: #123b5d;
+
+  --green: #169d48;
+  --green-dark: #0e7a3a;
+  --green-light: #8fcb3c;
+
+  --gold: #c8a44d;
+  --gold-light: #e3c87a;
+
+  --ivory: #f8f6f1;
+  --white: #ffffff;
+
+  --text: #1f2937;
+  --muted: #64748b;
+
+  --border: #e7dcc0;
+
+  --shadow:
+    0 18px 45px
+    rgba(11, 31, 58, 0.08);
+}
+
+
+/* ============================================================
+   PAGE BASE
+   ============================================================ */
+
+.officers-container {
+  width: min(1180px, 92%);
+  margin: 0 auto;
+}
+
+.officers-hero,
+.officers-council-section,
+.officers-advisory-section,
+.officers-executive-section,
+.officers-district-section,
+.officers-message-section {
+  font-family: "Inter", sans-serif;
+}
+
+
+/* ============================================================
+   HERO
+   ============================================================ */
+
+.officers-hero {
+  position: relative;
+
+  width: 100%;
+  min-height: 520px;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+
+  background:
+    url("../images/hero/hero-officers.jpg")
+    center center / cover no-repeat;
+}
+
+
+/* ============================================================
+   HERO OVERLAY
+   ============================================================ */
+
+.officers-hero-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(7, 29, 53, 0.94) 0%,
+      rgba(11, 61, 42, 0.80) 52%,
+      rgba(200, 164, 77, 0.28) 100%
+    );
+
+  z-index: 1;
+}
+
+
+/* ============================================================
+   HERO CONTENT
+   ============================================================ */
+
+.officers-hero-content {
+  position: relative;
+
+  z-index: 2;
+
+  width: min(1180px, 92%);
+
+  margin: 0 auto;
+
+  padding-top: 70px;
+
+  color: #ffffff;
+}
+
+
+.officers-hero-eyebrow {
+  display: inline-block;
+
+  margin-bottom: 14px;
+
+  color: var(--gold-light);
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+}
+
+
+.officers-hero h1 {
+  max-width: 850px;
+
+  margin: 0 0 18px;
+
+  color: #ffffff;
+
+  font-size:
+    clamp(3.2rem, 7vw, 5.5rem);
+
+  line-height: 1;
+
+  font-weight: 800;
+
+  letter-spacing: -0.04em;
+}
+
+
+.officers-hero p {
+  max-width: 700px;
+
+  margin: 0;
+
+  color:
+    rgba(255, 255, 255, 0.84);
+
+  font-size: 1.05rem;
+
+  line-height: 1.8;
+}
+
+
+/* ============================================================
+   SHARED SECTION HEADING
+   ============================================================ */
+
+.officers-section-heading {
+  max-width: 780px;
+
+  margin:
+    0 auto 45px;
+
+  text-align: center;
+}
+
+
+.officers-section-heading > span {
+  display: inline-block;
+
+  margin-bottom: 9px;
+
+  color: #a97916;
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.8px;
+
+  text-transform: uppercase;
+}
+
+
+.officers-section-heading h2 {
+  margin:
+    0 0 14px;
+
+  color: var(--navy);
+
+  font-size:
+    clamp(2.2rem, 4vw, 3.2rem);
+
+  line-height: 1.08;
+
+  font-weight: 800;
+
+  letter-spacing: -0.03em;
+}
+
+
+.officers-section-heading p {
+  max-width: 700px;
+
+  margin: 0 auto;
+
+  color: var(--muted);
+
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+
+/* ============================================================
+   SECTION 1
+   COUNCIL LEADERSHIP
+   ============================================================ */
+
+.officers-council-section {
+  position: relative;
+
+  overflow: hidden;
+
+  padding:
+    105px
+    0
+    120px;
+
+  background:
+    radial-gradient(
+      circle at 8% 15%,
+      rgba(22, 157, 72, 0.075),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 92% 85%,
+      rgba(200, 164, 77, 0.065),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #f5f1e8 0%,
+      #fffdf8 52%,
+      #f1f7f2 100%
+    );
+}
+
+
+/* ============================================================
+   COUNCIL GRID
+   ============================================================ */
+
+.officers-council-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 25px;
+}
+
+
+/* ============================================================
+   COUNCIL CARD
+   ============================================================ */
+
+.officer-feature-card {
+  overflow: hidden;
+
+  background: var(--white);
+
+  border:
+    1px solid
+    rgba(200, 164, 77, 0.45);
+
+  border-radius: 23px;
+
+  box-shadow:
+    0 18px 42px
+    rgba(11, 31, 58, 0.08);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+
+.officer-feature-card:hover {
+  transform:
+    translateY(-7px);
+
+  border-color:
+    rgba(200, 164, 77, 0.78);
+
+  box-shadow:
+    0 28px 58px
+    rgba(11, 31, 58, 0.13);
+}
+
+
+/* ============================================================
+   COUNCIL IMAGE
+   ============================================================ */
+
+.officer-feature-image {
+  width: 100%;
+
+  height: 350px;
+
+  overflow: hidden;
+
+  background:
+    #e9eee9;
+}
+
+
+.officer-feature-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  transition:
+    transform 0.45s ease;
+}
+
+
+.officer-feature-card:hover
+.officer-feature-image img {
+  transform:
+    scale(1.04);
+}
+
+
+/* ============================================================
+   COUNCIL CONTENT
+   ============================================================ */
+
+.officer-feature-content {
+  padding:
+    23px
+    25px
+    28px;
+}
+
+
+.officer-feature-content span {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #a97916;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
+}
+
+
+.officer-feature-content h3 {
+  margin: 0;
+
+  color: var(--navy);
+
+  font-size: 21px;
+
+  line-height: 1.25;
+
+  font-weight: 700;
+}
+
+
+/* ============================================================
+   SECTION 2
+   ADULT ADVISORY GROUP
+   ============================================================ */
+
+.officers-advisory-section {
+  position: relative;
+
+  overflow: hidden;
+
+  padding:
+    105px
+    0
+    120px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff 0%,
+      #fafcf9 100%
+    );
+}
+
+
+.officers-advisory-section::before {
+  content: "";
+
+  position: absolute;
+
+  width: 370px;
+  height: 370px;
+
+  top: -150px;
+  left: -130px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(22, 157, 72, 0.07);
+
+  filter:
+    blur(90px);
+
+  pointer-events: none;
+}
+
+
+/* ============================================================
+   ADVISORY GRID
+   ============================================================ */
+
+.officers-advisory-grid {
+  position: relative;
+
+  z-index: 2;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 20px;
+}
+
+
+/* ============================================================
+   ADVISORY CARD
+   ============================================================ */
+
+.officer-advisory-card {
+  display: flex;
+
+  align-items: center;
+
+  gap: 17px;
+
+  min-height: 128px;
+
+  padding: 15px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff,
+      #fafaf7
+    );
+
+  border:
+    1px solid
+    rgba(22, 157, 72, 0.18);
+
+  border-radius: 19px;
+
+  box-shadow:
+    0 13px 32px
+    rgba(11, 31, 58, 0.06);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+
+.officer-advisory-card:hover {
+  transform:
+    translateY(-5px);
+
+  border-color:
+    rgba(200, 164, 77, 0.60);
+
+  box-shadow:
+    0 20px 42px
+    rgba(11, 31, 58, 0.10);
+}
+
+
+/* ============================================================
+   ADVISORY IMAGE
+   ============================================================ */
+
+.officer-advisory-image {
+  width: 96px;
+  min-width: 96px;
+
+  height: 105px;
+
+  overflow: hidden;
+
+  border:
+    2px solid
+    rgba(200, 164, 77, 0.40);
+
+  border-radius: 14px;
+
+  background:
+    #e9eee9;
+}
+
+
+.officer-advisory-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  object-position: center;
+}
+
+
+/* ============================================================
+   ADVISORY CONTENT
+   ============================================================ */
+
+.officer-advisory-content {
+  min-width: 0;
+}
+
+
+.officer-advisory-content span {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: #a97916;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  line-height: 1.45;
+
+  letter-spacing: 1.1px;
+
+  text-transform: uppercase;
+}
+
+
+.officer-advisory-content h3 {
+  margin: 0;
+
+  color: var(--navy);
+
+  font-size: 18px;
+
+  line-height: 1.2;
+
+  font-weight: 700;
+}
+
+
+/* ============================================================
+   SECTION 3
+   EXECUTIVE OFFICERS
+   ============================================================ */
+
+.officers-executive-section {
+  position: relative;
+
+  overflow: hidden;
+
+  padding:
+    105px
+    0
+    120px;
+
+  background:
+    radial-gradient(
+      circle at 8% 15%,
+      rgba(22, 157, 72, 0.07),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 92% 85%,
+      rgba(11, 31, 58, 0.065),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #f5f1e8 0%,
+      #fffdf8 52%,
+      #f1f7f2 100%
+    );
+}
+
+
+/* ============================================================
+   EXECUTIVE GRID
+   ============================================================ */
+
+.officers-executive-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 22px;
+
+  max-width: 1060px;
+
+  margin:
+    0 auto;
+}
+
+
+/* ============================================================
+   EXECUTIVE CARD
+   ============================================================ */
+
+.officer-executive-card {
+  display: flex;
+
+  align-items: center;
+
+  min-height: 175px;
+
+  overflow: hidden;
+
+  background:
+    #ffffff;
+
+  border:
+    1px solid
+    rgba(200, 164, 77, 0.42);
+
+  border-radius: 20px;
+
+  box-shadow:
+    0 14px 34px
+    rgba(11, 31, 58, 0.07);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+
+.officer-executive-card:hover {
+  transform:
+    translateY(-5px);
+
+  border-color:
+    rgba(200, 164, 77, 0.75);
+
+  box-shadow:
+    0 23px 46px
+    rgba(11, 31, 58, 0.11);
+}
+
+
+/* ============================================================
+   EXECUTIVE IMAGE
+   ============================================================ */
+
+.officer-executive-image {
+  width: 150px;
+  min-width: 150px;
+
+  height: 175px;
+
+  overflow: hidden;
+
+  background:
+    #e9eee9;
+}
+
+
+.officer-executive-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  transition:
+    transform 0.4s ease;
+}
+
+
+.officer-executive-card:hover
+.officer-executive-image img {
+  transform:
+    scale(1.04);
+}
+
+
+/* ============================================================
+   EXECUTIVE CONTENT
+   ============================================================ */
+
+.officer-executive-content {
+  min-width: 0;
+
+  padding:
+    22px
+    25px;
+}
+
+
+.officer-executive-content span {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: #a97916;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.4px;
+
+  text-transform: uppercase;
+}
+
+
+.officer-executive-content h3 {
+  margin: 0;
+
+  color: var(--navy);
+
+  font-size: 22px;
+
+  line-height: 1.2;
+
+  font-weight: 700;
+}
+
+
+/* ============================================================
+   CONGRESSIONAL DISTRICTS
+   ============================================================ */
+
+.officers-district-section {
+  padding:
+    75px
+    0;
+
+  background:
+    #ffffff;
+}
+
+
+.officers-district-card {
+  position: relative;
+
+  max-width: 880px;
+
+  margin:
+    0 auto;
+
+  padding:
+    52px
+    45px;
+
+  overflow: hidden;
+
+  text-align: center;
+
+  border-radius: 25px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #0b1f3a,
+      #0b3d2a
+    );
+
+  box-shadow:
+    0 24px 55px
+    rgba(11, 31, 58, 0.14);
+}
+
+
+.officers-district-card::before {
+  content: "";
+
+  position: absolute;
+
+  width: 300px;
+  height: 300px;
+
+  top: -150px;
+  right: -90px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(200, 164, 77, 0.10);
+
+  filter:
+    blur(5px);
+
+  pointer-events: none;
+}
+
+
+.officers-district-card > span {
+  position: relative;
+
+  display: block;
+
+  margin-bottom: 9px;
+
+  color:
+    var(--gold-light);
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.7px;
+
+  text-transform: uppercase;
+}
+
+
+.officers-district-card h2 {
+  position: relative;
+
+  margin:
+    0 0 12px;
+
+  color:
+    #ffffff;
+
+  font-size:
+    clamp(2.4rem, 4vw, 3.5rem);
+
+  line-height: 1.05;
+
+  font-weight: 800;
+}
+
+
+.officers-district-card p {
+  position: relative;
+
+  max-width: 650px;
+
+  margin:
+    0 auto 25px;
+
+  color:
+    rgba(255,255,255,0.76);
+
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+
+/* ============================================================
+   DISTRICT BUTTON
+   ============================================================ */
+
+.officers-district-button {
+  position: relative;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding:
+    13px
+    21px;
+
+  border-radius: 12px;
+
+  background:
+    var(--gold);
+
+  color:
+    var(--navy);
+
+  text-decoration: none;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+.officers-district-button:hover {
+  transform:
+    translateY(-2px);
+
+  background:
+    var(--gold-light);
+
+  box-shadow:
+    0 10px 25px
+    rgba(200, 164, 77, 0.22);
+}
+
+
+/* ============================================================
+   BADEN-POWELL MESSAGE
+   ============================================================ */
+
+.officers-message-section {
+  position: relative;
+
+  overflow: hidden;
+
+  padding:
+    105px
+    0;
+
+  background:
+    url("../images/section-background/leadership-message.jpg")
+    center / cover no-repeat;
+}
+
+
+.officers-message-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(7, 29, 53, 0.94) 0%,
+      rgba(11, 61, 42, 0.84) 55%,
+      rgba(200, 164, 77, 0.30) 100%
+    );
+}
+
+
+.officers-message-section
+.officers-container {
+  position: relative;
+
+  z-index: 2;
+}
+
+
+.officers-message-grid {
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    1fr;
+
+  gap: 60px;
+
+  align-items: center;
+}
+
+
+.officers-message-label {
+  display: inline-block;
+
+  margin-bottom: 10px;
+
+  color:
+    var(--gold-light);
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.7px;
+
+  text-transform: uppercase;
+}
+
+
+.officers-message-grid h2 {
+  margin: 0;
+
+  color:
+    #ffffff;
+
+  font-size:
+    clamp(2.7rem, 4.5vw, 4.2rem);
+
+  line-height: 1.02;
+
+  font-weight: 800;
+}
+
+
+.officers-message-quote {
+  margin: 0;
+
+  color:
+    rgba(255,255,255,0.87);
+
+  font-size: 18px;
+
+  line-height: 1.9;
+
+  font-style: italic;
+
+  text-align: justify;
+}
+
+
+.officers-message-date {
+  display: block;
+
+  margin-top: 17px;
+
+  color:
+    var(--gold-light);
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  text-align: right;
+}
+
+
+/* ============================================================
+   TABLET
+   ============================================================ */
+
+@media (max-width: 950px) {
+
+  .officers-council-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .officers-advisory-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .officers-executive-grid {
+    grid-template-columns:
+      1fr;
+  }
+
+}
+
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (max-width: 700px) {
+
+  .officers-hero {
+    min-height: 450px;
+  }
+
+  .officers-hero-content {
+    padding-top: 65px;
+  }
+
+  .officers-hero h1 {
+    font-size: 3.1rem;
+  }
+
+
+  .officers-council-section,
+  .officers-advisory-section,
+  .officers-executive-section {
+    padding:
+      75px
+      0
+      85px;
+  }
+
+
+  .officers-council-grid,
+  .officers-advisory-grid {
+    grid-template-columns:
+      1fr;
+  }
+
+
+  /* COUNCIL */
+
+  .officer-feature-image {
+    height: 300px;
+  }
+
+  .officer-feature-content h3 {
+    font-size: 23px;
+  }
+
+
+  /* ADVISORY */
+
+  .officer-advisory-card {
+    min-height: 118px;
+  }
+
+  .officer-advisory-image {
+    width: 90px;
+    min-width: 90px;
+
+    height: 100px;
+  }
+
+
+  /* EXECUTIVE */
+
+  .officer-executive-card {
+    min-height: 150px;
+  }
+
+  .officer-executive-image {
+    width: 120px;
+    min-width: 120px;
+
+    height: 150px;
+  }
+
+  .officer-executive-content {
+    padding:
+      20px
+      18px;
+  }
+
+  .officer-executive-content h3 {
+    font-size: 21px;
+  }
+
+
+  /* DISTRICTS */
+
+  .officers-district-section {
+    padding:
+      55px
+      0;
+  }
+
+  .officers-district-card {
+    padding:
+      38px
+      24px;
+  }
+
+
+  /* MESSAGE */
+
+  .officers-message-section {
+    padding:
+      75px
+      0;
+  }
+
+  .officers-message-grid {
+    grid-template-columns:
+      1fr;
+
+    gap:
+      30px;
+  }
+
+  .officers-message-quote {
+    font-size:
+      16px;
+  }
+
+}
+
+
+/* ============================================================
+   SMALL MOBILE
+   ============================================================ */
+
+@media (max-width: 480px) {
+
+  .officers-hero h1 {
+    font-size:
+      2.7rem;
+  }
+
+  .officers-section-heading h2 {
+    font-size:
+      2.2rem;
+  }
+
+  .officer-feature-image {
+    height:
+      270px;
+  }
+
+  .officer-feature-content h3 {
+    font-size:
+      22px;
+  }
+
+  .officer-advisory-image {
+    width: 82px;
+    min-width: 82px;
+
+    height: 92px;
+  }
+
+  .officer-advisory-content h3 {
+    font-size:
+      17px;
+  }
+
+  .officer-executive-image {
+    width: 105px;
+    min-width: 105px;
+
+    height: 135px;
+  }
+
+  .officer-executive-content {
+    padding:
+      17px
+      15px;
+  }
+
+  .officer-executive-content span {
+    font-size:
+      9px;
+  }
+
+  .officer-executive-content h3 {
+    font-size:
+      19px;
+  }
+
+}
+
+
+/* ============================================================
+   REDUCED MOTION
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .officer-feature-card,
+  .officer-feature-image img,
+  .officer-advisory-card,
+  .officer-executive-card,
+  .officer-executive-image img,
+  .officers-district-button {
+    transition: none;
+  }
+
+}
+/* ============================================================
+   RESPONSIVE — TABLET
+   ============================================================ */
+
+@media (max-width: 1024px) {
+
+  .officers-container {
+    width: 92%;
+  }
+
+  /* HERO */
+
+  .officers-hero {
+    min-height: 480px;
+
+    background-position: center center;
+  }
+
+  .officers-hero-content {
+    padding-top: 60px;
+  }
+
+  .officers-hero h1 {
+    font-size: clamp(3rem, 7vw, 4.8rem);
+  }
+
+
+  /* SECTION SPACING */
+
+  .officers-council-section,
+  .officers-advisory-section,
+  .officers-executive-section {
+    padding:
+      85px
+      0
+      95px;
+  }
+
+
+  /* COUNCIL */
+
+  .officers-council-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+  }
+
+  .officer-feature-image {
+    height: 310px;
+  }
+
+
+  /* ADVISORY */
+
+  .officers-advisory-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 18px;
+  }
+
+
+  /* EXECUTIVE */
+
+  .officers-executive-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 18px;
+  }
+
+  .officer-executive-image {
+    width: 125px;
+    min-width: 125px;
+
+    height: 160px;
+  }
+
+  .officer-executive-content {
+    padding:
+      20px
+      18px;
+  }
+
+  .officer-executive-content h3 {
+    font-size: 20px;
+  }
+
+
+  /* DISTRICT */
+
+  .officers-district-section {
+    padding:
+      65px
+      0;
+  }
+
+
+  /* BADEN-POWELL */
+
+  .officers-message-section {
+    padding:
+      85px
+      0;
+
+    background-position:
+      center center;
+  }
+
+  .officers-message-grid {
+    gap: 40px;
+  }
+
+}
+
+
+/* ============================================================
+   RESPONSIVE — MOBILE
+   ============================================================ */
+
+@media (max-width: 700px) {
+
+  /* GENERAL */
+
+  .officers-container {
+    width: 92%;
+  }
+
+
+  /* HERO */
+
+  .officers-hero {
+    min-height: 450px;
+
+    background-position:
+      62% center;
+  }
+
+  .officers-hero-content {
+    padding-top: 55px;
+  }
+
+  .officers-hero-eyebrow {
+    font-size: 10px;
+
+    letter-spacing: 1.6px;
+  }
+
+  .officers-hero h1 {
+    font-size: 3.2rem;
+
+    line-height: 1;
+  }
+
+  .officers-hero p {
+    max-width: 100%;
+
+    font-size: 0.95rem;
+
+    line-height: 1.75;
+  }
+
+
+  /* SECTION HEADINGS */
+
+  .officers-section-heading {
+    margin-bottom: 32px;
+  }
+
+  .officers-section-heading > span {
+    font-size: 10px;
+  }
+
+  .officers-section-heading h2 {
+    font-size: 2.25rem;
+
+    line-height: 1.08;
+  }
+
+  .officers-section-heading p {
+    font-size: 0.93rem;
+
+    line-height: 1.75;
+  }
+
+
+  /* SECTIONS */
+
+  .officers-council-section,
+  .officers-advisory-section,
+  .officers-executive-section {
+    padding:
+      72px
+      0
+      82px;
+  }
+
+
+  /* COUNCIL */
+
+  .officers-council-grid {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+  }
+
+  .officer-feature-image {
+    height: 310px;
+  }
+
+  .officer-feature-content {
+    padding:
+      21px
+      22px
+      24px;
+  }
+
+  .officer-feature-content span {
+    font-size: 9px;
+  }
+
+  .officer-feature-content h3 {
+    font-size: 23px;
+
+    line-height: 1.2;
+  }
+
+
+  /* ADVISORY */
+
+  .officers-advisory-grid {
+    grid-template-columns: 1fr;
+
+    gap: 16px;
+  }
+
+  .officer-advisory-card {
+    min-height: 110px;
+
+    padding: 13px;
+
+    gap: 15px;
+  }
+
+  .officer-advisory-image {
+    width: 82px;
+    min-width: 82px;
+
+    height: 92px;
+  }
+
+  .officer-advisory-content span {
+    font-size: 8px;
+
+    letter-spacing: 0.9px;
+  }
+
+  .officer-advisory-content h3 {
+    font-size: 18px;
+
+    line-height: 1.18;
+  }
+
+
+  /* EXECUTIVE */
+
+  .officers-executive-grid {
+    grid-template-columns: 1fr;
+
+    gap: 16px;
+  }
+
+  .officer-executive-card {
+    min-height: 145px;
+  }
+
+  .officer-executive-image {
+    width: 110px;
+    min-width: 110px;
+
+    height: 145px;
+  }
+
+  .officer-executive-content {
+    padding:
+      19px
+      17px;
+  }
+
+  .officer-executive-content span {
+    font-size: 9px;
+
+    letter-spacing: 1.1px;
+  }
+
+  .officer-executive-content h3 {
+    font-size: 20px;
+
+    line-height: 1.18;
+  }
+
+
+  /* DISTRICT */
+
+  .officers-district-section {
+    padding:
+      55px
+      0;
+  }
+
+  .officers-district-card {
+    padding:
+      38px
+      22px;
+
+    border-radius: 21px;
+  }
+
+  .officers-district-card h2 {
+    font-size: 2.35rem;
+  }
+
+  .officers-district-card p {
+    font-size: 0.92rem;
+
+    line-height: 1.75;
+  }
+
+  .officers-district-button {
+    width: 100%;
+
+    padding:
+      13px
+      16px;
+
+    font-size: 12px;
+  }
+
+
+  /* BADEN-POWELL */
+
+  .officers-message-section {
+    padding:
+      72px
+      0;
+  }
+
+  .officers-message-grid {
+    grid-template-columns: 1fr;
+
+    gap: 28px;
+  }
+
+  .officers-message-label {
+    font-size: 9px;
+
+    letter-spacing: 1.4px;
+  }
+
+  .officers-message-grid h2 {
+    font-size: 2.7rem;
+
+    line-height: 1.05;
+  }
+
+  .officers-message-quote {
+    font-size: 15px;
+
+    line-height: 1.8;
+  }
+
+  .officers-message-date {
+    font-size: 11px;
+  }
+
+}
+
+
+/* ============================================================
+   RESPONSIVE — SMALL MOBILE
+   ============================================================ */
+
+@media (max-width: 480px) {
+
+  .officers-hero {
+    min-height: 430px;
+
+    background-position:
+      65% center;
+  }
+
+  .officers-hero-content {
+    padding-top: 50px;
+  }
+
+  .officers-hero h1 {
+    font-size: 2.75rem;
+  }
+
+  .officers-hero p {
+    font-size: 0.9rem;
+  }
+
+
+  .officers-section-heading h2 {
+    font-size: 2.1rem;
+  }
+
+
+  /* COUNCIL */
+
+  .officer-feature-image {
+    height: 270px;
+  }
+
+
+  /* ADVISORY */
+
+  .officer-advisory-card {
+    min-height: 100px;
+
+    padding: 11px;
+
+    gap: 13px;
+  }
+
+  .officer-advisory-image {
+    width: 76px;
+    min-width: 76px;
+
+    height: 84px;
+  }
+
+  .officer-advisory-content h3 {
+    font-size: 17px;
+  }
+
+
+  /* EXECUTIVE */
+
+  .officer-executive-card {
+    min-height: 130px;
+  }
+
+  .officer-executive-image {
+    width: 95px;
+    min-width: 95px;
+
+    height: 130px;
+  }
+
+  .officer-executive-content {
+    padding:
+      16px
+      14px;
+  }
+
+  .officer-executive-content span {
+    font-size: 8px;
+  }
+
+  .officer-executive-content h3 {
+    font-size: 18px;
+  }
+
+
+  /* DISTRICT */
+
+  .officers-district-card {
+    padding:
+      32px
+      18px;
+  }
+
+  .officers-district-card h2 {
+    font-size: 2.15rem;
+  }
+
+
+  /* BADEN-POWELL */
+
+  .officers-message-section {
+    padding:
+      65px
+      0;
+  }
+
+  .officers-message-grid h2 {
+    font-size: 2.4rem;
+  }
+
+  .officers-message-quote {
+    font-size: 14px;
+  }
+
+}

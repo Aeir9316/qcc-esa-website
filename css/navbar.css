@@ -1,0 +1,1068 @@
+/* ============================================================
+   QCC-ESA SHARED NAVBAR + FOOTER
+   Desktop + Mobile
+   ============================================================ */
+
+
+/* ============================================================
+   1. VARIABLES
+   ============================================================ */
+
+:root {
+
+  --navy: #0b1f3a;
+  --navy-light: #13294b;
+
+  --green: #169d48;
+  --green-dark: #0e7a3a;
+  --green-light: #8fcb3c;
+
+  --gold: #c8a44d;
+  --gold-light: #e3c87a;
+
+  --ivory: #f8f6f1;
+  --white: #ffffff;
+
+  --text: #1f2937;
+  --muted: #64748b;
+
+  --border: #e7dcc0;
+
+  --shadow:
+    0 18px 45px rgba(11, 31, 58, 0.08);
+}
+
+
+/* ============================================================
+   2. RESET
+   ============================================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+
+  margin: 0;
+  padding: 0;
+
+  font-family: "Inter", sans-serif;
+
+  background: var(--ivory);
+  color: var(--text);
+
+  line-height: 1.7;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+
+/* ============================================================
+   3. NAVBAR
+   ============================================================ */
+
+.site-navbar {
+
+  position: fixed;
+
+  top: 0;
+  left: 0;
+  right: 0;
+
+  z-index: 1000;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(14, 22, 25, 0.90) 0%,
+      rgba(22, 157, 72, 0.84) 45%,
+      rgba(184, 216, 61, 0.80) 80%,
+      rgba(237, 215, 52, 0.80) 100%
+    );
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  border-bottom:
+    1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow:
+    0 4px 20px rgba(8, 54, 31, 0.12);
+
+  overflow: hidden;
+}
+
+
+/* ============================================================
+   4. NAVBAR SHINE
+   ============================================================ */
+
+.site-navbar::before {
+
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: -30%;
+
+  width: 22%;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.18),
+      transparent
+    );
+
+  transform: skewX(-20deg);
+
+  animation:
+    navbarShine 8s ease-in-out infinite;
+
+  pointer-events: none;
+}
+
+@keyframes navbarShine {
+
+  0% {
+    left: -30%;
+  }
+
+  55% {
+    left: 120%;
+  }
+
+  100% {
+    left: 120%;
+  }
+
+}
+
+
+/* ============================================================
+   5. NAVBAR INNER
+   ============================================================ */
+
+.site-navbar-inner {
+
+  position: relative;
+  z-index: 2;
+
+  width: min(1180px, 92%);
+
+  min-height: 76px;
+
+  margin: 0 auto;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 25px;
+}
+
+
+/* ============================================================
+   6. LOGO
+   ============================================================ */
+
+.site-logo {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  color: #ffffff !important;
+
+  text-decoration: none !important;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+.site-logo:visited,
+.site-logo:hover,
+.site-logo:active {
+  color: #ffffff !important;
+  text-decoration: none !important;
+}
+
+.site-logo span {
+  color: #ffffff !important;
+
+  text-decoration: none !important;
+
+  font-weight: 700;
+}
+
+.site-logo img {
+
+  width: 44px;
+  height: 44px;
+
+  object-fit: contain;
+}
+
+
+/* ============================================================
+   7. DESKTOP NAVIGATION
+   ============================================================ */
+
+.site-navigation {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: flex-end;
+
+  gap: 20px;
+}
+
+.site-navigation a {
+
+  position: relative;
+
+  display: inline-block;
+
+  padding: 8px 0;
+
+  color:
+    rgba(255, 255, 255, 0.90) !important;
+
+  text-decoration: none !important;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  transition:
+    color 0.25s ease;
+}
+
+
+/* GOLD UNDERLINE */
+
+.site-navigation a::after {
+
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 0;
+  height: 2px;
+
+  background:
+    var(--gold-light);
+
+  transition:
+    width 0.25s ease;
+}
+
+.site-navigation a:hover,
+.site-navigation a.active {
+
+  color:
+    var(--gold-light) !important;
+}
+
+.site-navigation a:hover::after,
+.site-navigation a.active::after {
+
+  width: 100%;
+}
+
+
+/* ============================================================
+   8. MOBILE MENU BUTTON
+   ============================================================ */
+
+.menu-toggle {
+
+  display: none;
+
+  position: relative;
+
+  z-index: 1003;
+
+  width: 44px;
+  height: 44px;
+
+  padding: 9px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.22);
+
+  border-radius: 12px;
+
+  background:
+    rgba(255, 255, 255, 0.08);
+
+  cursor: pointer;
+}
+
+.menu-toggle span {
+
+  display: block;
+
+  width: 100%;
+  height: 3px;
+
+  margin: 5px 0;
+
+  border-radius: 999px;
+
+  background:
+    #ffffff;
+
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+
+/* ============================================================
+   9. MOBILE BACKDROP
+   ============================================================ */
+
+.nav-backdrop {
+
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 1001;
+
+  background:
+    rgba(7, 15, 26, 0.58);
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  pointer-events: none;
+
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+}
+
+
+/* ============================================================
+   10. FOOTER
+   ============================================================ */
+
+.site-footer {
+
+  background:
+    linear-gradient(
+      135deg,
+      #0b3d2a 0%,
+      #0b3d2a 45%,
+      #0b1f3a 100%
+    );
+
+  color:
+    rgba(255, 255, 255, 0.82);
+
+  padding:
+    64px 0 36px;
+
+  box-shadow:
+    0 -12px 35px
+    rgba(11, 31, 58, 0.08);
+}
+
+.site-footer-inner {
+
+  width: min(1180px, 92%);
+
+  margin: 0 auto;
+}
+
+
+/* ============================================================
+   11. FOOTER BRAND
+   ============================================================ */
+
+.footer-brand {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  margin-bottom: 28px;
+}
+
+.footer-brand img {
+
+  width: 58px;
+  height: 58px;
+
+  object-fit: contain;
+}
+
+.footer-brand h3 {
+
+  margin-bottom: 6px;
+
+  color: #ffffff;
+
+  font-size: 18px;
+}
+
+.footer-brand p {
+
+  max-width: 720px;
+
+  margin: 0;
+
+  color:
+    rgba(255, 255, 255, 0.72);
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+
+/* ============================================================
+   12. FOOTER BOTTOM
+   ============================================================ */
+
+.footer-bottom {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding-top: 24px;
+
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.12);
+}
+
+.footer-bottom > p {
+
+  margin: 0;
+
+  font-size: 13px;
+}
+
+.footer-links {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+}
+
+.footer-links a {
+
+  color:
+    rgba(255, 255, 255, 0.82);
+
+  text-decoration: none;
+
+  font-size: 13px;
+
+  transition:
+    color 0.25s ease;
+}
+
+.footer-links a:hover {
+
+  color:
+    var(--gold-light);
+}
+
+
+/* ============================================================
+   13. MOBILE NAVIGATION
+   ============================================================ */
+
+@media (max-width: 980px) {
+
+  .site-navbar-inner {
+    min-height: 72px;
+  }
+
+
+  /* HAMBURGER */
+
+  .menu-toggle {
+    display: block;
+  }
+
+
+  /* SLIDE MENU */
+
+  .site-navigation {
+
+    position: fixed;
+
+    top: 0;
+    right: 0;
+
+    z-index: 1002;
+
+    width: min(320px, 84vw);
+    height: 100vh;
+
+    padding:
+      100px 24px 30px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    justify-content: flex-start;
+
+    gap: 6px;
+
+    background:
+      linear-gradient(
+        160deg,
+        rgba(14, 122, 58, 0.42) 0%,
+        rgba(22, 157, 72, 0.28) 25%,
+        rgba(19, 41, 75, 0.24) 58%,
+        rgba(11, 31, 58, 0.50) 100%
+      ) !important;
+
+    backdrop-filter: blur(22px) saturate(160%);
+    -webkit-backdrop-filter: blur(22px) saturate(160%);
+
+    box-shadow:
+      -16px 0 40px
+      rgba(0, 0, 0, 0.30);
+
+    transform:
+      translateX(100%);
+
+    transition:
+      transform 0.35s ease;
+
+    overflow-y: auto;
+
+    visibility: visible;
+  }
+
+
+  /* OPEN */
+
+  body.menu-open .site-navigation {
+
+    transform:
+      translateX(0);
+  }
+
+
+  /* LINKS */
+
+  .site-navigation a {
+
+    display: block;
+
+    width: 100%;
+
+    padding:
+      14px 16px;
+
+    border-radius: 10px;
+
+    color:
+      rgba(255, 255, 255, 0.92) !important;
+
+    font-size: 15px;
+
+    font-weight: 600;
+  }
+
+  .site-navigation a::after {
+    display: none;
+  }
+
+  .site-navigation a:hover,
+  .site-navigation a.active {
+
+    background:
+      rgba(255, 255, 255, 0.09);
+
+    color:
+      var(--gold-light) !important;
+  }
+
+
+  /* BACKDROP */
+
+  body.menu-open .nav-backdrop {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+  }
+
+
+  /* PREVENT BODY SCROLL */
+
+  body.menu-open {
+    overflow: hidden;
+  }
+
+
+  /* HAMBURGER → X */
+
+  body.menu-open
+  .menu-toggle span:nth-child(1) {
+
+    transform:
+      translateY(8px)
+      rotate(45deg);
+  }
+
+  body.menu-open
+  .menu-toggle span:nth-child(2) {
+
+    opacity: 0;
+  }
+
+  body.menu-open
+  .menu-toggle span:nth-child(3) {
+
+    transform:
+      translateY(-8px)
+      rotate(-45deg);
+  }
+
+
+  /* FOOTER */
+
+  .footer-bottom {
+
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+}
+
+
+/* ============================================================
+   14. SMALL MOBILE
+   ============================================================ */
+
+@media (max-width: 600px) {
+
+  .site-logo {
+
+    font-size: 14px;
+  }
+
+  .site-logo img {
+
+    width: 40px;
+    height: 40px;
+  }
+
+  .site-footer {
+
+    padding:
+      50px 0 30px;
+  }
+
+  .footer-brand {
+
+    align-items: flex-start;
+  }
+
+  .footer-brand h3 {
+
+    font-size: 16px;
+  }
+
+  .footer-links {
+
+    flex-wrap: wrap;
+
+    gap:
+      12px 18px;
+  }
+
+}
+/* ============================================================
+   GLOBAL PAGE HEIGHT FIX
+   ============================================================ */
+
+html {
+  min-height: 100%;
+}
+
+body {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+.site-footer {
+  flex-shrink: 0;
+  width: 100%;
+}
+/* ============================================================
+   MOBILE NAVIGATION
+   ============================================================ */
+
+@media (max-width: 980px) {
+
+  .site-navbar {
+    z-index: 1100;
+    overflow: visible;
+  }
+
+
+  /* ==========================================================
+     NAVBAR INNER
+     ========================================================== */
+
+  .site-navbar-inner {
+    min-height: 72px;
+
+    position: relative;
+
+    z-index: 1102;
+  }
+
+
+  /* ==========================================================
+     HAMBURGER
+     ========================================================== */
+
+  .menu-toggle {
+    display: block;
+
+    position: relative;
+
+    z-index: 1105;
+  }
+
+
+  /* ==========================================================
+     MOBILE DRAWER
+     ========================================================== */
+
+  .site-navigation {
+
+    position: fixed;
+
+    top: 72px;
+    right: 0;
+
+    z-index: 1101;
+
+    width: min(340px, 88vw);
+
+    height: calc(100vh - 72px);
+
+    padding: 24px 18px 30px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    justify-content: flex-start;
+
+    gap: 8px;
+
+
+    /* GLASS EFFECT — TRANSPARENT GREEN + NAVY */
+
+    background:
+      linear-gradient(
+        145deg,
+        rgba(14, 122, 58, 0.42) 0%,
+        rgba(22, 157, 72, 0.28) 24%,
+        rgba(19, 41, 75, 0.22) 58%,
+        rgba(11, 31, 58, 0.48) 100%
+      );
+
+    backdrop-filter: blur(22px) saturate(160%);
+    -webkit-backdrop-filter: blur(22px) saturate(160%);
+
+
+    /* BORDER */
+
+    border-left:
+      1px solid
+      rgba(143, 203, 60, 0.22);
+
+    border-top:
+      1px solid
+      rgba(255, 255, 255, 0.08);
+
+
+    /* SHADOW */
+
+    box-shadow:
+      -18px 0 45px
+      rgba(5, 20, 35, 0.28),
+
+      inset 1px 0 0
+      rgba(255, 255, 255, 0.06);
+
+
+    /* SLIDE */
+
+    transform:
+      translateX(100%);
+
+    transition:
+      transform 0.35s ease;
+
+
+    overflow-y: auto;
+
+    overscroll-behavior: contain;
+  }
+
+
+  /* ==========================================================
+     SUBTLE GLASS HIGHLIGHT
+     ========================================================== */
+
+  .site-navigation::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    right: 0;
+    left: 0;
+
+    height: 1px;
+
+    background:
+      linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,0.20),
+        transparent
+      );
+
+    pointer-events: none;
+  }
+
+
+  /* ==========================================================
+     OPEN
+     ========================================================== */
+
+  body.menu-open .site-navigation {
+    transform:
+      translateX(0);
+  }
+
+
+  /* ==========================================================
+     LINKS
+     ========================================================== */
+
+  .site-navigation a {
+
+    display: flex;
+
+    align-items: center;
+
+    width: 100%;
+
+    min-height: 52px;
+
+    padding:
+      13px 16px;
+
+    border-radius: 11px;
+
+    color:
+      rgba(255, 255, 255, 0.94) !important;
+
+    background:
+      rgba(255, 255, 255, 0.055);
+
+    border:
+      1px solid
+      rgba(255, 255, 255, 0.035);
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    transition:
+      background 0.25s ease,
+      color 0.25s ease,
+      transform 0.25s ease,
+      border-color 0.25s ease;
+  }
+
+
+  .site-navigation a::after {
+    display: none;
+  }
+
+
+  /* HOVER */
+
+  .site-navigation a:hover {
+
+    background:
+      rgba(255, 255, 255, 0.10);
+
+    border-color:
+      rgba(255, 255, 255, 0.10);
+
+    color:
+      #e3c87a !important;
+
+    transform:
+      translateX(-3px);
+  }
+
+
+  /* ACTIVE */
+
+  .site-navigation a.active {
+
+    background:
+      linear-gradient(
+        90deg,
+        rgba(22, 157, 72, 0.24),
+        rgba(11, 31, 58, 0.16)
+      );
+
+    border-color:
+      rgba(143, 203, 60, 0.26);
+
+    color:
+      #e3c87a !important;
+  }
+
+
+  /* ==========================================================
+     BACKDROP
+     ========================================================== */
+
+  .nav-backdrop {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 1090;
+
+    background:
+      rgba(4, 12, 22, 0.48);
+
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transition:
+      opacity 0.3s ease,
+      visibility 0.3s ease;
+  }
+
+
+  body.menu-open .nav-backdrop {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+  }
+
+
+  /* ==========================================================
+     PREVENT PAGE SCROLL
+     ========================================================== */
+
+  body.menu-open {
+    overflow: hidden;
+  }
+
+
+  /* ==========================================================
+     HAMBURGER → X
+     ========================================================== */
+
+  body.menu-open
+  .menu-toggle span:nth-child(1) {
+
+    transform:
+      translateY(8px)
+      rotate(45deg);
+  }
+
+  body.menu-open
+  .menu-toggle span:nth-child(2) {
+
+    opacity: 0;
+  }
+
+  body.menu-open
+  .menu-toggle span:nth-child(3) {
+
+    transform:
+      translateY(-8px)
+      rotate(-45deg);
+  }
+
+}

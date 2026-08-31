@@ -1,0 +1,3342 @@
+/* ============================================================
+   QCC-ESA ABOUT PAGE
+   ============================================================ */
+
+
+/* ============================================================
+   BASIC RESET
+   ============================================================ */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+
+  font-family: "Inter", sans-serif;
+
+  background: #f7f4ed;
+
+  color: #0b1f3a;
+}
+
+
+/* ============================================================
+   ABOUT HERO
+   ============================================================ */
+
+.about-hero {
+  position: relative;
+
+  width: 100%;
+  height: 500px;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+
+  isolation: isolate;
+
+  background:
+    url("../images/hero/hero-about.jpg")
+    center center / cover no-repeat;
+}
+
+
+/* ============================================================
+   HERO OVERLAY
+   ============================================================ */
+
+.about-hero-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5, 45, 27, 0.93) 0%,
+      rgba(8, 73, 45, 0.82) 30%,
+      rgba(11, 31, 58, 0.65) 62%,
+      rgba(11, 31, 58, 0.28) 100%
+    );
+
+  z-index: 1;
+}
+
+
+/* ============================================================
+   HERO GREEN GLOW
+   ============================================================ */
+
+.about-hero::before {
+  content: "";
+
+  position: absolute;
+
+  width: 420px;
+  height: 420px;
+
+  top: -160px;
+  left: -110px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(22, 157, 72, 0.18);
+
+  filter: blur(90px);
+
+  pointer-events: none;
+
+  z-index: 2;
+
+  animation:
+    aboutGreenGlow
+    12s
+    ease-in-out
+    infinite
+    alternate;
+}
+
+
+/* ============================================================
+   HERO NAVY GLOW
+   ============================================================ */
+
+.about-hero::after {
+  content: "";
+
+  position: absolute;
+
+  width: 400px;
+  height: 400px;
+
+  right: -150px;
+  bottom: -160px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(11, 31, 58, 0.24);
+
+  filter: blur(90px);
+
+  pointer-events: none;
+
+  z-index: 2;
+
+  animation:
+    aboutNavyGlow
+    14s
+    ease-in-out
+    infinite
+    alternate;
+}
+
+
+/* ============================================================
+   HERO ANIMATIONS
+   ============================================================ */
+
+@keyframes aboutGreenGlow {
+
+  0% {
+    transform:
+      translate(0, 0)
+      scale(1);
+
+    opacity: 0.55;
+  }
+
+  100% {
+    transform:
+      translate(55px, 30px)
+      scale(1.12);
+
+    opacity: 0.78;
+  }
+
+}
+
+
+@keyframes aboutNavyGlow {
+
+  0% {
+    transform:
+      translate(0, 0)
+      scale(1);
+
+    opacity: 0.45;
+  }
+
+  100% {
+    transform:
+      translate(-50px, -25px)
+      scale(1.12);
+
+    opacity: 0.68;
+  }
+
+}
+
+
+/* ============================================================
+   HERO CONTENT
+   ============================================================ */
+
+.about-hero-content {
+  position: relative;
+
+  z-index: 3;
+
+  width:
+    min(1180px, 92%);
+
+  margin:
+    0 auto;
+
+  padding-top: 45px;
+
+  color: #ffffff;
+}
+
+
+/* ============================================================
+   HERO EYEBROW
+   ============================================================ */
+
+.about-hero-eyebrow {
+  display: inline-block;
+
+  margin-bottom: 14px;
+
+  color: #e3c87a;
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+}
+
+
+/* ============================================================
+   HERO TITLE
+   ============================================================ */
+
+.about-hero h1 {
+  max-width: 800px;
+
+  margin:
+    0 0 18px;
+
+  color: #ffffff;
+
+  font-size:
+    clamp(3rem, 6vw, 5.2rem);
+
+  line-height: 1.02;
+
+  letter-spacing: -0.04em;
+
+  font-weight: 800;
+}
+
+
+/* ============================================================
+   HERO DESCRIPTION
+   ============================================================ */
+
+.about-hero p {
+  max-width: 650px;
+
+  margin: 0;
+
+  color:
+    rgba(255, 255, 255, 0.84);
+
+  font-size: 1.05rem;
+
+  line-height: 1.8;
+}
+
+
+/* ============================================================
+   PREAMBLE SECTION
+   ============================================================ */
+
+.about-preamble-section {
+  position: relative;
+
+  width: 100%;
+
+  padding:
+    115px
+    0
+    130px;
+
+  overflow: hidden;
+
+  isolation: isolate;
+
+  background:
+    radial-gradient(
+      circle at 8% 18%,
+      rgba(22, 157, 72, 0.10),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 92% 82%,
+      rgba(11, 31, 58, 0.08),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #f5f1e8 0%,
+      #fffdf8 50%,
+      #f1f7f2 100%
+    );
+}
+
+
+/* ============================================================
+   PREAMBLE GREEN BLOB
+   ============================================================ */
+
+.about-preamble-section::before {
+  content: "";
+
+  position: absolute;
+
+  width: 360px;
+  height: 360px;
+
+  left: -120px;
+  top: -130px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(22, 157, 72, 0.13);
+
+  filter: blur(90px);
+
+  pointer-events: none;
+
+  z-index: 0;
+
+  animation:
+    preambleGreenBlob
+    13s
+    ease-in-out
+    infinite
+    alternate;
+}
+
+
+/* ============================================================
+   PREAMBLE NAVY BLOB
+   ============================================================ */
+
+.about-preamble-section::after {
+  content: "";
+
+  position: absolute;
+
+  width: 380px;
+  height: 380px;
+
+  right: -130px;
+  bottom: -150px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(11, 31, 58, 0.11);
+
+  filter: blur(95px);
+
+  pointer-events: none;
+
+  z-index: 0;
+
+  animation:
+    preambleNavyBlob
+    15s
+    ease-in-out
+    infinite
+    alternate;
+}
+
+
+/* ============================================================
+   PREAMBLE BLOB ANIMATIONS
+   ============================================================ */
+
+@keyframes preambleGreenBlob {
+
+  0% {
+    transform:
+      translate(0, 0)
+      scale(1);
+
+    opacity: 0.40;
+  }
+
+  100% {
+    transform:
+      translate(55px, 35px)
+      scale(1.14);
+
+    opacity: 0.65;
+  }
+
+}
+
+
+@keyframes preambleNavyBlob {
+
+  0% {
+    transform:
+      translate(0, 0)
+      scale(1);
+
+    opacity: 0.35;
+  }
+
+  100% {
+    transform:
+      translate(-55px, -25px)
+      scale(1.14);
+
+    opacity: 0.58;
+  }
+
+}
+
+
+/* ============================================================
+   PREAMBLE CONTAINER
+   ============================================================ */
+
+.about-preamble-container {
+  position: relative;
+
+  z-index: 2;
+
+  width:
+    min(980px, 90%);
+
+  margin:
+    0 auto;
+}
+
+
+/* ============================================================
+   PREAMBLE CARD
+   ============================================================ */
+
+.about-preamble-card {
+  position: relative;
+
+  max-width: 850px;
+
+  margin:
+    0 auto;
+
+  padding:
+    58px
+    65px
+    62px;
+
+  text-align: center;
+
+  border:
+    1px solid
+    rgba(11, 31, 58, 0.08);
+
+  border-radius: 26px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.97),
+      rgba(248, 246, 241, 0.94)
+    );
+
+  box-shadow:
+    0 24px 60px
+    rgba(11, 31, 58, 0.09);
+
+  backdrop-filter: blur(10px);
+
+  -webkit-backdrop-filter: blur(10px);
+}
+
+
+/* ============================================================
+   PREAMBLE TOP ACCENT
+   ============================================================ */
+
+.about-preamble-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 50%;
+
+  width: 90px;
+  height: 4px;
+
+  transform:
+    translateX(-50%);
+
+  border-radius:
+    0 0 999px 999px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #169d48,
+      #0b1f3a
+    );
+}
+
+
+/* ============================================================
+   PREAMBLE EYEBROW
+   ============================================================ */
+
+.about-preamble-eyebrow {
+  display: inline-block;
+
+  margin-bottom: 10px;
+
+  color: #a97916;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.8px;
+
+  text-transform: uppercase;
+}
+
+
+/* ============================================================
+   PREAMBLE TITLE
+   ============================================================ */
+
+.about-preamble-card h2 {
+  margin:
+    0 0 18px;
+
+  color: #0b1f3a;
+
+  font-size:
+    clamp(2.1rem, 4vw, 3rem);
+
+  line-height: 1.15;
+
+  font-weight: 800;
+}
+
+
+/* ============================================================
+   PREAMBLE LINE
+   ============================================================ */
+
+.about-preamble-line {
+  width: 55px;
+  height: 2px;
+
+  margin:
+    0 auto 28px;
+
+  border-radius: 999px;
+
+  background:
+    #169d48;
+}
+
+
+/* ============================================================
+   PREAMBLE TEXT
+   ============================================================ */
+
+.about-preamble-card p {
+  max-width: 700px;
+
+  margin:
+    0 auto;
+
+  color: #64748b;
+
+  font-size: 1rem;
+
+  line-height: 1.9;
+}
+
+
+/* ============================================================
+   HISTORY SECTION
+   ============================================================ */
+
+.about-history-section {
+  position: relative;
+
+  width: 100%;
+
+  padding:
+    125px
+    0
+    140px;
+
+  overflow: hidden;
+
+  isolation: isolate;
+
+  background:
+    url("../images/section-background/history.jpg")
+    center center / cover no-repeat;
+}
+
+
+/* ============================================================
+   HISTORY OVERLAY
+   ============================================================ */
+
+.about-history-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(5, 45, 27, 0.88) 0%,
+      rgba(8, 73, 45, 0.72) 35%,
+      rgba(11, 31, 58, 0.78) 70%,
+      rgba(11, 31, 58, 0.90) 100%
+    );
+
+  z-index: 0;
+}
+
+
+/* ============================================================
+   HISTORY GLOW
+   ============================================================ */
+
+.about-history-section::before {
+  content: "";
+
+  position: absolute;
+
+  width: 430px;
+  height: 430px;
+
+  top: -170px;
+  left: -130px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(22, 157, 72, 0.18);
+
+  filter: blur(90px);
+
+  pointer-events: none;
+
+  z-index: 1;
+
+  animation:
+    historyGreenGlow
+    13s
+    ease-in-out
+    infinite
+    alternate;
+}
+
+
+.about-history-section::after {
+  content: "";
+
+  position: absolute;
+
+  width: 430px;
+  height: 430px;
+
+  right: -150px;
+  bottom: -170px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(11, 31, 58, 0.28);
+
+  filter: blur(100px);
+
+  pointer-events: none;
+
+  z-index: 1;
+
+  animation:
+    historyNavyGlow
+    15s
+    ease-in-out
+    infinite
+    alternate;
+}
+
+
+/* ============================================================
+   HISTORY GLOW ANIMATIONS
+   ============================================================ */
+
+@keyframes historyGreenGlow {
+
+  0% {
+    transform:
+      translate(0, 0)
+      scale(1);
+
+    opacity: 0.45;
+  }
+
+  100% {
+    transform:
+      translate(60px, 35px)
+      scale(1.15);
+
+    opacity: 0.72;
+  }
+
+}
+
+
+@keyframes historyNavyGlow {
+
+  0% {
+    transform:
+      translate(0, 0)
+      scale(1);
+
+    opacity: 0.38;
+  }
+
+  100% {
+    transform:
+      translate(-55px, -25px)
+      scale(1.14);
+
+    opacity: 0.62;
+  }
+
+}
+
+
+/* ============================================================
+   HISTORY CONTAINER
+   ============================================================ */
+
+.about-history-container {
+  position: relative;
+
+  z-index: 2;
+
+  width:
+    min(1080px, 92%);
+
+  margin:
+    0 auto;
+}
+
+
+/* ============================================================
+   HISTORY CARD
+   ============================================================ */
+
+.about-history-card {
+  position: relative;
+
+  max-width: 900px;
+
+  margin:
+    0 auto;
+
+  padding:
+    58px
+    65px
+    64px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.22);
+
+  border-radius: 26px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 253, 248, 0.97),
+      rgba(247, 244, 237, 0.94)
+    );
+
+  box-shadow:
+    0 30px 80px
+    rgba(0, 0, 0, 0.22);
+
+  backdrop-filter: blur(12px);
+
+  -webkit-backdrop-filter: blur(12px);
+}
+
+
+/* ============================================================
+   HISTORY CARD TOP ACCENT
+   ============================================================ */
+
+.about-history-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 50%;
+
+  width: 95px;
+  height: 4px;
+
+  transform:
+    translateX(-50%);
+
+  border-radius:
+    0 0 999px 999px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #169d48,
+      #0b1f3a
+    );
+}
+
+
+/* ============================================================
+   HISTORY EYEBROW
+   ============================================================ */
+
+.about-history-eyebrow {
+  display: block;
+
+  margin-bottom: 9px;
+
+  color: #a97916;
+
+  text-align: center;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.9px;
+
+  text-transform: uppercase;
+}
+
+
+/* ============================================================
+   HISTORY TITLE
+   ============================================================ */
+
+.about-history-card h2 {
+  margin:
+    0 0 16px;
+
+  color: #0b1f3a;
+
+  text-align: center;
+
+  font-size:
+    clamp(2.3rem, 4vw, 3.2rem);
+
+  line-height: 1.12;
+
+  font-weight: 800;
+
+  letter-spacing: -0.03em;
+}
+
+
+/* ============================================================
+   HISTORY LINE
+   ============================================================ */
+
+.about-history-line {
+  width: 58px;
+  height: 2px;
+
+  margin:
+    0 auto 34px;
+
+  border-radius: 999px;
+
+  background:
+    #169d48;
+}
+
+
+/* ============================================================
+   HISTORY TEXT
+   ============================================================ */
+
+.about-history-content {
+  max-width: 780px;
+
+  margin:
+    0 auto;
+}
+
+
+.about-history-content p {
+  margin:
+    0 0 24px;
+
+  color: #526276;
+
+  font-size: 0.98rem;
+
+  line-height: 1.9;
+}
+
+
+.about-history-content p:last-child {
+  margin-bottom: 0;
+}
+
+
+.about-history-content strong {
+  color: #0b1f3a;
+
+  font-weight: 750;
+}
+
+
+/* ============================================================
+   MISSION & VISION
+   ============================================================ */
+
+.about-mission-vision-section {
+  position: relative;
+
+  width: 100%;
+
+  padding:
+    115px
+    0
+    135px;
+
+  overflow: hidden;
+
+  isolation: isolate;
+
+  background:
+    radial-gradient(
+      circle at 10% 15%,
+      rgba(22, 157, 72, 0.09),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 90% 85%,
+      rgba(11, 31, 58, 0.08),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #f5f1e8 0%,
+      #fffdf8 50%,
+      #f1f7f2 100%
+    );
+}
+
+
+/* ============================================================
+   MISSION & VISION GLOW
+   ============================================================ */
+
+.about-mission-vision-section::before {
+  content: "";
+
+  position: absolute;
+
+  width: 360px;
+  height: 360px;
+
+  top: -130px;
+  left: -120px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(22, 157, 72, 0.13);
+
+  filter: blur(90px);
+
+  pointer-events: none;
+
+  z-index: 0;
+
+  animation:
+    mvGreenGlow
+    13s
+    ease-in-out
+    infinite
+    alternate;
+}
+
+
+.about-mission-vision-section::after {
+  content: "";
+
+  position: absolute;
+
+  width: 390px;
+  height: 390px;
+
+  right: -140px;
+  bottom: -160px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(11, 31, 58, 0.11);
+
+  filter: blur(95px);
+
+  pointer-events: none;
+
+  z-index: 0;
+
+  animation:
+    mvNavyGlow
+    15s
+    ease-in-out
+    infinite
+    alternate;
+}
+
+
+/* ============================================================
+   MISSION & VISION ANIMATIONS
+   ============================================================ */
+
+@keyframes mvGreenGlow {
+
+  0% {
+    transform:
+      translate(0, 0)
+      scale(1);
+
+    opacity: 0.38;
+  }
+
+  100% {
+    transform:
+      translate(55px, 35px)
+      scale(1.14);
+
+    opacity: 0.62;
+  }
+
+}
+
+
+@keyframes mvNavyGlow {
+
+  0% {
+    transform:
+      translate(0, 0)
+      scale(1);
+
+    opacity: 0.34;
+  }
+
+  100% {
+    transform:
+      translate(-55px, -25px)
+      scale(1.14);
+
+    opacity: 0.58;
+  }
+
+}
+
+
+/* ============================================================
+   MISSION & VISION CONTAINER
+   ============================================================ */
+
+.about-mission-vision-container {
+  position: relative;
+
+  z-index: 2;
+
+  width:
+    min(1100px, 92%);
+
+  margin:
+    0 auto;
+}
+
+
+/* ============================================================
+   MISSION & VISION HEADER
+   ============================================================ */
+
+.about-mv-header {
+  max-width: 720px;
+
+  margin:
+    0 auto 45px;
+
+  text-align: center;
+}
+
+
+.about-mv-eyebrow {
+  display: block;
+
+  margin-bottom: 9px;
+
+  color: #a97916;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.9px;
+
+  text-transform: uppercase;
+}
+
+
+.about-mv-header h2 {
+  margin:
+    0 0 12px;
+
+  color: #0b1f3a;
+
+  font-size:
+    clamp(2.2rem, 4vw, 3.2rem);
+
+  line-height: 1.12;
+
+  font-weight: 800;
+
+  letter-spacing: -0.03em;
+}
+
+
+.about-mv-header p {
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 0.98rem;
+
+  line-height: 1.8;
+}
+
+
+/* ============================================================
+   MISSION & VISION GRID
+   ============================================================ */
+
+.about-mv-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 26px;
+}
+
+
+/* ============================================================
+   MISSION & VISION CARD
+   ============================================================ */
+
+.about-mv-card {
+  position: relative;
+
+  padding:
+    48px
+    45px
+    52px;
+
+  text-align: center;
+
+  border:
+    1px solid
+    rgba(11, 31, 58, 0.08);
+
+  border-radius: 24px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.97),
+      rgba(248, 246, 241, 0.94)
+    );
+
+  box-shadow:
+    0 20px 50px
+    rgba(11, 31, 58, 0.08);
+
+  backdrop-filter: blur(10px);
+
+  -webkit-backdrop-filter: blur(10px);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+
+.about-mv-card:hover {
+  transform:
+    translateY(-7px);
+
+  border-color:
+    rgba(200, 164, 77, 0.65);
+
+  box-shadow:
+    0 28px 60px
+    rgba(11, 31, 58, 0.12);
+}
+
+
+/* ============================================================
+   CARD TOP ACCENT
+   ============================================================ */
+
+.about-mv-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 50%;
+
+  width: 80px;
+  height: 4px;
+
+  transform:
+    translateX(-50%);
+
+  border-radius:
+    0 0 999px 999px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #169d48,
+      #0b1f3a
+    );
+}
+
+
+/* ============================================================
+   ICON
+   ============================================================ */
+
+.about-mv-icon {
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin:
+    0 auto 18px;
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      135deg,
+      #169d48,
+      #0b1f3a
+    );
+
+  color: #ffffff;
+
+  font-size: 20px;
+
+  font-weight: 800;
+
+  box-shadow:
+    0 10px 25px
+    rgba(11, 31, 58, 0.16);
+}
+
+
+/* ============================================================
+   LABEL
+   ============================================================ */
+
+.about-mv-label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #a97916;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.7px;
+
+  text-transform: uppercase;
+}
+
+
+/* ============================================================
+   TITLE
+   ============================================================ */
+
+.about-mv-card h3 {
+  margin:
+    0 0 14px;
+
+  color: #0b1f3a;
+
+  font-size: 28px;
+
+  line-height: 1.2;
+
+  font-weight: 800;
+}
+
+
+/* ============================================================
+   LINE
+   ============================================================ */
+
+.about-mv-line {
+  width: 52px;
+  height: 2px;
+
+  margin:
+    0 auto 24px;
+
+  border-radius: 999px;
+
+  background:
+    #169d48;
+}
+
+
+/* ============================================================
+   TEXT
+   ============================================================ */
+
+.about-mv-card p {
+  margin: 0;
+
+  color: #5f6f82;
+
+  font-size: 0.96rem;
+
+  line-height: 1.85;
+}
+
+
+/* ============================================================
+   TIMELINE SECTION
+   ============================================================ */
+
+.about-timeline-section {
+  position: relative;
+
+  width: 100%;
+
+  padding:
+    120px
+    0
+    140px;
+
+  overflow: hidden;
+
+  isolation: isolate;
+
+  background:
+    radial-gradient(
+      circle at 8% 12%,
+      rgba(22, 157, 72, 0.08),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 92% 88%,
+      rgba(11, 31, 58, 0.08),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #f5f1e8 0%,
+      #fffdf8 50%,
+      #f1f7f2 100%
+    );
+}
+
+
+/* ============================================================
+   TIMELINE GLOW
+   ============================================================ */
+
+.about-timeline-section::before {
+  content: "";
+
+  position: absolute;
+
+  width: 360px;
+  height: 360px;
+
+  top: -130px;
+  right: -100px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(22, 157, 72, 0.12);
+
+  filter: blur(90px);
+
+  pointer-events: none;
+
+  z-index: 0;
+
+  animation:
+    timelineGreenGlow
+    13s
+    ease-in-out
+    infinite
+    alternate;
+}
+
+
+.about-timeline-section::after {
+  content: "";
+
+  position: absolute;
+
+  width: 390px;
+  height: 390px;
+
+  bottom: -150px;
+  left: -130px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(11, 31, 58, 0.10);
+
+  filter: blur(95px);
+
+  pointer-events: none;
+
+  z-index: 0;
+
+  animation:
+    timelineNavyGlow
+    15s
+    ease-in-out
+    infinite
+    alternate;
+}
+
+
+/* ============================================================
+   TIMELINE GLOW ANIMATIONS
+   ============================================================ */
+
+@keyframes timelineGreenGlow {
+
+  0% {
+    transform:
+      translate(0, 0)
+      scale(1);
+
+    opacity: 0.35;
+  }
+
+  100% {
+    transform:
+      translate(-50px, 35px)
+      scale(1.14);
+
+    opacity: 0.60;
+  }
+
+}
+
+
+@keyframes timelineNavyGlow {
+
+  0% {
+    transform:
+      translate(0, 0)
+      scale(1);
+
+    opacity: 0.32;
+  }
+
+  100% {
+    transform:
+      translate(55px, -25px)
+      scale(1.15);
+
+    opacity: 0.55;
+  }
+
+}
+
+
+/* ============================================================
+   TIMELINE CONTAINER
+   ============================================================ */
+
+.about-timeline-container {
+  position: relative;
+
+  z-index: 2;
+
+  width:
+    min(1120px, 92%);
+
+  margin:
+    0 auto;
+}
+
+
+/* ============================================================
+   TIMELINE HEADER
+   ============================================================ */
+
+.about-timeline-header {
+  max-width: 720px;
+
+  margin:
+    0 auto 75px;
+
+  text-align: center;
+}
+
+
+.about-timeline-eyebrow {
+  display: block;
+
+  margin-bottom: 9px;
+
+  color: #a97916;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.9px;
+
+  text-transform: uppercase;
+}
+
+
+.about-timeline-header h2 {
+  margin:
+    0 0 12px;
+
+  color: #0b1f3a;
+
+  font-size:
+    clamp(2.2rem, 4vw, 3.2rem);
+
+  line-height: 1.12;
+
+  font-weight: 800;
+
+  letter-spacing: -0.03em;
+}
+
+
+.about-timeline-header p {
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 0.98rem;
+
+  line-height: 1.8;
+}
+
+
+/* ============================================================
+   TIMELINE
+   ============================================================ */
+
+.about-timeline {
+  position: relative;
+
+  width: 100%;
+}
+
+
+/* ============================================================
+   CENTRAL LINE
+   ============================================================ */
+
+.about-timeline::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  bottom: 0;
+
+  left: 50%;
+
+  width: 2px;
+
+  transform:
+    translateX(-50%);
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(22,157,72,0.18),
+      #169d48,
+      #0b1f3a,
+      rgba(11,31,58,0.12)
+    );
+}
+
+
+/* ============================================================
+   TIMELINE ITEM
+   ============================================================ */
+
+.about-timeline-item {
+  position: relative;
+
+  width: 100%;
+
+  display: flex;
+
+  margin-bottom: 60px;
+}
+
+
+.about-timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+
+.about-timeline-item:nth-child(odd) {
+  justify-content: flex-start;
+}
+
+
+.about-timeline-item:nth-child(even) {
+  justify-content: flex-end;
+}
+
+
+/* ============================================================
+   TIMELINE MARKER
+   ============================================================ */
+
+.about-timeline-marker {
+  position: absolute;
+
+  top: 32px;
+  left: 50%;
+
+  z-index: 4;
+
+  width: 72px;
+  height: 72px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  transform:
+    translateX(-50%);
+
+  border:
+    5px solid
+    #fffdf8;
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      135deg,
+      #169d48,
+      #0b1f3a
+    );
+
+  box-shadow:
+    0 10px 28px
+    rgba(11, 31, 58, 0.18);
+}
+
+
+.about-timeline-marker span {
+  color: #ffffff;
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.4px;
+
+  text-align: center;
+}
+
+
+/* ============================================================
+   LANDSCAPE TIMELINE CARD
+   ============================================================ */
+
+.about-timeline-card {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(240px, 46%)
+    minmax(0, 54%);
+
+  width:
+    calc(50% - 62px);
+
+  min-height: 270px;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    rgba(11, 31, 58, 0.10);
+
+  border-radius: 22px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.97),
+      rgba(248, 246, 241, 0.95)
+    );
+
+  box-shadow:
+    0 20px 50px
+    rgba(11, 31, 58, 0.08);
+
+  backdrop-filter:
+    blur(10px);
+
+  -webkit-backdrop-filter:
+    blur(10px);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+
+/* ============================================================
+   CARD HOVER
+   ============================================================ */
+
+.about-timeline-card:hover {
+  transform:
+    translateY(-6px);
+
+  border-color:
+    rgba(200, 164, 77, 0.62);
+
+  box-shadow:
+    0 28px 60px
+    rgba(11, 31, 58, 0.12);
+}
+
+
+/* ============================================================
+   TIMELINE IMAGE
+   ============================================================ */
+
+.about-timeline-image {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  min-height: 270px;
+
+  overflow: hidden;
+
+  background: #dfe7df;
+}
+
+
+.about-timeline-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  transition:
+    transform 0.45s ease;
+}
+
+
+.about-timeline-card:hover
+.about-timeline-image img {
+  transform:
+    scale(1.05);
+}
+
+
+/* ============================================================
+   IMAGE OVERLAY
+   ============================================================ */
+
+.about-timeline-image::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5,45,27,0.12),
+      rgba(11,31,58,0.02)
+    );
+
+  pointer-events: none;
+}
+
+
+/* ============================================================
+   TIMELINE CONTENT
+   ============================================================ */
+
+.about-timeline-content {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  padding:
+    30px
+    32px;
+}
+
+
+/* ============================================================
+   TIMELINE LABEL
+   ============================================================ */
+
+.about-timeline-label {
+  display: inline-block;
+
+  margin-bottom: 7px;
+
+  color: #a97916;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.6px;
+
+  text-transform: uppercase;
+}
+
+
+/* ============================================================
+   TIMELINE TITLE
+   ============================================================ */
+
+.about-timeline-content h3 {
+  margin:
+    0 0 12px;
+
+  color: #0b1f3a;
+
+  font-size: 23px;
+
+  line-height: 1.25;
+
+  font-weight: 800;
+}
+
+
+/* ============================================================
+   TIMELINE LINE
+   ============================================================ */
+
+.about-timeline-line {
+  width: 46px;
+  height: 2px;
+
+  margin-bottom: 18px;
+
+  border-radius: 999px;
+
+  background:
+    #169d48;
+}
+
+
+/* ============================================================
+   TIMELINE DESCRIPTION
+   ============================================================ */
+
+.about-timeline-content p {
+  margin: 0;
+
+  color: #5f6f82;
+
+  font-size: 0.91rem;
+
+  line-height: 1.78;
+}
+
+
+.about-timeline-content strong {
+  color: #0b1f3a;
+
+  font-weight: 750;
+}
+
+
+/* ============================================================
+   LEADERSHIP ARCHIVES
+   ============================================================ */
+
+.about-leadership-section {
+  position: relative;
+
+  width: 100%;
+
+  padding:
+    120px
+    0
+    135px;
+
+  overflow: hidden;
+
+  isolation: isolate;
+
+  background:
+    url("../images/section-background/leadership-history.jpg")
+    center center / cover no-repeat;
+}
+
+
+.about-leadership-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(5, 45, 27, 0.90) 0%,
+      rgba(8, 73, 45, 0.76) 35%,
+      rgba(11, 31, 58, 0.76) 68%,
+      rgba(11, 31, 58, 0.91) 100%
+    );
+
+  z-index: 0;
+}
+
+
+/* ============================================================
+   LEADERSHIP GLOW
+   ============================================================ */
+
+.about-leadership-section::before {
+  content: "";
+
+  position: absolute;
+
+  width: 420px;
+  height: 420px;
+
+  top: -160px;
+  left: -130px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(22,157,72,0.17);
+
+  filter: blur(95px);
+
+  pointer-events: none;
+
+  z-index: 1;
+
+  animation:
+    leadershipGreenGlow
+    13s
+    ease-in-out
+    infinite
+    alternate;
+}
+
+
+.about-leadership-section::after {
+  content: "";
+
+  position: absolute;
+
+  width: 430px;
+  height: 430px;
+
+  right: -160px;
+  bottom: -180px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(11,31,58,0.28);
+
+  filter: blur(100px);
+
+  pointer-events: none;
+
+  z-index: 1;
+
+  animation:
+    leadershipNavyGlow
+    15s
+    ease-in-out
+    infinite
+    alternate;
+}
+
+
+/* ============================================================
+   LEADERSHIP GLOW ANIMATIONS
+   ============================================================ */
+
+@keyframes leadershipGreenGlow {
+
+  0% {
+    transform:
+      translate(0,0)
+      scale(1);
+
+    opacity: 0.42;
+  }
+
+  100% {
+    transform:
+      translate(60px,35px)
+      scale(1.14);
+
+    opacity: 0.70;
+  }
+
+}
+
+
+@keyframes leadershipNavyGlow {
+
+  0% {
+    transform:
+      translate(0,0)
+      scale(1);
+
+    opacity: 0.38;
+  }
+
+  100% {
+    transform:
+      translate(-55px,-30px)
+      scale(1.14);
+
+    opacity: 0.62;
+  }
+
+}
+
+
+/* ============================================================
+   LEADERSHIP CONTAINER
+   ============================================================ */
+
+.about-leadership-container {
+  position: relative;
+
+  z-index: 2;
+
+  width:
+    min(1080px, 92%);
+
+  margin:
+    0 auto;
+}
+
+
+/* ============================================================
+   LEADERSHIP HEADER
+   ============================================================ */
+
+.about-leadership-header {
+  max-width: 760px;
+
+  margin:
+    0 auto 48px;
+
+  text-align: center;
+}
+
+
+.about-leadership-eyebrow {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: #e3c87a;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+}
+
+
+.about-leadership-header h2 {
+  margin:
+    0 0 14px;
+
+  color: #ffffff;
+
+  font-size:
+    clamp(2.3rem, 4vw, 3.3rem);
+
+  line-height: 1.12;
+
+  font-weight: 800;
+
+  letter-spacing: -0.03em;
+}
+
+
+.about-leadership-header p {
+  max-width: 680px;
+
+  margin:
+    0 auto;
+
+  color:
+    rgba(255,255,255,0.78);
+
+  font-size: 0.98rem;
+
+  line-height: 1.8;
+}
+
+
+/* ============================================================
+   HISTORY BUTTONS
+   ============================================================ */
+
+.history-buttons {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 24px;
+}
+
+
+.history-button {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns:
+    64px
+    minmax(0, 1fr)
+    auto;
+
+  align-items: center;
+
+  gap: 20px;
+
+  min-height: 190px;
+
+  padding:
+    28px
+    30px;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    rgba(255,255,255,0.20);
+
+  border-radius: 22px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,0.14),
+      rgba(255,255,255,0.07)
+    );
+
+  box-shadow:
+    0 20px 45px
+    rgba(0,0,0,0.18);
+
+  backdrop-filter: blur(12px);
+
+  -webkit-backdrop-filter: blur(12px);
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+.history-button::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      120deg,
+      rgba(255,255,255,0.10),
+      transparent 38%
+    );
+
+  pointer-events: none;
+}
+
+
+.history-button:hover {
+  transform:
+    translateY(-7px);
+
+  border-color:
+    rgba(227,200,122,0.60);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,0.19),
+      rgba(255,255,255,0.09)
+    );
+
+  box-shadow:
+    0 30px 60px
+    rgba(0,0,0,0.24);
+}
+
+
+.history-button-icon {
+  position: relative;
+
+  z-index: 1;
+
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border:
+    1px solid
+    rgba(255,255,255,0.20);
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      135deg,
+      #169d48,
+      #0b1f3a
+    );
+
+  color: #ffffff;
+
+  font-size: 13px;
+
+  font-weight: 800;
+
+  box-shadow:
+    0 10px 24px
+    rgba(0,0,0,0.18);
+}
+
+
+.history-button-content {
+  position: relative;
+
+  z-index: 1;
+
+  min-width: 0;
+}
+
+
+.history-button-content span {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color:
+    rgba(227,200,122,0.92);
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.6px;
+
+  text-transform: uppercase;
+}
+
+
+.history-button-content strong {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #ffffff;
+
+  font-size: 20px;
+
+  line-height: 1.25;
+
+  font-weight: 800;
+}
+
+
+.history-button-content p {
+  max-width: 430px;
+
+  margin: 0;
+
+  color:
+    rgba(255,255,255,0.70);
+
+  font-size: 12px;
+
+  line-height: 1.65;
+}
+
+
+.history-button-arrow {
+  position: relative;
+
+  z-index: 1;
+
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border:
+    1px solid
+    rgba(255,255,255,0.18);
+
+  border-radius: 50%;
+
+  background:
+    rgba(255,255,255,0.08);
+
+  color: #ffffff;
+
+  font-size: 18px;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
+}
+
+
+.history-button:hover
+.history-button-arrow {
+  transform:
+    translateX(4px);
+
+  background:
+    rgba(22,157,72,0.70);
+}
+
+
+/* ============================================================
+   ABOUT MESSAGE
+   ============================================================ */
+
+.about-message-section {
+  position: relative;
+
+  width: 100%;
+
+  padding:
+    110px
+    0
+    125px;
+
+  overflow: hidden;
+
+  isolation: isolate;
+
+  background:
+    radial-gradient(
+      circle at 8% 20%,
+      rgba(22,157,72,0.10),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 92% 80%,
+      rgba(11,31,58,0.09),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #f5f1e8 0%,
+      #fffdf8 50%,
+      #f1f7f2 100%
+    );
+}
+
+
+/* ============================================================
+   MESSAGE GLOW
+   ============================================================ */
+
+.about-message-section::before {
+  content: "";
+
+  position: absolute;
+
+  width: 370px;
+  height: 370px;
+
+  top: -140px;
+  left: -110px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(22,157,72,0.13);
+
+  filter: blur(90px);
+
+  pointer-events: none;
+
+  z-index: 0;
+
+  animation:
+    messageGreenGlow
+    13s
+    ease-in-out
+    infinite
+    alternate;
+}
+
+
+.about-message-section::after {
+  content: "";
+
+  position: absolute;
+
+  width: 390px;
+  height: 390px;
+
+  right: -130px;
+  bottom: -160px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(11,31,58,0.11);
+
+  filter: blur(95px);
+
+  pointer-events: none;
+
+  z-index: 0;
+
+  animation:
+    messageNavyGlow
+    15s
+    ease-in-out
+    infinite
+    alternate;
+}
+
+
+/* ============================================================
+   MESSAGE ANIMATIONS
+   ============================================================ */
+
+@keyframes messageGreenGlow {
+
+  0% {
+    transform:
+      translate(0,0)
+      scale(1);
+
+    opacity: 0.36;
+  }
+
+  100% {
+    transform:
+      translate(55px,30px)
+      scale(1.14);
+
+    opacity: 0.62;
+  }
+
+}
+
+
+@keyframes messageNavyGlow {
+
+  0% {
+    transform:
+      translate(0,0)
+      scale(1);
+
+    opacity: 0.32;
+  }
+
+  100% {
+    transform:
+      translate(-55px,-25px)
+      scale(1.14);
+
+    opacity: 0.56;
+  }
+
+}
+
+
+/* ============================================================
+   MESSAGE CONTAINER
+   ============================================================ */
+
+.about-message-container {
+  position: relative;
+
+  z-index: 2;
+
+  width:
+    min(980px, 92%);
+
+  margin:
+    0 auto;
+}
+
+
+/* ============================================================
+   MESSAGE CARD
+   ============================================================ */
+
+.about-message-card {
+  position: relative;
+
+  max-width: 850px;
+
+  margin:
+    0 auto;
+
+  padding:
+    60px
+    65px
+    58px;
+
+  text-align: center;
+
+  border:
+    1px solid
+    rgba(11,31,58,0.08);
+
+  border-radius: 26px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,0.97),
+      rgba(248,246,241,0.94)
+    );
+
+  box-shadow:
+    0 24px 60px
+    rgba(11,31,58,0.09);
+
+  backdrop-filter: blur(10px);
+
+  -webkit-backdrop-filter: blur(10px);
+}
+
+
+.about-message-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 50%;
+
+  width: 95px;
+  height: 4px;
+
+  transform:
+    translateX(-50%);
+
+  border-radius:
+    0 0 999px 999px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #169d48,
+      #0b1f3a
+    );
+}
+
+
+.about-message-eyebrow {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: #a97916;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.9px;
+
+  text-transform: uppercase;
+}
+
+
+.about-message-card h2 {
+  max-width: 700px;
+
+  margin:
+    0 auto 18px;
+
+  color: #0b1f3a;
+
+  font-size:
+    clamp(2rem, 4vw, 3rem);
+
+  line-height: 1.15;
+
+  font-weight: 800;
+
+  letter-spacing: -0.03em;
+}
+
+
+.about-message-line {
+  width: 58px;
+  height: 2px;
+
+  margin:
+    0 auto 28px;
+
+  border-radius: 999px;
+
+  background:
+    #169d48;
+}
+
+
+.about-message-card p {
+  max-width: 720px;
+
+  margin:
+    0 auto 20px;
+
+  color: #5f6f82;
+
+  font-size: 0.98rem;
+
+  line-height: 1.9;
+}
+
+
+.about-message-card p:last-of-type {
+  margin-bottom: 30px;
+}
+
+
+.about-message-card strong {
+  color: #0b1f3a;
+
+  font-weight: 800;
+}
+
+
+/* ============================================================
+   MESSAGE STAT
+   ============================================================ */
+
+.about-message-stat {
+  display: inline-flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-width: 150px;
+
+  padding:
+    18px
+    26px;
+
+  border:
+    1px solid
+    rgba(22,157,72,0.16);
+
+  border-radius: 16px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(22,157,72,0.08),
+      rgba(11,31,58,0.05)
+    );
+}
+
+
+.about-message-stat strong {
+  display: block;
+
+  color: #169d48;
+
+  font-size: 2.3rem;
+
+  line-height: 1;
+
+  letter-spacing: -0.04em;
+}
+
+
+.about-message-stat span {
+  display: block;
+
+  margin-top: 6px;
+
+  color: #31577e;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.2px;
+
+  text-transform: uppercase;
+}
+
+
+/* ============================================================
+   TABLET
+   ============================================================ */
+
+@media (max-width: 900px) {
+
+  .about-timeline-card {
+    width:
+      calc(50% - 52px);
+
+    grid-template-columns:
+      minmax(180px, 45%)
+      minmax(0, 55%);
+
+    min-height: 240px;
+  }
+
+  .about-timeline-image {
+    min-height: 240px;
+  }
+
+  .about-timeline-content {
+    padding:
+      25px
+      23px;
+  }
+
+  .about-timeline-content h3 {
+    font-size: 20px;
+  }
+
+  .about-timeline-content p {
+    font-size: 0.87rem;
+  }
+
+  .about-mv-card {
+    padding:
+      42px
+      30px
+      46px;
+  }
+
+  .about-history-card {
+    padding:
+      48px
+      42px
+      52px;
+  }
+
+  .about-message-card {
+    padding:
+      50px
+      42px
+      48px;
+  }
+
+}
+
+
+/* ============================================================
+   TABLET - ARCHIVES
+   ============================================================ */
+
+@media (max-width: 850px) {
+
+  .history-buttons {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (max-width: 700px) {
+
+  /* HERO */
+
+  .about-hero {
+    height: 500px;
+
+    background-position:
+      60% center;
+  }
+
+  .about-hero-content {
+    padding-top: 70px;
+  }
+
+  .about-hero-eyebrow {
+    font-size: 10px;
+  }
+
+  .about-hero h1 {
+    font-size:
+      2.8rem;
+
+    line-height: 1.05;
+  }
+
+  .about-hero p {
+    font-size: 0.96rem;
+
+    line-height: 1.75;
+  }
+
+
+  /* PREAMBLE */
+
+  .about-preamble-section {
+    padding:
+      70px
+      0
+      80px;
+  }
+
+  .about-preamble-container {
+    width: 92%;
+  }
+
+  .about-preamble-card {
+    padding:
+      45px
+      24px
+      48px;
+
+    border-radius: 20px;
+  }
+
+  .about-preamble-card h2 {
+    font-size: 2.1rem;
+  }
+
+  .about-preamble-card p {
+    font-size: 0.94rem;
+
+    line-height: 1.8;
+  }
+
+
+  /* HISTORY */
+
+  .about-history-section {
+    padding:
+      72px
+      0
+      82px;
+
+    background-position:
+      62% center;
+  }
+
+  .about-history-container {
+    width: 92%;
+  }
+
+  .about-history-card {
+    padding:
+      45px
+      24px
+      48px;
+
+    border-radius: 20px;
+  }
+
+  .about-history-card h2 {
+    font-size: 2.15rem;
+  }
+
+  .about-history-content p {
+    font-size: 0.93rem;
+
+    line-height: 1.8;
+  }
+
+
+  /* MISSION / VISION */
+
+  .about-mission-vision-section {
+    padding:
+      72px
+      0
+      82px;
+  }
+
+  .about-mv-header {
+    margin-bottom: 30px;
+  }
+
+  .about-mv-header p {
+    font-size: 0.93rem;
+  }
+
+  .about-mv-grid {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+  .about-mv-card {
+    padding:
+      42px
+      25px
+      46px;
+
+    border-radius: 20px;
+  }
+
+
+  /* ==========================================================
+     TIMELINE MOBILE
+     ========================================================== */
+
+  .about-timeline-section {
+    padding:
+      80px
+      0
+      90px;
+  }
+
+  .about-timeline-container {
+    width: 92%;
+  }
+
+  .about-timeline-header {
+    margin-bottom: 50px;
+  }
+
+  .about-timeline {
+    width: 100%;
+  }
+
+
+  /* REMOVE CENTER LINE ON MOBILE */
+
+  .about-timeline::before {
+    display: none;
+  }
+
+
+  /* EACH ITEM */
+
+  .about-timeline-item,
+  .about-timeline-item:nth-child(odd),
+  .about-timeline-item:nth-child(even) {
+
+    display: block;
+
+    width: 100%;
+
+    margin-bottom: 28px;
+
+    padding: 0;
+  }
+
+
+  /* MARKER */
+
+  .about-timeline-marker {
+
+    position: relative;
+
+    top: auto;
+    left: auto;
+
+    transform: none;
+
+    width: 52px;
+    height: 52px;
+
+    margin:
+      0 0 -1px 18px;
+
+    border-width: 4px;
+  }
+
+  .about-timeline-marker span {
+    font-size: 10px;
+  }
+
+
+  /* LANDSCAPE BECOMES STACKED */
+
+  .about-timeline-card {
+
+    display: block;
+
+    width: 100%;
+
+    min-height: 0;
+
+    border-radius: 20px;
+  }
+
+
+  /* IMAGE STILL LARGE ON MOBILE */
+
+  .about-timeline-image {
+
+    width: 100%;
+
+    height: 220px;
+
+    min-height: 220px;
+  }
+
+
+  .about-timeline-image img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+  }
+
+
+  /* CONTENT */
+
+  .about-timeline-content {
+
+    padding:
+      25px
+      23px
+      30px;
+  }
+
+  .about-timeline-content h3 {
+    font-size: 20px;
+  }
+
+  .about-timeline-content p {
+    font-size: 0.90rem;
+
+    line-height: 1.75;
+  }
+
+
+  /* ARCHIVES */
+
+  .about-leadership-section {
+    padding:
+      80px
+      0
+      90px;
+
+    background-position:
+      60% center;
+  }
+
+  .about-leadership-header {
+    margin-bottom: 32px;
+  }
+
+  .about-leadership-header p {
+    font-size: 0.93rem;
+  }
+
+  .history-buttons {
+    gap: 18px;
+  }
+
+  .history-button {
+    grid-template-columns:
+      54px
+      minmax(0, 1fr);
+
+    gap: 16px;
+
+    min-height: 0;
+
+    padding:
+      24px
+      20px;
+
+    border-radius: 18px;
+  }
+
+  .history-button-icon {
+    width: 50px;
+    height: 50px;
+
+    font-size: 11px;
+  }
+
+  .history-button-content strong {
+    font-size: 18px;
+  }
+
+  .history-button-content p {
+    font-size: 11px;
+  }
+
+  .history-button-arrow {
+    display: none;
+  }
+
+
+  /* MESSAGE */
+
+  .about-message-section {
+    padding:
+      72px
+      0
+      82px;
+  }
+
+  .about-message-container {
+    width: 92%;
+  }
+
+  .about-message-card {
+    padding:
+      45px
+      24px
+      46px;
+
+    border-radius: 20px;
+  }
+
+  .about-message-card h2 {
+    font-size: 2.05rem;
+  }
+
+  .about-message-card p {
+    font-size: 0.93rem;
+
+    line-height: 1.8;
+  }
+
+  .about-message-stat {
+    min-width: 135px;
+
+    padding:
+      16px
+      22px;
+  }
+
+  .about-message-stat strong {
+    font-size: 2rem;
+  }
+
+}
+
+
+/* ============================================================
+   EXTRA SMALL MOBILE
+   ============================================================ */
+
+@media (max-width: 480px) {
+
+  .about-hero h1 {
+    font-size: 2.5rem;
+  }
+
+
+  .about-timeline-image {
+    height: 195px;
+
+    min-height: 195px;
+  }
+
+
+  .about-timeline-content {
+    padding:
+      23px
+      20px
+      28px;
+  }
+
+
+  .about-timeline-content h3 {
+    font-size: 19px;
+  }
+
+
+  .about-timeline-content p {
+    font-size: 0.88rem;
+
+    line-height: 1.75;
+  }
+
+
+  .about-timeline-marker {
+    width: 48px;
+    height: 48px;
+
+    margin-left: 14px;
+  }
+
+
+  .about-message-card {
+    padding:
+      42px
+      20px
+      44px;
+  }
+
+}
+
+
+/* ============================================================
+   REDUCED MOTION
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .about-hero::before,
+  .about-hero::after,
+
+  .about-preamble-section::before,
+  .about-preamble-section::after,
+
+  .about-history-section::before,
+  .about-history-section::after,
+
+  .about-mission-vision-section::before,
+  .about-mission-vision-section::after,
+
+  .about-timeline-section::before,
+  .about-timeline-section::after,
+
+  .about-leadership-section::before,
+  .about-leadership-section::after,
+
+  .about-message-section::before,
+  .about-message-section::after {
+
+    animation: none;
+  }
+
+  .about-timeline-card,
+  .about-timeline-image img,
+  .about-mv-card,
+  .history-button,
+  .about-message-card {
+
+    transition: none;
+  }
+
+}
